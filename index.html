@@ -1,26 +1,51 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<style> 
-div {
-  border: 2px solid;
-  padding: 20px; 
-  width: 300px;
-  resize: both;
-  overflow: auto;
+<style>
+.droptarget {
+  float: left; 
+  width: 100px; 
+  height: 35px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
 }
 </style>
 </head>
 <body>
 
-<h1>The resize Property</h1>
+<p>Drag the p element back and forth between the two rectangles:</p>
 
-<div>
-  <p>Let the user resize both the height and the width of this div element.</p>
-  <p>To resize: Click and drag the bottom right corner of this div element.</p>
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Drag me!</p>
 </div>
 
-<p><b>Note:</b> Internet Explorer and Edge does not support the resize property.</p>
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
+
+<p id="demo"></p>
+
+<script>
+function dragStart(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+}
+
+function dragging(event) {
+  document.getElementById("demo").innerHTML = "The p element is being dragged";
+}
+
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+  document.getElementById("demo").innerHTML = "The p element was dropped";
+}
+</script>
 
 </body>
 </html>
