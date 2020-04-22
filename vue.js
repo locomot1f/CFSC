@@ -28,7 +28,7 @@ Vue.component('product', {
     return  {
       product: 'Boots',
       description: 'This is a description of the term Boots',
-      image: 'http://drive.google.com/uc?export=view&id=0BzHHb3SBxtQSemNoWXNQcnVGalVSUHJwekZsTlRkRVZhektj',
+      image: 'https://drive.google.com/uc?export=view&id=0BzHHb3SBxtQSemNoWXNQcnVGalVSUHJwekZsTlRkRVZhektj',
       title: 'padding:10px; color:hsla(215, 65%, 28%, 1);border-radius:5px 5px 0 0;',
       inStock: 0,
 
@@ -36,22 +36,22 @@ Vue.component('product', {
             {
               GroupID: 'U8 Girls',
               AgeID: 8,
-              ImageID: 'http://drive.google.com/uc?export=view&id=1hov1CiPoxW1OA1c3SD54Dnq8QVAi3NKM'
+              ImageID: 'https://drive.google.com/uc?export=view&id=1hov1CiPoxW1OA1c3SD54Dnq8QVAi3NKM'
             }, 
             {
               GroupID: 'U9 Girls',
               AgeID: 9,
-              ImageID: 'http://drive.google.com/uc?export=view&id=1jBbH4MyNz1bpOX_fJ1EewshsyfsWuIdJ'
+              ImageID: 'https://drive.google.com/uc?export=view&id=1jBbH4MyNz1bpOX_fJ1EewshsyfsWuIdJ'
             },
             {
               GroupID: 'U10 Boys',
               AgeID: 10,
-              ImageID: 'http://drive.google.com/uc?export=view&id=1hov1CiPoxW1OA1c3SD54Dnq8QVAi3NKM'
+              ImageID: 'https://drive.google.com/uc?export=view&id=1hov1CiPoxW1OA1c3SD54Dnq8QVAi3NKM'
             }, 
             {
               GroupID: 'U12 Boys',
               AgeID: 12,
-              ImageID: 'http://drive.google.com/uc?export=view&id=1jBbH4MyNz1bpOX_fJ1EewshsyfsWuIdJ'
+              ImageID: 'https://drive.google.com/uc?export=view&id=1jBbH4MyNz1bpOX_fJ1EewshsyfsWuIdJ'
             }
             ],
             reviews:[]
