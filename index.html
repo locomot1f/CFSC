@@ -1,6 +1,16 @@
 <html>
   <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
-<body>
+  <script>
+    const draggable = new Draggable(document.querySelectorAll('ul'), {
+      draggable: 'li'
+    });
+  
+    draggable.on('drag:start', () => console.log('drag:start'));
+    draggable.on('drag:move', () => console.log('drag:move'));
+    draggable.on('drag:stop', () => console.log('drag:stop'));
+    
+  </script>
+  <body>
   <ul>
     <li>this is one</li>
     <li>this is two</li>
@@ -8,15 +18,4 @@
   </ul>
 
 </body>
-<script>
-  const draggable = new Draggable(document.querySelectorAll('ul'), {
-    draggable: 'li'
-  });
-
-  draggable.on('drag:start', () => console.log('drag:start'));
-  draggable.on('drag:move', () => console.log('drag:move'));
-  draggable.on('drag:stop', () => console.log('drag:stop'));
-  
-</script>
-
 </html>
