@@ -1,15 +1,9 @@
+<!DOCTYPE html>
 <html>
-  <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
-  <script>
-    const draggable = new Draggable(document.querySelectorAll('ul'), {
-      draggable: 'li'
-    });
+  <head>
+    <title>Draggable elements</title>
+  </head>
   
-    draggable.on('drag:start', () => console.log('drag:start'));
-    draggable.on('drag:move', () => console.log('drag:move'));
-    draggable.on('drag:stop', () => console.log('drag:stop'));
-    
-  </script>
   <body>
   <ul>
     <li>this is one</li>
@@ -17,5 +11,8 @@
     <li>this is three</li>
   </ul>
 
-</body>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
+  <script type="text/javascript" src="draggable.js"></script>
+  </head>
+  </body>
 </html>
