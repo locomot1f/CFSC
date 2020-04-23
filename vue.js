@@ -58,10 +58,10 @@ Vue.component('product', {
     }
   },  
   methods: {
-    updateImage: function(ImageID) {
+    updateImage(ImageID) {
       this.image = ImageID
     },
-    addReview: function(productReview) {
+    addReview(productReview) {
       this.reviews.push(productReview)
     }
   },
