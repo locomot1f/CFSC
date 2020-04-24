@@ -1,8 +1,4 @@
-    //import { Draggable } from '@shopify/draggable';
+//set constructs for draggable elements
 
-    drag = new PlainDraggable(document.getElementsByTagName('ul'));
-  
-    draggable.on('drag:start', () => console.log('drag:start'));
-    draggable.on('drag:move', () => console.log('drag:move'));
-    draggable.on('drag:stop', () => console.log('drag:stop'));
+draggable = new PlainDraggable(document.getElementById('draggable'));
     

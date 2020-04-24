@@ -3,24 +3,19 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" type="text/css" href="css/draggable.css">
     <title>Draggable elements</title>
   </head>
-  
-  <body>
-    <script type="text/javascript" src="js/plain-draggable/plain-draggable.min.js" type="module"></script>
 
-    <div>
-    <ul>
-      <li id="draggable">this is one</li>
-      <li>this is two</li>
-      <li>this is three</li>
-    </ul>
+<body>
+
+  <div id="draggable-box">
+    <div id="draggable">
+      <img src="https://drive.google.com/uc?export=view&id=1jBbH4MyNz1bpOX_fJ1EewshsyfsWuIdJ" />
+    </div>
   </div>
-  <script type="text/javascript">
-   draggable = new PlainDraggable(document.getElementById('draggable'));
-  
-  </script>
 
-  </head>
+<script src="js/plain-draggable/plain-draggable.min.js"></script>
+<script src="draggable.js"></script>  
   </body>
 </html>
