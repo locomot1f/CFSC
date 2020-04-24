@@ -1,8 +1,6 @@
     //import { Draggable } from '@shopify/draggable';
 
-    const draggable = new Draggable(document.querySelectorAll('ul'), {
-      draggable: 'li'
-    });
+    drag = new PlainDraggable(document.getElementsByTagName('ul'));
   
     draggable.on('drag:start', () => console.log('drag:start'));
     draggable.on('drag:move', () => console.log('drag:move'));
