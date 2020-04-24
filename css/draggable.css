@@ -1,5 +1,11 @@
 /* Style sheets for Draggable elements */
 
+#header {
+    width: 500px;
+    background-color: hsl(56, 95%, 51%);
+    color: hsl(215, 65%, 28%);
+
+}
 #draggable-box {
     width: 500px;
     height: 400px;
