@@ -4,6 +4,7 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <link rel="stylesheet" type="text/css" href="css/draggable.css">
+    <link rel="stylesheet" type="text/css" href="js/subjx/dist/style/subjx.css">
     <title>Draggable elements</title>
   </head>
 
@@ -11,12 +12,19 @@
 
   <div id="header">Drag Me</div>
   <div id="draggable-box">
-    <div id="draggable">
-      <img src="https://drive.google.com/uc?export=view&id=1jBbH4MyNz1bpOX_fJ1EewshsyfsWuIdJ" />
-    </div>
+
+    <!-- Draggable & Resizable Elements -->
+    <div id="draggable"><img src="https://drive.google.com/uc?export=view&id=1jBbH4MyNz1bpOX_fJ1EewshsyfsWuIdJ" width="100%"/></div>
+    
+    <!-- Arrow Elements -->
+    <div id="arrowStart"></div>
+    <div id="arrowEnd"></div>  
+  
   </div>
 
 <script src="js/plain-draggable/plain-draggable.min.js"></script>
+<script src="js/leader-line/leader-line.min.js"></script>
+<script src="js/subjx/dist/js/subjx.js"></script>
 <script src="draggable.js"></script>  
   </body>
 </html>
