@@ -3,7 +3,7 @@
 #header {
     position: absolute;
     top: 0px;
-    left: 100px;
+    left: 250px;
     width: 400px;
     height: 40px;
     text-align: center;
@@ -14,7 +14,7 @@
 }
 #draggable-box {
     position: absolute;
-    left: 100px;
+    left: 250px;
     top:40px;
     width: 400px;
     height: 400px;
@@ -43,4 +43,23 @@
     width: 10px;
     border-radius: 50%;
     opacity: 0;
+}
+#directions {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 400px;
+    font-family: 'Fira Sans',Arial, Helvetica, sans-serif;
+    border: 5px hsl(215, 65%, 28%)solid;
+    padding: 5px;
+}
+li {
+    font-weight: 400;
+    line-height: 1;
+    font-size: 9.5pt;
+    margin-bottom: 3pt;
+}
+ul {
+    margin-left: -10pt;
 }

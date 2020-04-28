@@ -19,6 +19,24 @@ const options = {
 //set constructs for draggable elements
 const Draggables = subjx('#draggable').drag(options);
    
+Draggables.forEach(item => {
+    const controls = item.controls;
+    subjx(controls).on('dblclick', () => {
+      item.disable();
+      Draggables.splice(Draggables.indexOf(item), 1);
+    });
+  });
+  
+  subjx('#draggable').on('dblclick', e => {
+    if (e.currentTarget.classList.contains('sjx-drag')) return;
+    const xDraggable = subjx(e.currentTarget).drag(options)[0];
+    Draggables.push(xDraggable);
+    // adding event to controls
+    const controls = xDraggable.controls;
+    subjx(controls).on('dblclick', () => {
+      xDraggable.disable();
+    });
+  });
 
 //set constructs for LeaderLine (arrows)
 var startElement = document.getElementById('arrowStart')
