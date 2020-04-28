@@ -42,7 +42,7 @@ Draggables.forEach(item => {
 var startElement = document.getElementById('arrowStart')
 var endElement = document.getElementById('arrowEnd')
 
-var line = new LeaderLine(startElement, LeaderLine.pointAnchor(endElement,{x: 15, y: 5}),{
+var line = new LeaderLine(startElement, LeaderLine.pointAnchor(endElement,{x: '50%', y: '50%'}),{
     dash: {animation: false},
     path: 'fluid',
     startPlug: 'behind',
