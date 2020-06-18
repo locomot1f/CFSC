@@ -26,6 +26,22 @@
     height: 70px;
     top: 0px;
 }   
+#selector-box{
+    position: absolute;
+    left: 655px;
+    top: 40px;
+    border: 1px solid lightgray;
+    width: 75px;
+    height: 400px;
+}
+.clone{
+    width: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background-color: lightcoral;
+    top: 0px;
+}
 #arrowStart {
     position: inherit;
     left: 30px;
@@ -62,4 +78,23 @@ li {
 }
 ul {
     margin-left: -10pt;
+}
+#stack{
+    box-sizing: border-box;
+    position: absolute;
+    width:50%;
+    height:200px;
+    border-top: #32B5FE 1px dashed;
+}
+.side_left{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 50px;
+}
+.draggable {  
+    position: absolute;
+    width: 40px;
+    height: 70px;
+    top: 0px;
 }

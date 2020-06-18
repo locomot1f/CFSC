@@ -38,6 +38,36 @@ Draggables.forEach(item => {
     });
   });
 
+
+//set clones for elements
+const onDrop = (e, el, clone) => {
+
+  const stack = subjx('#draggable-box')[0],
+    offset = stack.getBoundingClientRect(),
+    div = document.createElement('div');
+    img = document.getElementById('selector-box').getElementsByTagName('img');
+    
+  div.style.top = `${e.clientY - offset.top}px`;
+  div.style.left = `${e.clientX - offset.left}px`;
+
+  div.id = 'draggable';
+  
+  console.log(img);
+  console.log(div.innerHTML);
+
+  
+  stack.appendChild(div);
+  
+  Draggables.push(...subjx(div).drag());
+};
+
+subjx('.clone').clone({
+  stack: '#draggable-box',
+  appendTo: '#draggable',
+  onDrop
+});
+
+
 //set constructs for LeaderLine (arrows)
 var startElement = document.getElementById('arrowStart')
 var endElement = document.getElementById('arrowEnd')

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="The U.S. Soccer Learning Center is a state-of-the art online educational platform. It allows coaches to create a personal profile, register for courses, communicate with technical staff, take part in online courses, create session plans with an online graphics tool, access an archive of U.S. Soccer training sessions and much more."
+      name="description"
+    />
+    <title>U.S. Soccer Learning Center</title>
+    <base href="/" />
+    <!-- Main Theme-->
+    <!-- build:css css/dcc.min.css-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="https://releases.flowplayer.org/6.0.5/skin/minimalist.css" rel="stylesheet" />
+    <link href="https://releases.flowplayer.org/quality-selector/flowplayer.quality-selector.css" rel="stylesheet" />
+    <link href="/img/favicon.png" rel="shortcut icon" type="image/png" />
+    <link href="/img/favicon.png" rel="icon" type="image/png" />
+    <!-- end build-->
+  <script type="text/javascript" src="runtime~polyfills.js?cachebust=7a5acc51"></script><script type="text/javascript" src="vendors~253ae210-bundle.js?cachebust=7a5acc51"></script><script type="text/javascript" src="vendors~fa64df5a-bundle.js?cachebust=7a5acc51"></script><script type="text/javascript" src="vendors~2a42e354-bundle.js?cachebust=7a5acc51"></script><script type="text/javascript" src="vendors~d939e436-bundle.js?cachebust=7a5acc51"></script><script type="text/javascript" src="vendors~70aabc29-bundle.js?cachebust=7a5acc51"></script><script type="text/javascript" src="vendors~b58f7129-bundle.js?cachebust=7a5acc51"></script><script type="text/javascript" src="polyfills~01ea3192-bundle.js?cachebust=7a5acc51"></script><script type="text/javascript" src="runtime~index.js?cachebust=7a5acc51"></script><script type="text/javascript" src="index~01e7b97c-bundle.js?cachebust=7a5acc51"></script><script type="text/javascript" src="index~bf20d766-bundle.js?cachebust=7a5acc51"></script></head>
+  <body ng-class="{'app-header__responsive-navigation-wrapper--is--open': ui.menuToggled}">
+    <!-- / page wrapper-->
+    <flash-message class="main-flash-messages-container" name="main-flash-fixed"></flash-message>
+    <!-- / header-->
+    <!-- re-add if new header is required
+    <div ng-controller="GeneralWarningsController as vm">
+      <div class="alert alert-info alert--centered alert-dismissible" ng-if="vm.showLimitedSupportWarning" role="alert">
+        <button class="close" ng-click="vm.showLimitedSupportWarning = false" type="button">
+          <span>×</span><span class="sr-only">Close</span>
+        </button>
+        U.S. Soccer will be closed for the holidays beginning at 5pm on Friday December 20. There will be limited
+        support available until we return on January 2. Happy holidays!
+      </div>
+    </div>
+    -->
+    <top-menu></top-menu>
+    <!-- / content wrapper-->
+    <main>
+      <section class="app-body">
+        <div class="wrapper">
+          <div class="wrapper-inner" data-ui-view></div>
+          <!-- / ^ this is very useless wrapper, but I can see some of the project pages don't have "page-content" so it's more of a double safety thing-->
+        </div>
+      </section>
+    </main>
+    <!-- / footer-->
+    <footer class="app-footer ng-cloak" ng-controller="FooterController as vm">
+      <div class="wrapper">
+        <nav>
+          <discipline-switcher>
+            <discipline-coach>
+              <ul>
+                <li><a ui-sref="discipline">Home</a></li>
+                <li><a ng-click="vm.showTerms()">Terms of Use</a></li>
+                <li><a ui-sref="discipline.help">Contact Us</a></li>
+                <li><a href="http://www.ussoccer.com" target="_blank">U.S. Soccer</a></li>
+                <li><a href="http://status.ussdcc.com/" target="_blank">USSLC Status</a></li>
+              </ul>
+            </discipline-coach>
+            <discipline-referee>
+              <ul>
+                <li><a ui-sref="discipline">Home</a></li>
+                <li><a ng-click="vm.showTerms()">Terms of Use</a></li>
+                <li><a ui-sref="discipline.help">Contact Us</a></li>
+                <li><a href="http://www.ussoccer.com" target="_blank">U.S. Soccer</a></li>
+                <li><a href="http://status.ussdcc.com/" target="_blank">USSLC Status</a></li>
+              </ul>
+            </discipline-referee>
+            <discipline-default>
+              <ul>
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ng-click="vm.showTerms()">Terms of Use</a></li>
+                <li><a href="https://ussoccerfederation.force.com/lcsupport/s/" target="_blank">Contact Us</a></li>
+                <li><a href="http://www.ussoccer.com" target="_blank">U.S. Soccer</a></li>
+                <li><a href="http://status.ussdcc.com/" target="_blank">USSLC Status</a></li>
+              </ul>
+            </discipline-default>
+          </discipline-switcher>
+        </nav>
+        <div class="app-footer__social-icons">
+          <discipline-switcher>
+            <discipline-referee>
+              <h4>Follow us on:</h4>
+              <ul>
+                <li>
+                  <a href="https://twitter.com/ussoccer_ref" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ussoccerreferee" target="_blank"
+                    ><i class="fa fa-facebook-square"></i
+                  ></a>
+                </li>
+              </ul>
+            </discipline-referee>
+            <discipline-coach>
+              <h4>Follow us on:</h4>
+              <ul>
+                <li>
+                  <a href="https://twitter.com/ussoccer_coach" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ussoccercoaching" target="_blank"
+                    ><i class="fa fa-facebook-square"></i
+                  ></a>
+                </li>
+              </ul>
+            </discipline-coach>
+          </discipline-switcher>
+        </div>
+      </div>
+    </footer>
+    <div id="no-angular-fallback">
+      <h2>Your browser version is too old</h2>
+      <p>
+        Your browser might not be capable of running this page. Please check and possible update your browser verion.
+        The following browsers are supported:
+      </p>
+      <ul>
+        <li>Internet Explorer version 11 or newer</li>
+        <li>Microsoft Edge</li>
+        <li>Mozilla Firefox</li>
+        <li>Google Chrome</li>
+        <li>Apple Safari</li>
+      </ul>
+      Check out<a href="http://whatbrowser.org" target="_blank">http://whatbrowser.org</a> for information on your
+      current browser.
+    </div>
+    <noscript>
+      <div id="no-script-fallback">
+        <h2>JavaScript is not running</h2>
+        <p>This website requires javascript as well as one of the following browsers</p>
+        <ul>
+          <li>Internet Explorer version 9 or newer</li>
+          <li>Mozilla Firefox</li>
+          <li>Google Chrome</li>
+          <li>Apple Safari</li>
+          <li>Opera</li>
+        </ul>
+        Check out<a href="http://whatbrowser.org" target="_blank">http://whatbrowser.org</a> for information on your
+        current browser.
+      </div>
+    </noscript>
+    <script src="https://releases.flowplayer.org/6.0.5/flowplayer.min.js" async></script>
+    <script src="https://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js" async></script>
+    <script src="https://api.satis.fi/SDK/satisfipopup-1.7.7.js" async></script>
+  </body>
+</html>
