@@ -1,8 +1,8 @@
 <style>
 .tab-wrap {
-  -webkit-transition: 0.3s box-shadow ease;
-  transition: 0.3s box-shadow ease;
-  border-radius: 6px;
+  /* -webkit-transition: 0.3s box-shadow ease; */
+  /* transition: 0.3s box-shadow ease; */
+  /* border-radius: 6px; */
   max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,12 +12,14 @@
   position: relative;
   list-style: none;
   background-color: #fff;
-  margin: 40px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  /* margin: 40px 0; */
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
 }
+/**************************
 .tab-wrap:hover {
   box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
 }
+*****************************/
 
 .tab {
   display: none;
@@ -100,12 +102,12 @@
 }
 .tab:checked + label {
   background-color: #fff;
-  box-shadow: 0 -1px 0 #fff inset;
+  box-shadow: 0 -1px 0 #f9eb0d inset;
   cursor: default;
 }
 .tab:checked + label:hover {
   box-shadow: 0 -1px 0 #fff inset;
-  background-color: #fff;
+  background-color: #f9eb0d;
 }
 .tab + label {
   box-shadow: 0 -1px 0 #eee inset;
@@ -113,7 +115,7 @@
   cursor: pointer;
   display: block;
   text-decoration: none;
-  color: #333;
+  color: #194077;
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
@@ -132,7 +134,7 @@
 }
 .tab + label:hover {
   background-color: #f9f9f9;
-  box-shadow: 0 1px 0 #f4f4f4 inset;
+  /* box-shadow: 0 1px 0 #f4f4f4 inset; */
 }
 .tab__content {
   padding: 10px 25px;
@@ -185,8 +187,8 @@
         *Paid in monthly installments
         *Price includes a training shirt
     </div>
-    <div class="tab__content" id="Training Locations">
-        Training Locations
+    <div class="tab__content" id="Schedule">
+        Schedule
     </div>
     <div class="tab__content" id="Registration">
         **Ready To Register?**
