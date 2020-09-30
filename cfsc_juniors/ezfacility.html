@@ -34,7 +34,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    td {
+    td.col1, td.col2 {
         padding: 5px;
         border-bottom: 1px dashed #000044;
     }
@@ -60,6 +60,15 @@
         width: 170pt;
         text-align: center;
     }
+    .info {
+        font-family: 'Fira Sans', sans-serif, Arial, Helvetica, sans-serif;
+        font-size: 15pt;
+        font-weight: 450;
+        color: gray ;
+        border-bottom: 1px solid #000000;
+        text-align: left;
+        padding-left: 15px;
+    }
 </style>
 <div class="body">
     <div> <img src="https://c3359025.ssl.cf0.rackcdn.com/104810.png" alt="CFSA Shield" width="150px" class="logo" /> </div>
@@ -69,23 +78,23 @@
     <table>
         <tr>
             <td class="col1">AGES</td>
-            <td>3 -- 4 Boys &amp; Girls</td>
+            <td class="col2">3 -- 4 Boys &amp; Girls</td>
         </tr>
         <tr>
             <td class="col1">SUNDAY DATES</td>
-            <td><strong>OCT </strong>25; <strong>NOV </strong>1, 8, 15, 22, <span style="color: #ff0000">OFF 29</span>; <strong>DEC </strong>6</td>
+            <td class="col2"><strong>OCT </strong>25; <strong>NOV </strong>1, 8, 15, 22, <span style="color: #ff0000">OFF 29</span>; <strong>DEC </strong>6</td>
         </tr>
         <tr>
             <td class="col1">TIME</td>
-            <td>11:00am - 11:45am</td>
+            <td class="col2">11:00am - 11:45am</td>
         </tr>
         <tr>
             <td class="col1">LOCATION</td>
-            <td><a href="https://goo.gl/maps/ZDfAFvKpTAmumepz7">Force - Richmond</a></td>
+            <td class="col2"><a href="https://goo.gl/maps/ZDfAFvKpTAmumepz7">Force - Richmond</a></td>
         </tr>
         <tr>
             <td class="col1">PRICE</td>
-            <td>$105 for 6 weeks</td>
+            <td class="col2">$105 for 6 weeks</td>
         </tr>
     </table>
 
@@ -106,8 +115,18 @@
         </ul>
     </div>
     
-    <div><strong>For More Information:</strong></div>
-    <div>Adam Deich</div>
-    <div><strong><a href="mailto:Adam@Force-Sports.com">Adam@Force-Sports.com</a></div>
-    <div></strong>440-331-0100</div>
+    <table style="padding: 5px;">
+        <th colspan="2" class="info">&#x2139; For More Information:</th>
+        <tr style="vertical-align:text-top;">
+            <td style="border-right: 1px dotted #000000; padding: 5px;">
+                <div><strong>Ben Gunter</strong></div>
+                <div><a href="mailto:ben@force-sports.com">ben@force-sports.com</a></div>
+            </td>
+            <td style="padding: 5px;">
+                <div><strong>Drew Greathouse</strong></div>
+                <div><a href="mailto:drew@force-sports.com">drew@force-sports.com</a></div>
+                <div>216-464-7122</div>
+            </td>
+        </tr>
+    </table>
 </div>
