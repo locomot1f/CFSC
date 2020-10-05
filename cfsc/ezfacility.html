@@ -1,980 +1,560 @@
 <style>
-.tab-wrap {
-  /* -webkit-transition: 0.3s box-shadow ease; */
-  /* transition: 0.3s box-shadow ease; */
-  /* border-radius: 6px; */
-  max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: relative;
-  list-style: none;
-  background-color: #fff;
-  /* margin: 40px 0; */
-  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
-}
-/**************************
+  .tab-wrap {
+    /* -webkit-transition: 0.3s box-shadow ease; */
+    /* transition: 0.3s box-shadow ease; */
+    /* border-radius: 6px; */
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    list-style: none;
+    background-color: #fff;
+    /* margin: 40px 0; */
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+  }
+  /**************************
 .tab-wrap:hover {
   box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
 }
 *****************************/
 
-.tab {
-  display: none;
-}
-.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:first-of-type:not(:last-of-type) + label {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.tab:not(:first-of-type):not(:last-of-type) + label {
-  border-radius: 0;
-}
-.tab:last-of-type:not(:first-of-type) + label {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.tab:checked + label {
-  background-color: #f9eb0d;
-  box-shadow: 0 -1px 0 #fff inset;
-  cursor: default;
-}
-.tab:checked + label:hover {
-  box-shadow: 0 -1px 0 #fff inset;
-  background-color: #f9eb0d;
-}
-.tab + label {
-  box-shadow: 0 -1px 0 #eee inset;
-  /* border-radius: 6px 6px 0 0; */
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  color: #194077;
-  font-weight: 500;
-  font-size: 18pt;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-  text-align: center;
-  background-color: #f2f2f2;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  text-align: center;
-  -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
-  transition: 0.3s background-color ease, 0.3s box-shadow ease;
-  height: 50px;
-  box-sizing: border-box;
-  padding: 15px;
-}
-.tab + label:hover {
-  background-color: #f9f9f9;
-  /* box-shadow: 0 1px 0 #f4f4f4 inset; */
-}
-.tab__content {
-  padding: 10px;
-  background-color: transparent;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  opacity: 0;
-  left: 0;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-  border-radius: 6px;
-}
-.schedule_inner {
+  .tab {
+    display: none;
+  }
+  .tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(6) ~ .tab__content:nth-of-type(6) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(7) ~ .tab__content:nth-of-type(7) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(8) ~ .tab__content:nth-of-type(8) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(9) ~ .tab__content:nth-of-type(9) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(10) ~ .tab__content:nth-of-type(10) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(11) ~ .tab__content:nth-of-type(11) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(12) ~ .tab__content:nth-of-type(12) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(13) ~ .tab__content:nth-of-type(13) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(14) ~ .tab__content:nth-of-type(14) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(15) ~ .tab__content:nth-of-type(15) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(16) ~ .tab__content:nth-of-type(16) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(17) ~ .tab__content:nth-of-type(17) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:checked:nth-of-type(18) ~ .tab__content:nth-of-type(18) {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease,
+      0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+  .tab:first-of-type:not(:last-of-type) + label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .tab:not(:first-of-type):not(:last-of-type) + label {
+    border-radius: 0;
+  }
+  .tab:last-of-type:not(:first-of-type) + label {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .tab:checked + label {
+    background-color: #f9eb0d;
+    box-shadow: 0 -1px 0 #fff inset;
+    cursor: default;
+  }
+  .tab:checked + label:hover {
+    box-shadow: 0 -1px 0 #fff inset;
+    background-color: #f9eb0d;
+  }
+  .tab + label {
+    box-shadow: 0 -1px 0 #eee inset;
+    /* border-radius: 6px 6px 0 0; */
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: #194077;
+    font-weight: 400;
+    font-size: 14pt;
+    font-family: 'Fira Sans', Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 450;
-    font-size: 13pt;
-    border-right: solid; 
-    width: 300px;
-    padding: 10px;
-}
-.schedule_outer {
+    background-color: #f2f2f2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 450;
-    font-size: 13pt; 
-    width: 300px;
+    -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  .tab + label:hover {
+    background-color: #f9f9f9;
+    /* box-shadow: 0 1px 0 #f4f4f4 inset; */
+  }
+  .tab__content {
     padding: 10px;
-}
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    border-radius: 6px;
+  }
+  .section_header {
+    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 16pt;
 
+  }
+  .tab__content {
+    font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+  }
+  li.header {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
+  ul.sub {
+    margin-left: 12pt;
+    padding-left: 0pt;
+  }
+  table.dates {
+    border-collapse: collapse;
+  }
+  th.col1 {
+    border-left: 1px solid #ffffff;
+    background-color: #194077;
+    color: #f9eb0d;
+    padding: 5px;
+  }
+  th.col2 {
+    border-left: 1px solid #ffffff;
+    background-color: #194077;
+    color: #f9eb0d;
+    padding: 5px;
+  }
+  td.col1, tr.col1 {
+    border-bottom: 1px dashed #000000;
+    padding: 3px;
+  }
+  td.col2, tr.col2 {
+    border-bottom: 1px dashed #000000;
+    border-left: 1px solid #000000;
+    padding: 3px;
+  }
 </style>
+<!-- Tabbed Section - CLEVELAND FORCE SOCCER ACADEMY -->
+<div class="section_header" id="tabGroup1">CLEVELAND FORCE SOCCER ACADEMY</div>
+<div class="tab-wrap" id="tabGroup1">
 
-<div>
-    &nbsp;</div>
+  <input type="radio" id="tab1" name="tabGroup1" class="tab" checked />
+  <label for="tab1">ABOUT CFSA</label>
 
-<div class="tab-wrap">
-    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked="">
-    <label for="tab1">ABOUT CFSA</label>
-    
-    <input type="radio" id="tab2" name="tabGroup1" class="tab">
-    <label for="tab2">&nbsp;DATES</label>
+  <input type="radio" id="tab2" name="tabGroup1" class="tab" />
+  <label for="tab2">DATES</label>
 
-    <input type="radio" id="tab3" name="tabGroup1" class="tab">
-    <label for="tab3">COACHES</label>
-    
-    <input type="radio" id="tab4" name="tabGroup1" class="tab">
-    <label for="tab4">&nbsp;#SSAH</label>
+  <input type="radio" id="tab3" name="tabGroup1" class="tab" />
+  <label for="tab3">COACHES</label>
 
-    <input type="radio" id="tab5" name="tabGroup1" class="tab">
-    <label for="tab5">CAMPS</label><div class="tab__content" id="Training">&nbsp;&nbsp;<strong>- Weekly supplemental soccer clinics for beginners &amp; developing players</strong><br>- CFSA Minis Ages 3 - 4<br>-&nbsp;CFSA K-1 Instructional Ages 5 - 7<br>- CFSA U9 - U11 Ages 8 - 11<br>- CFSA U11 - U14 Ages 10 - 14<br><strong>- Invitation based advanced training for aspiring &amp; e<strong>xperienced&nbsp;</strong>players</strong><br>- CFSA Juniors Academy Ages 5 - 8&nbsp;<br>- CFSA Advanced&nbsp; Ages 9 - 18&nbsp;&nbsp;<br><strong>- In-House soccer leagues for individuals without or with a team<br></strong>- In-House Youth League Ages 6 - 11 - Individual player registration<br>- High School 4v4 League Ages 13 - 18 - Individual and team registration<br><strong>- Seasonal youth soccer camps</strong>&nbsp;<br>- Winter, Spring &amp; Summer&nbsp; Ages 3 - 14
-    <div></div></div><div class="tab__content" id="Schedule">&nbsp;<div id="Training"><div><table cellspacing="4" cellpadding="1" align="center"><tbody><tr><td><strong>DAY</strong>PROGRAM<br></td><td><strong>FALL I</strong>2020</td><td><strong>FALL II2020</strong></td><td><strong>WINTER I</strong>2021</td></tr><tr><td><strong>SUNDAY</strong>Clinics</td><td><strong>SEPT</strong>13, 20, 27<strong>OCT</strong>4, 11, 18</td><td><strong>OCT</strong>25;<strong>NOV</strong>1, 8, 15, 22<strong>DEC</strong>6</td><td><strong>JAN</strong>10, 17, 24, 31<strong>FEB</strong>7, 14</td></tr><tr><td><strong>TUESDAY</strong>Clinics</td><td><strong>N/A</strong></td><td><strong>OCT</strong>27<strong>NOV</strong>3, 10, 17<strong>DEC</strong>1, 8</td><td><strong>JAN</strong>12, 19, 26<strong>FEB</strong>2, 9, 16</td></tr><tr><td><strong>THURSDAY</strong>Clinics</td><td><strong>SEPT</strong>17, 24<strong>OCT</strong>1, 8, 15, 22</td><td><strong>N/A</strong></td><td><strong>N/A</strong><br></td></tr><tr><td><strong>FRIDAY</strong>Clinics</td><td><strong>N/A</strong></td><td><strong>NOV</strong>6, 13, 20<strong>DEC</strong>4, 11, 18</td><td><strong>JAN</strong>8, 15, 22, 29<strong>FEB</strong>5, 12</td></tr><tr><td><strong>SATURDAY</strong>In-HouseLeagues</td><td><strong>SEPT</strong>12, 19, 26<strong>OCT</strong>3, 10, 17</td><td><strong><strong>OCT</strong></strong>24, 31<strong><strong>NOV</strong></strong>7, 14, 21<strong><strong>DEC</strong></strong>5</td><td><strong>JAN</strong>9, 16, 23, 30<strong>FEB</strong>6, 13</td></tr></tbody></table><br></div></div><div id="Schedule"><table><tbody></tbody></table></div>
+  <input type="radio" id="tab4" name="tabGroup1" class="tab" />
+  <label for="tab4">Soccer Starts at Home</label>
+
+  <input type="radio" id="tab5" name="tabGroup1" class="tab" />
+  <label for="tab5">CAMPS</label>
+
+    <!-- This begins the content for Tabbed Section 1 -->
+    <div class="tab__content" id="About CFSA">
+      <ul>
+        <li class="header">Weekly supplemental soccer clinics for beginners & developing players</li>
+          <ul class="sub">
+            <li>CFSA Minis Ages 3 - 4</li>
+            <li>CFSA K-1 Instructional Ages 5 - 7</li>
+            <li>CFSA U9 - U11 Ages 8 - 11</li>
+            <li>CFSA U11 - U14 Ages 10 - 14</li>
+          </ul>
+        <li class="header">Invitation based advanced training for aspiring & experienced players</li>
+          <ul class="sub">
+            <li>CFSA Juniors Academy Ages 5 - 8</li>
+            <li>CFSA Advanced Ages 9 - 18</li>
+          </ul>
+        <li class="header">In-House soccer leagues for individuals without or with a team</li>
+          <ul class="sub">
+            <li>In-House Youth League Ages 6 - 11 - Individual player registration</li>
+            <li>High School 4v4 League Ages 13 - 18 - Individual and team registration</li>
+          </ul>
+        <li class="header">Seasonal youth soccer camps</li>
+          <ul class="sub">
+            <li>Winter, Spring & Summer Ages 3 - 14</li>
+          </ul>
+      </ul>
     </div>
-    <div class="tab__content" id="Registration">
-        <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
-            <span style="font-weight:bold;">Ready To Register?</span>
-            Follow the link to the right to create an account and register for the upcoming program! **How To Get Started!**
-        </div>    
-        <div style="position: fixed; left: 475px; top: 10px;"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_clickhere-01.png" width="200px"></div>
-        
-        <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%); top: 100px;">
-            Follow the link to the right for a step-by-step guide on how to register for Juniors Academy!
-        </div>
-        <div style="position: fixed; left: 475px; top: 100px;"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_clickhere-01.png" width="200px"></div>
-        
-        <div style="border-right: #ffe900 solid 2px; width: 450px; width: 450px; position: fixed; left: 0; top: 200px; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
-            <span style="font-weight:bold;">Any Questions?</span> Please reach out to Ben Gunter with any program questions!
-        </div>
-        <div style="position: fixed; left: 475px; top: 200px;"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/email_benn_yellow-01.png" width="200px"></div>
-
+  
+    <div class="tab__content" id="Dates">
+      <table class="dates">
+        <tbody>
+          <tr>
+            <th class="col1">DAY / PROGRAM<br /></th>
+            <th class="col2">FALL I - 2020</th>
+            <th class="col2">FALL II - 2020</th>
+            <th class="col2">WINTER I - 2021</th>
+          </tr>
+          <tr>
+            <td class="col1"><strong>SUNDAY</strong>/ Clinics</td>
+            <td class="col2"><strong>SEPT </strong>13, 20, 27;<strong>OCT </strong>4, 11, 18</td>
+            <td class="col2"><strong>OCT </strong>25;<strong>NOV </strong>1, 8, 15, 22<strong>DEC </strong>6</td>
+            <td class="col2"><strong>JAN </strong>10, 17, 24, 31<strong>FEB</strong>7, 14</td>
+          </tr>
+          <tr>
+            <td class="col1"><strong>TUESDAY</strong>/ Clinics</td>
+            <td class="col2"><strong>N/A</strong></td>
+            <td class="col2"><strong>OCT </strong>27;<strong>NOV </strong>3, 10, 17;<strong>DEC</strong>1, 8</td>
+            <td class="col2"><strong>JAN </strong>12, 19, 26;<strong>FEB </strong>2, 9, 16</td>
+          </tr>
+          <tr>
+            <td class="col1"><strong>THURSDAY</strong>/ Clinics</td>
+            <td class="col2"><strong>SEPT </strong>17, 24;<strong>OCT </strong>1, 8, 15, 22</td>
+            <td class="col2"><strong>N/A</strong></td>
+            <td class="col2"><strong>N/A</strong><br /></td>
+          </tr>
+          <tr>
+            <td class="col1"><strong>FRIDAY</strong>/ Clinics</td>
+            <td class="col2"><strong>N/A</strong></td>
+            <td class="col2"><strong>NOV </strong>6, 13, 20;<strong>DEC </strong>4, 11, 18</td>
+            <td class="col2"><strong>JAN </strong>8, 15, 22, 29;<strong>FEB </strong>5, 12</td>
+          </tr>
+          <tr>
+            <td class="col1"><strong>SATURDAY</strong>/ In-HouseLeagues</td>
+            <td class="col2"><strong>SEPT </strong>12, 19, 26;<strong>OCT </strong>3, 10, 17</td>
+            <td class="col2"><strong>OCT </strong>24, 31;<strong>NOV </strong>7, 14, 21;<strong>DEC</strong>5</td>
+            <td class="col2"><strong>JAN </strong>9, 16, 23, 30;<strong>FEB </strong>6, 13</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="tab__content" id="Training Locations">
-        TAB FOUR CONTEN</div>
-    
+  
+    <div class="tab__content" id="COACHES">
+      <div>Tab Content for COACHES</div>
+    </div>
+  
+    <div class="tab__content" id="Soccer Starts at Home">
+      <div>TAB Content for #SSAH</div>
+    </div>
+
+    <div class="tab__content" id="Camps">
+      <div>TAB Content for Camps</div>
+    </div>
 </div>
+<!-- End Section - CLEVELAND FORCE SOCCER ACADEMY-->
+
+<!-- Tabbed Section - WEEKLY SUPPLEMENTAL CLINICS - DEVELOPING PLAYERS -->
+<div class="section_header" id="tabGroup2">WEEKLY SUPPLEMENTAL CLINICS - DEVELOPING PLAYERS</div>
+<div class="tab-wrap" id="tabGroup2">
+  <input type="radio" id="tab6" name="tabGroup2" class="tab" />
+  <label for="tab6">Ages 3-4</label>
+
+  <input type="radio" id="tab7" name="tabGroup2" class="tab" />
+  <label for="tab7">Ages 5-7</label>
+
+  <input type="radio" id="tab8" name="tabGroup2" class="tab" />
+  <label for="tab8">Ages 9-11</label>
+
+  <input type="radio" id="tab9" name="tabGroup2" class="tab" />
+  <label for="tab9">Ages 11-14</label>
+
+  <input type="radio" id="tab10" name="tabGroup2" class="tab" />
+  <label for="tab10">Ages 14-18</label>
+
+  <div class="tab__content" id="Ages 3-4">
+  <div>TAB Content for Section 2</div>
+  </div>
+
+  <div class="tab__content" id="Ages 3-4">
+    <div>TAB Content for Section 2</div>
+  </div>
+
+  <div class="tab__content" id="Ages 3-4">
+    <div>TAB Content for Section 2</div>
+  </div>
+
+  <div class="tab__content" id="Ages 3-4">
+    <div>TAB Content for Section 2</div>
+  </div>
+
+  <div class="tab__content" id="Ages 3-4">
+    <div>TAB Content for Section 2</div>
+  </div>
 </div>
+<!-- End Section - WEEKLY SUPPLEMENTAL CLINICS - DEVELOPING PLAYERS -->
 
-</div><!-- End_Module_1000831 --></div>
-			<div class="clear-both"></div>
-		</div>
-	</div>
-</div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-1000832"><a name="1000832"></a>
-<div class="dtCNWrapper">
-	<div class="dtContainer">
-		<h2 class="dtHead">
-			<div class="dtFloat-left"></div>
-			<div class="dtIcon"></div>
-			<span id="dnn_ctr1000832_dnnTITLE_titleLabel" class="dtTitle">WEEKLY SUPPLEMENTAL CLINICS - DEVELOPING PLAYERS</span>
+<!-- Tabbed Section - IN-HOUSE SOCCER LEAGUES -->
+<div class="section_header" id="tabGroup3">IN-HOUSE SOCCER LEAGUES</div>
+<div class="tab-wrap" id="tabGroup3">
+  <input type="radio" id="tab11" name="tabGroup3" class="tab" />
+  <label for="tab11">Ages 6-8</label>
 
+  <input type="radio" id="tab12" name="tabGroup3" class="tab" />
+  <label for="tab12">Ages 9-11</label>
 
+  <input type="radio" id="tab13" name="tabGroup3" class="tab" />
+  <label for="tab13">High School 4&#x1F19A;4</label>
 
-			<div class="clear-both"></div>
-		</h2>
-		<div class="dtContent">
-			<div id="dnn_ctr1000832_ContentPane"><!-- Start_Module_1000832 --><div id="dnn_ctr1000832_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
-	<div id="dnn_ctr1000832_HtmlModule_lblContent" class="Normal">
-	<style>
-.tab-wrap {
-  /* -webkit-transition: 0.3s box-shadow ease; */
-  /* transition: 0.3s box-shadow ease; */
-  /* border-radius: 6px; */
-  max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: relative;
-  list-style: none;
-  background-color: #fff;
-  /* margin: 40px 0; */
-  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
-}
-/**************************
-.tab-wrap:hover {
-  box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
-}
-*****************************/
-
-.tab {
-  display: none;
-}
-.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:first-of-type:not(:last-of-type) + label {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.tab:not(:first-of-type):not(:last-of-type) + label {
-  border-radius: 0;
-}
-.tab:last-of-type:not(:first-of-type) + label {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.tab:checked + label {
-  background-color: #f9eb0d;
-  box-shadow: 0 -1px 0 #fff inset;
-  cursor: default;
-}
-.tab:checked + label:hover {
-  box-shadow: 0 -1px 0 #fff inset;
-  background-color: #f9eb0d;
-}
-.tab + label {
-  box-shadow: 0 -1px 0 #eee inset;
-  /* border-radius: 6px 6px 0 0; */
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  color: #194077;
-  font-weight: 500;
-  font-size: 18pt;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-  text-align: center;
-  background-color: #f2f2f2;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  text-align: center;
-  -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
-  transition: 0.3s background-color ease, 0.3s box-shadow ease;
-  height: 50px;
-  box-sizing: border-box;
-  padding: 15px;
-}
-.tab + label:hover {
-  background-color: #f9f9f9;
-  /* box-shadow: 0 1px 0 #f4f4f4 inset; */
-}
-.tab__content {
-  padding: 10px;
-  background-color: transparent;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  opacity: 0;
-  left: 0;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-  border-radius: 6px;
-}
-.schedule_inner {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 450;
-    font-size: 13pt;
-    border-right: solid; 
-    width: 300px;
-    padding: 10px;
-}
-.schedule_outer {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 450;
-    font-size: 13pt; 
-    width: 300px;
-    padding: 10px;
-}
-
-</style>
-
-<div>
-    &nbsp;</div>
-
-<div class="tab-wrap">
-    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked="">
-    <label for="tab1">Ages 3-4</label>
-    
-    <input type="radio" id="tab2" name="tabGroup1" class="tab">
-    <label for="tab2">&nbsp;Ages 5-7</label>
-
-    <input type="radio" id="tab3" name="tabGroup1" class="tab">
-    <label for="tab3">&nbsp;Ages 9-11</label>
-    
-    <input type="radio" id="tab4" name="tabGroup1" class="tab">
-    <label for="tab4">Ages 11-14</label>
-
-    <input type="radio" id="tab5" name="tabGroup1" class="tab">
-    <label for="tab5">Ages 14-18</label><div class="tab__content" id="Training">&nbsp;<table class="" style="width: 900px;" align="center"><tbody><tr><td colspan="4" style="text-align: center;">&nbsp;<img src="https://bsbproduction.s3.amazonaws.com/portals/1178/images/soccer/20-%20ptbs/21_test-01.png" alt="" style="width: 960px; height: 167px;"></td></tr><tr><td style="border-right: 3px solid rgb(0, 51, 102); text-align: center;" class=""><span style="font-size: 18px;"><br><span style="color: rgb(0, 51, 102);">&nbsp;<strong>2020 Fall I Session</strong></span></span><br><strong><span style="color: rgb(255, 102, 0);">@ Force Rocky River</span></strong><br><br><span style="color: rgb(0, 0, 0);"><strong>Sundays</strong><br>11:00am - 11:45am<br>September 13 - October 18</span><br><br></td><td style="border-right: 3px solid rgb(0, 51, 102); text-align: center;" class=""><br><span style="font-size: 18px;"><span style="color: rgb(0, 51, 102);">&nbsp;<strong>2020 Fall II Session</strong></span></span><br><strong><span style="color: rgb(255, 102, 0);">@ Force Rocky River</span></strong><br><br><span style="color: rgb(0, 0, 0);"><strong>Sundays</strong><br>11:00am - 11:45am<br>October 25 - December 6</span><strong><br></strong><br></td><td style="border-right: 3px solid rgb(0, 51, 102); text-align: center;" class=""><br><span style="font-size: 18px;"><span style="color: rgb(0, 51, 102);">&nbsp;<strong>2021 Winter I Session</strong></span></span><br><strong><span style="color: rgb(255, 102, 0);">@ Force Rocky River</span></strong><br><br><span style="color: rgb(0, 0, 0);"><strong>Sundays</strong><br>11:00am - 11:45am<br>January 10 - February 14</span></td><td style="text-align: center;">&nbsp;&nbsp;<br><span style="font-size: 18px;"><strong><span style="color: rgb(0, 51, 102);">2021 Spring I Session</span></strong></span><br><strong><span style="color: rgb(255, 102, 0);">@ Force Rocky River</span></strong><br><br><span style="color: rgb(0, 0, 0);"><strong>Sundays</strong><br>11:00am - 11:45am<br>January 10 - February 14</span></td></tr><tr><td style="text-align: center;">&nbsp;<strong><span style="color: rgb(255, 0, 0);"><a href="https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=1469&amp;GroupID=2777364" target="_blank"></a>CLASS FULL</span></strong></td><td style="text-align: center;"><span style="color: rgb(51, 51, 255);"><strong>REGISTER HERE</strong></span></td><td style="text-align: center;">&nbsp;<span style="color: rgb(51, 51, 255);"><strong><a href="https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=1469&amp;GroupID=2777366" target="_blank"></a>REGISTER HERE</strong></span></td><td style="text-align: center;"><span style="color: rgb(51, 51, 255);">REGISTER HERE&nbsp;</span></td></tr></tbody></table>
-    </div>
-    <div class="tab__content" id="Price" style="font: 400 15pt &quot;Fira Sans&quot;, arial; color: rgb(74, 74, 74); text-align: center;">
-        <div>Price per Player</div>
-        <div>$575 (30 sessions)</div>
-        <div>$975 (60 sessions)</div>
-        <div>*Paid in monthly installments</div>
-        <div>🔵 Price includes a training shirt</div>
-    </div>
-    <div class="tab__content" id="Schedule">
-        <table>
-            <tbody><tr>
-                <td class="schedule_inner" style="text-align: center;">
-                    <div><img src="https://www.force-sports.com/Portals/1178/Users/032/24/878624/20_CFSA_Minis_PTB4-01.png"></div>
-                    <div><br><strong>2020 Fall I Session</strong><br><strong>@ Force Rocky River</strong><br><br><strong>Sundays</strong><br>11:00am - 11:45am<br>September 13 - October 18<strong><br></strong><strong><a href="https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=1469&amp;GroupID=2777364" target="_blank">&nbsp;</a>CLASS FULL</strong><br>----------------------------------------------<br><strong>2020 Fall II Session</strong><br><strong>@ Force Rocky River</strong><br><br><strong>Sundays</strong><br>11:00am - 11:45am<br>October 25 - December 6<strong><br></strong><a href="https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=1469&amp;GroupID=2777365" target="_blank"><strong>More Information&nbsp;</strong><strong>&amp; Registration</strong></a></div>
-                </td>
-                <td class="schedule_inner" style="text-align: center;">
-                    <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessionii_block_upd-01.png" alt="Session II" width="300px"></div>
-                    <div>Oct 24, 31; Nov 7, 14, 21 Dec 5</div>
-                    <div>Tuesdays 6:00pm-7:00pm (west)</div>
-                    <div>Oct 27; Nov 3, 10, 17; Dec 1, 8</div>
-                    <div>Wednesdays 6pm-7pm (central)</div>
-                    <div>28; Nov 4, 11, 18; Dec 2, 9</div>
-                </td>
-                <td class="schedule_outer">
-                    <div style="text-align: center;"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessioniii_block_upd-01.png" alt="Session III" width="300px"></div>
-                    <div style="text-align: center;">Saturdays 9:00am-10:00am (both locations)</div>
-                    <div style="text-align: center;">Jan 9, 16, 23, 30; Feb 6, 13</div>
-                    <div style="text-align: center;">Tuesdays 6:00pm-7:00pm (west)</div>
-                    <div style="text-align: center;">Jan 12, 19, 26; Feb 2, 9, 16</div>
-                    <div style="text-align: center;">Wednesdays 6pm-7pm (central)</div>
-                    <div style="text-align: center;">Jan 13, 20, 27; Feb 3, 10, 17</div>
-                </td>
-            </tr>
-            <tr>
-                <td class="schedule_inner">
-                    <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessioniv_block_upd-01.png" alt="Session IV" width="300px"></div>
-                    <div>Saturdays 9:00am-10:00am (both locations)</div>
-                    <div>Feb 20, 27; Mar 6, 13, 20, 27</div>
-                    <div>Tuesdays 6:00pm-7:00pm (west)</div>
-                    <div>Feb 23; Mar 2, 9, 16, 23, 30</div>
-                    <div>Wednesdays 6pm-7pm (central)</div>
-                    <div>Feb 24; Mar 3, 10, 17, 24, 31</div>
-                </td>
-                <td class="schedule_inner">
-                    <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessionv_block_upd-01.png" alt="Session V" width="300px"></div>
-                    <div>Saturdays 9:00am-10:00am (both locations)</div>
-                    <div>Apr 17, 24; May 1, 8, 15, 22</div>
-                    <div>Tuesdays 6:30pm-7:30pm (central)</div>
-                    <div>Apr 20, 27; May 4, 11, 18, 25</div>
-                    <div>Thursdays 6:30pm-7:30pm (west)</div>
-                    <div>Apr 22, 29; May 6, 13, 20, 27</div>
-                </td>
-                <td class="schedule_outer">
-                    <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/cfja_director_block-01.png" alt="Session IV" width="300px">"</div>
-                    <div>
-                        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/ben%20gunter.jpg" width="250px">
-                    </div>
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tab__content" id="Registration">
-        <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
-            <span style="font-weight:bold;">Ready To Register?</span>
-            Follow the link to the right to create an account and register for the upcoming program! **How To Get Started!**
-        </div>    
-        <div style="position: fixed; left: 475px; top: 10px;"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_clickhere-01.png" width="200px"></div>
-        
-        <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%); top: 100px;">
-            Follow the link to the right for a step-by-step guide on how to register for Juniors Academy!
-        </div>
-        <div style="position: fixed; left: 475px; top: 100px;"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_clickhere-01.png" width="200px"></div>
-        
-        <div style="border-right: #ffe900 solid 2px; width: 450px; width: 450px; position: fixed; left: 0; top: 200px; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
-            <span style="font-weight:bold;">Any Questions?</span> Please reach out to Ben Gunter with any program questions!
-        </div>
-        <div style="position: fixed; left: 475px; top: 200px;"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/email_benn_yellow-01.png" width="200px"></div>
-
-    </div>
-    <div class="tab__content" id="Training Locations">
-        TAB FOUR CONTEN</div>
-    
+  <input type="radio" id="tab14" name="tabGroup3" class="tab" />
+  <label for="tab14">Team Youth Leagues</label>
 </div>
+<!-- End Section - IN-HOUSE SOCCER LEAGUES -->
+
+<!-- Tabbed Section - ADVANCED TRAINING -->
+<div class="section_header" id="tabGroup4">ADVANCED TRAINING</div>
+<div class="tab-wrap" id="tabGroup4">
+  <input type="radio" id="tab15" name="tabGroup4" class="tab" />
+  <label for="tab15">Juniors Academy: Ages 6-8</label>
+
+  <input type="radio" id="tab16" name="tabGroup4" class="tab" />
+  <label for="tab16">CFSA Advanced Ages 9-14</label>
+
+  <input type="radio" id="tab17" name="tabGroup4" class="tab" />
+  <label for="tab17">CFSA Advanced Ages 14-18</label>
+
+  <input type="radio" id="tab18" name="tabGroup4" class="tab" />
+  <label for="tab18">A.O.E.</label>
 </div>
-
-</div><!-- End_Module_1000832 --></div>
-			<div class="clear-both"></div>
-		</div>
-	</div>
-</div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-1000834"><a name="1000834"></a>
-<div class="dtCNWrapper">
-	<div class="dtContainer">
-		<h2 class="dtHead">
-			<div class="dtFloat-left"></div>
-			<div class="dtIcon"></div>
-			<span id="dnn_ctr1000834_dnnTITLE_titleLabel" class="dtTitle">IN-HOUSE SOCCER LEAGUES</span>
-
-
-
-			<div class="clear-both"></div>
-		</h2>
-		<div class="dtContent">
-			<div id="dnn_ctr1000834_ContentPane"><!-- Start_Module_1000834 --><div id="dnn_ctr1000834_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
-	<div id="dnn_ctr1000834_HtmlModule_lblContent" class="Normal">
-	<style>
-.tab-wrap {
-  /* -webkit-transition: 0.3s box-shadow ease; */
-  /* transition: 0.3s box-shadow ease; */
-  /* border-radius: 6px; */
-  max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: relative;
-  list-style: none;
-  background-color: #fff;
-  /* margin: 40px 0; */
-  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
-}
-/**************************
-.tab-wrap:hover {
-  box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
-}
-*****************************/
-
-.tab {
-  display: none;
-}
-.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:first-of-type:not(:last-of-type) + label {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.tab:not(:first-of-type):not(:last-of-type) + label {
-  border-radius: 0;
-}
-.tab:last-of-type:not(:first-of-type) + label {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.tab:checked + label {
-  background-color: #f9eb0d;
-  box-shadow: 0 -1px 0 #fff inset;
-  cursor: default;
-}
-.tab:checked + label:hover {
-  box-shadow: 0 -1px 0 #fff inset;
-  background-color: #f9eb0d;
-}
-.tab + label {
-  box-shadow: 0 -1px 0 #eee inset;
-  /* border-radius: 6px 6px 0 0; */
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  color: #194077;
-  font-weight: 500;
-  font-size: 18pt;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-  text-align: center;
-  background-color: #f2f2f2;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  text-align: center;
-  -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
-  transition: 0.3s background-color ease, 0.3s box-shadow ease;
-  height: 50px;
-  box-sizing: border-box;
-  padding: 15px;
-}
-.tab + label:hover {
-  background-color: #f9f9f9;
-  /* box-shadow: 0 1px 0 #f4f4f4 inset; */
-}
-.tab__content {
-  padding: 10px;
-  background-color: transparent;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  opacity: 0;
-  left: 0;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-  border-radius: 6px;
-}
-.schedule_inner {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 450;
-    font-size: 13pt;
-    border-right: solid; 
-    width: 300px;
-    padding: 10px;
-}
-.schedule_outer {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 450;
-    font-size: 13pt; 
-    width: 300px;
-    padding: 10px;
-}
-
-</style>
-
-<div>
-    &nbsp;</div>
-
-<div class="tab-wrap">
-    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked="">
-    <label for="tab1">AGES 6-8</label>
-    
-    <input type="radio" id="tab2" name="tabGroup1" class="tab">
-    <label for="tab2">AGES 9-11</label>
-
-    <input type="radio" id="tab3" name="tabGroup1" class="tab">
-    <label for="tab3">HIGH SCHOOL 4V4</label>
-    
-    <input type="radio" id="tab4" name="tabGroup1" class="tab">
-    <label for="tab4">TEAM YOUTH LEAGUES</label>
-
-    <input type="radio" id="tab5" name="tabGroup1" class="tab">
-    <div class="tab__content" id="Training">&nbsp;
-    </div>
-    <div class="tab__content" id="Price" style="font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
-        &nbsp;    </div>
-    <div class="tab__content" id="Schedule">
-        <table>
-            <tbody>
-            <tr>
-                
-                
-                
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tab__content" id="Registration">
-        <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
-            </div>
-
-    </div>
-    <div class="tab__content" id="Training Locations">
-        TAB FOUR CONTENT
-    </div>
-    
-</div>
-</div>
-
-</div><!-- End_Module_1000834 --></div>
-			<div class="clear-both"></div>
-		</div>
-	</div>
-</div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-1000836"><a name="1000836"></a>
-<div class="dtCNWrapper">
-	<div class="dtContainer">
-		<h2 class="dtHead">
-			<div class="dtFloat-left"></div>
-			<div class="dtIcon"></div>
-			<span id="dnn_ctr1000836_dnnTITLE_titleLabel" class="dtTitle">ADVANCED TRAINING</span>
-
-
-
-			<div class="clear-both"></div>
-		</h2>
-		<div class="dtContent">
-			<div id="dnn_ctr1000836_ContentPane"><!-- Start_Module_1000836 --><div id="dnn_ctr1000836_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
-	<div id="dnn_ctr1000836_HtmlModule_lblContent" class="Normal">
-	<style>
-.tab-wrap {
-  /* -webkit-transition: 0.3s box-shadow ease; */
-  /* transition: 0.3s box-shadow ease; */
-  /* border-radius: 6px; */
-  max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: relative;
-  list-style: none;
-  background-color: #fff;
-  /* margin: 40px 0; */
-  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
-}
-/**************************
-.tab-wrap:hover {
-  box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
-}
-*****************************/
-
-.tab {
-  display: none;
-}
-.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
-  opacity: 1;
-  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  top: 0;
-  z-index: 100;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  text-shadow: 0 0 0;
-}
-.tab:first-of-type:not(:last-of-type) + label {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.tab:not(:first-of-type):not(:last-of-type) + label {
-  border-radius: 0;
-}
-.tab:last-of-type:not(:first-of-type) + label {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.tab:checked + label {
-  background-color: #f9eb0d;
-  box-shadow: 0 -1px 0 #fff inset;
-  cursor: default;
-}
-.tab:checked + label:hover {
-  box-shadow: 0 -1px 0 #fff inset;
-  background-color: #f9eb0d;
-}
-.tab + label {
-  box-shadow: 0 -1px 0 #eee inset;
-  /* border-radius: 6px 6px 0 0; */
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  color: #194077;
-  font-weight: 500;
-  font-size: 18pt;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-  text-align: center;
-  background-color: #f2f2f2;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  text-align: center;
-  -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
-  transition: 0.3s background-color ease, 0.3s box-shadow ease;
-  height: 50px;
-  box-sizing: border-box;
-  padding: 15px;
-}
-.tab + label:hover {
-  background-color: #f9f9f9;
-  /* box-shadow: 0 1px 0 #f4f4f4 inset; */
-}
-.tab__content {
-  padding: 10px;
-  background-color: transparent;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  opacity: 0;
-  left: 0;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-  border-radius: 6px;
-}
-.schedule_inner {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 450;
-    font-size: 13pt;
-    border-right: solid; 
-    width: 300px;
-    padding: 10px;
-}
-.schedule_outer {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 450;
-    font-size: 13pt; 
-    width: 300px;
-    padding: 10px;
-}
-
-</style>
-
-<div>
-    &nbsp;</div>
-
-<div class="tab-wrap">
-    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked="">
-    <label for="tab1">JUNIORS AGES 6-8</label>
-    
-    <input type="radio" id="tab2" name="tabGroup1" class="tab">
-    <label for="tab2">CFSA ADVANCED AGES 9-14</label>
-
-    <input type="radio" id="tab3" name="tabGroup1" class="tab">
-    <label for="tab3">CFSA ADVANCED AGED 14-18</label>
-    
-    <input type="radio" id="tab4" name="tabGroup1" class="tab">
-    <label for="tab4">A.O.E.</label><div class="tab__content" id="Training">&nbsp;
-    </div>
-    <div class="tab__content" id="Price" style="font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
-        &nbsp;    </div>
-    <div class="tab__content" id="Schedule">
-        <table>
-            <tbody>
-            <tr>
-                
-                
-                
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tab__content" id="Registration">
-        <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
-            </div>
-
-    </div>
-    <div class="tab__content" id="Training Locations">
-        TAB FOUR CONTENT
-    </div>
-    
-</div>
-</div>
-
-</div><!-- End_Module_1000836 --></div>
+<!-- End Section - ADVANCED TRAINING -->
