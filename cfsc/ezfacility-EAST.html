@@ -355,8 +355,8 @@
   }
   ul.sub {
     list-style-type: circle;
-    margin-left: 12pt;
-    padding-left: 0pt;
+    margin:  0 0 0 12pt;
+    padding: 0 0 0 0;
   }
   table.dates {
     border-collapse: collapse;
@@ -383,8 +383,9 @@
     padding: 3px;
   }
   td.left_box {
-    width: 60%;
+    width: 50%;
     padding-right: 5px;
+    vertical-align: text-top;
   }
   td.right_box {
     border-left: 1px dashed #194077;
@@ -392,19 +393,23 @@
     vertical-align: text-top;
   }
   .sub_header {
-    font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Fira Sans SemiBold', Arial, Helvetica, sans-serif;
     font-size: 13pt;
-    font-weight: 500;
     background-color: #194077;
     color: #f9eb0d;
-    padding: 5px;
-    width: 310px;
+    padding: 0 3px 3px 3px;
   }
   .sub_dates, .sub_times, .sub_info {
-    font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Fira Sans Book', Arial, Helvetica, sans-serif;
     font-size: 11pt;
-    font-weight: 300;
-    margin: 3px 0 0 7px;
+    font-weight: 350;
+    margin: 3px 0 5px 7px;
+    padding-top: 3px;
+  }
+  .day {
+    background-color: #f9eb0d;
+    font-weight: 500;
+    color: #194077;
   }
 </style>
 <!-- About Force Soccer Academy Section -->
@@ -539,7 +544,7 @@
       <tr>
         <td class="left_box">
           <div>This program is not only an excellent way to introduce your little athlete to soccer, but an awesome way to introduce the different dimensions of learning. Through this environment we look to activate learning through:
-              <ul>
+              <ul class="sub">
                   <li>Mobility</li>
                   <li>Decision Making</li>
                   <li>Listening skills</li>
@@ -549,21 +554,21 @@
         </td>
         <td class="right_box">
           <div>
-            <div class="sub_header">2020 Fall I Session @ Force - Richmond</div>
-            <div class="sub_times">Sundays -- 11:00am - 12:00pm</div>
+            <span class="sub_header">2020 Fall I Session @ Force - Richmond</span>
+            <div class="sub_times"><span class="day">Sundays</span> -- 11:00am - 12:00pm</div>
             <div class="sub_dates">September 13 - October 18</div>
             <div class="sub_info">More Information & Registration</div>
           </div>
           <div>
-            <div class="sub_header">2020 Fall II Session @ Force - Richmond</div>
-            <div class="sub_times">Sundays -- 11:00am - 12:00pm</div>
-            <div class="sub_dates">September 13 - October 18</div>
+            <span class="sub_header">2020 Fall II Session @ Force - Richmond</span>
+            <div class="sub_times"><span class="day">Sundays</span> -- 11:00am - 12:00pm</div>
+            <div class="sub_dates">October 25 - December 6</div>
             <div class="sub_info">More Information & Registration</div>
           </div>
           <div>
-            <div class="sub_header">2020 Winter I Session @ Force - Richmond</div>
-            <div class="sub_times">Sundays -- 11:00am - 12:00pm</div>
-            <div class="sub_dates">September 13 - October 18</div>
+            <span class="sub_header">2020 Winter I Session @ Force - Richmond</span>
+            <div class="sub_times"><span class="day">Sundays</span> -- 11:00am - 12:00pm</div>
+            <div class="sub_dates">January 10 - February 14</div>
             <div class="sub_info">More Information & Registration</div>
           </div>
         </td>
@@ -571,19 +576,54 @@
     </table>
 </div>
 
-  <div class="tab__content">
+  <div class="tab__content" id="Ages:5-7">
+    <table>
+      <tr>
+        <td class="left_box">
+          <div>This program is geared to introduce our players and families into our 4 pillars of player development:
+              <ul class="sub">
+                <li>Mental</li>
+                <li>Physical (Mobility)</li>
+                <li>Technical</li>
+              </ul>
+              These clinics are designed to focus greatly on the first 3 of these pillars, to help give the individual the ability to succeed in various environments. Experienced Cleveland Force Soccer Academy Trainers will work to build a solid foundation of agility, coordination, sportsmanship and listening skills. We <em>highly</em> recommend a <em>size 3</em> soccer ball for this age group; and a size 1 soccer ball for @ home. This program is also part of our <a href="https://bit.ly/cfsc_ssah">Soccer Starts at Home (#SSAH)</a> initiative.
+          </div>
+        </td>
+        <td class="right_box">
+          <div>
+            <span class="sub_header">2020 Fall I Session @ Force - Richmond</span>
+            <div class="sub_times"><span class="day">Tuesdays</span> -- 5:30pm - 6:30pm</div>
+            <div class="sub_dates">September 15 - October 20</div>
+            <div class="sub_info">More Information & Registration</div>
+            <hr>
+            <div class="sub_times"><span class="day">Sundays</span> -- 12:00pm - 1:00pm</div>
+            <div class="sub_dates">September 13 - October 18</div>
+            <div class="sub_info">More Information & Registration</div>
+          </div>
+          <div>
+            <span class="sub_header">2020 Fall II Session @ Force - Richmond</span>
+            <div class="sub_times"><span class="day">Wednesdays</span> -- 6:00pm - 7:00pm</div>
+            <div class="sub_dates">October 28 - December 9</div>
+            <div class="sub_info">More Information & Registration</div>
+            <hr>
+            <div class="sub_times"><span class="day">Sundays</span> -- 12:00am - 1:00pm</div>
+            <div class="sub_dates">October 25 - December 6</div>
+            <div class="sub_info">More Information & Registration</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="tab__content" id="Ages:9-11">
     <div>TAB Content for Section 2</div>
   </div>
 
-  <div class="tab__content">
+  <div class="tab__content" id="Ages:11-14">
     <div>TAB Content for Section 2</div>
   </div>
 
-  <div class="tab__content">
-    <div>TAB Content for Section 2</div>
-  </div>
-
-  <div class="tab__content">
+  <div class="tab__content" id="Ages:14-18">
     <div>TAB Content for Section 2</div>
   </div>
 </div>
