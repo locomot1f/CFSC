@@ -303,8 +303,8 @@
     display: block;
     text-decoration: none;
     color: #194077;
-    font-weight: 400;
-    font-size: 14pt;
+    font-weight: 500;
+    font-size: 15pt;
     font-family: 'Fira Sans', Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     -webkit-box-flex: 3;
     -ms-flex-positive: 3;
@@ -318,9 +318,9 @@
     text-align: center;
     -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
     transition: 0.3s background-color ease, 0.3s box-shadow ease;
-    height: 50px;
+    height: 35px;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 5px;
   }
   .tab + label:hover {
     background-color: #f9f9f9;
@@ -338,15 +338,15 @@
     transform: translateY(-3px);
     border-radius: 6px;
   }
-  .section_header {
-    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    font-size: 16pt;
-
-  }
   .tab__content {
     font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
     font-size: 12pt;
+  }
+  .section_header {
+    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 15pt;
+    padding: 5px 0 5px 0;
   }
   li.header {
     font-weight: 500;
@@ -354,6 +354,7 @@
     padding: 0;
   }
   ul.sub {
+    list-style-type: circle;
     margin-left: 12pt;
     padding-left: 0pt;
   }
@@ -381,9 +382,39 @@
     border-left: 1px solid #000000;
     padding: 3px;
   }
+  td.left_box {
+    width: 60%;
+    padding-right: 5px;
+  }
+  td.right_box {
+    border-left: 1px dashed #194077;
+    padding-left: 5px;
+    vertical-align: text-top;
+  }
+  .sub_header {
+    font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    font-weight: 500;
+    background-color: #194077;
+    color: #f9eb0d;
+    padding: 5px;
+    width: 310px;
+  }
+  .sub_dates, .sub_times, .sub_info {
+    font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+    margin: 3px 0 0 7px;
+  }
 </style>
+<!-- About Force Soccer Academy Section -->
+<div>
+  Through positive coaching and customer service <em>"Force Soccer Academy"</em> strives to develop a soccer training environment. The mission of FSA is to provide professional, educational, competitive and individual development for players, teams, communities and coaches.
+</div> 
+<!-- End About Force Soccer Academy Section-->
+
 <!-- Tabbed Section - CLEVELAND FORCE SOCCER ACADEMY -->
-<div class="section_header" id="tabGroup1">CLEVELAND FORCE SOCCER ACADEMY</div>
+<div class="section_header" id="tabGroup1">&#x1F53B;CLEVELAND FORCE SOCCER ACADEMY</div>
 <div class="tab-wrap" id="tabGroup1">
 
   <input type="radio" id="tab1" name="tabGroup1" class="tab" checked />
@@ -462,7 +493,7 @@
             <td class="col2"><strong>JAN </strong>8, 15, 22, 29;<strong>FEB </strong>5, 12</td>
           </tr>
           <tr>
-            <td class="col1"><strong>SATURDAY</strong>/ In-HouseLeagues</td>
+            <td class="col1"><strong>SATURDAY</strong>/ In-House Leagues</td>
             <td class="col2"><strong>SEPT </strong>12, 19, 26;<strong>OCT </strong>3, 10, 17</td>
             <td class="col2"><strong>OCT </strong>24, 31;<strong>NOV </strong>7, 14, 21;<strong>DEC</strong>5</td>
             <td class="col2"><strong>JAN </strong>9, 16, 23, 30;<strong>FEB </strong>6, 13</td>
@@ -486,9 +517,9 @@
 <!-- End Section - CLEVELAND FORCE SOCCER ACADEMY-->
 
 <!-- Tabbed Section - WEEKLY SUPPLEMENTAL CLINICS - DEVELOPING PLAYERS -->
-<div class="section_header" id="tabGroup2">WEEKLY SUPPLEMENTAL CLINICS - DEVELOPING PLAYERS</div>
+<div class="section_header" id="tabGroup2">&#x1F53B;WEEKLY SUPPLEMENTAL CLINICS - DEVELOPING PLAYERS</div>
 <div class="tab-wrap" id="tabGroup2">
-  <input type="radio" id="tab6" name="tabGroup2" class="tab" />
+  <input type="radio" id="tab6" name="tabGroup2" class="tab" checked />
   <label for="tab6">Ages 3-4</label>
 
   <input type="radio" id="tab7" name="tabGroup2" class="tab" />
@@ -503,32 +534,65 @@
   <input type="radio" id="tab10" name="tabGroup2" class="tab" />
   <label for="tab10">Ages 14-18</label>
 
-  <div class="tab__content" id="Ages 3-4">
-  <div>TAB Content for Section 2</div>
-  </div>
+  <div class="tab__content" id="Ages:3-4">
+    <table>
+      <tr>
+        <td class="left_box">
+          <div>This program is not only an excellent way to introduce your little athlete to soccer, but an awesome way to introduce the different dimensions of learning. Through this environment we look to activate learning through:
+              <ul>
+                  <li>Mobility</li>
+                  <li>Decision Making</li>
+                  <li>Listening skills</li>
+              </ul>
+          ... within the game of soccer. Experienced Cleveland Force Soccer Academy Trainers will work to build a solid foundation of a love for the ball! We <em>highly</em> recommend a <em>size 3</em> soccer ball for this age group; and a size 1 soccer ball for @ home. This program is also part of our <a href="https://bit.ly/cfsc_ssah">Soccer Starts at Home (#SSAH)</a> initiative.
+          </div>
+        </td>
+        <td class="right_box">
+          <div>
+            <div class="sub_header">2020 Fall I Session @ Force - Richmond</div>
+            <div class="sub_times">Sundays -- 11:00am - 12:00pm</div>
+            <div class="sub_dates">September 13 - October 18</div>
+            <div class="sub_info">More Information & Registration</div>
+          </div>
+          <div>
+            <div class="sub_header">2020 Fall II Session @ Force - Richmond</div>
+            <div class="sub_times">Sundays -- 11:00am - 12:00pm</div>
+            <div class="sub_dates">September 13 - October 18</div>
+            <div class="sub_info">More Information & Registration</div>
+          </div>
+          <div>
+            <div class="sub_header">2020 Winter I Session @ Force - Richmond</div>
+            <div class="sub_times">Sundays -- 11:00am - 12:00pm</div>
+            <div class="sub_dates">September 13 - October 18</div>
+            <div class="sub_info">More Information & Registration</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+</div>
 
-  <div class="tab__content" id="Ages 3-4">
+  <div class="tab__content">
     <div>TAB Content for Section 2</div>
   </div>
 
-  <div class="tab__content" id="Ages 3-4">
+  <div class="tab__content">
     <div>TAB Content for Section 2</div>
   </div>
 
-  <div class="tab__content" id="Ages 3-4">
+  <div class="tab__content">
     <div>TAB Content for Section 2</div>
   </div>
 
-  <div class="tab__content" id="Ages 3-4">
+  <div class="tab__content">
     <div>TAB Content for Section 2</div>
   </div>
 </div>
 <!-- End Section - WEEKLY SUPPLEMENTAL CLINICS - DEVELOPING PLAYERS -->
 
 <!-- Tabbed Section - IN-HOUSE SOCCER LEAGUES -->
-<div class="section_header" id="tabGroup3">IN-HOUSE SOCCER LEAGUES</div>
+<div class="section_header" id="tabGroup3">&#x1F53B;IN-HOUSE SOCCER LEAGUES</div>
 <div class="tab-wrap" id="tabGroup3">
-  <input type="radio" id="tab11" name="tabGroup3" class="tab" />
+  <input type="radio" id="tab11" name="tabGroup3" class="tab" checked />
   <label for="tab11">Ages 6-8</label>
 
   <input type="radio" id="tab12" name="tabGroup3" class="tab" />
@@ -543,18 +607,32 @@
 <!-- End Section - IN-HOUSE SOCCER LEAGUES -->
 
 <!-- Tabbed Section - ADVANCED TRAINING -->
-<div class="section_header" id="tabGroup4">ADVANCED TRAINING</div>
+<div class="section_header" id="tabGroup4">&#x1F53B;ADVANCED TRAINING</div>
 <div class="tab-wrap" id="tabGroup4">
-  <input type="radio" id="tab15" name="tabGroup4" class="tab" />
+  <input type="radio" id="tab15" name="tabGroup4" class="tab" checked />
   <label for="tab15">Juniors Academy: Ages 6-8</label>
 
   <input type="radio" id="tab16" name="tabGroup4" class="tab" />
-  <label for="tab16">CFSA Advanced Ages 9-14</label>
+  <label for="tab16">CFSA Advanced: Ages 9-14</label>
 
   <input type="radio" id="tab17" name="tabGroup4" class="tab" />
-  <label for="tab17">CFSA Advanced Ages 14-18</label>
+  <label for="tab17">CFSA Advanced: Ages 14-18</label>
 
   <input type="radio" id="tab18" name="tabGroup4" class="tab" />
   <label for="tab18">A.O.E.</label>
+
+  <div class="tab__content">
+    <span style="font-weight: 600;">The Cleveland Force SC Juniors Academy</span> is a school year program designed for young players that are beginning to show a great love for the game, and those families looking for a challenging environment, with more advanced coaching. The program is comprised of male and female athletes between 6 — 8 years of age.
+</div>
+
+<div class="tab__content">
+    <span style="font-weight: 600;">The Program's primary objective</span> is to maximize the development of every child in each of the four elements of the game in a FUN & SAFE environment!
+</div>
+    <ul>
+        <li><span style="color: #194077; font-family: 'Fira Sans ExtraBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 600; font-size: 15pt;">Technical</span> - ball manipulation</li>
+        <li><span style="color: #194077; font-family: 'Fira Sans ExtraBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 600; font-size: 15pt;">Physical/ Mobility</span> - coordination, balance</li>
+        <li><span style="color: #194077; font-family: 'Fira Sans ExtraBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 600; font-size: 15pt;">Mental</span> - decision making, spacial recognition</li>
+        <li><span style="color: #194077; font-family: 'Fira Sans ExtraBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 600; font-size: 15pt;">Tactical</span> - teamwork</li>
+    </ul>
 </div>
 <!-- End Section - ADVANCED TRAINING -->
