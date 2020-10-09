@@ -373,8 +373,9 @@
     padding: 0 0 0 5pt;
     font-weight: 450;
   }
-  table.dates {
+  table.dates, table.coaches {
     border-collapse: collapse;
+    width: 100%;
   }
   th.col1 {
     border-left: 1px solid #ffffff;
@@ -407,6 +408,10 @@
     border-left: 1px dashed #194077;
     padding-left: 5px;
     vertical-align: top;
+  }
+  td.coaches {
+    text-align: center;
+    font-family: 'Fira Sans';
   }
   .sub_box {
     padding: 0 0 7px 0;
@@ -459,8 +464,8 @@
 </div> 
 
 <div id="Dates">
+  <div class="section_header">&#x1F53B;Current Sessions</div>
   <table class="dates">
-    <tbody>
       <tr>
         <th class="col1">DAY / PROGRAM<br /></th>
         <th class="col2">FALL I - 2020</th>
@@ -497,7 +502,6 @@
         <td class="col2"><strong>OCT </strong>24, 31;<strong>NOV </strong>7, 14, 21;<strong>DEC</strong>5</td>
         <td class="col2"><strong>JAN </strong>9, 16, 23, 30;<strong>FEB </strong>6, 13</td>
       </tr>
-    </tbody>
   </table>
 </div>
 <!-- End About Force Soccer Academy Section-->
@@ -889,14 +893,14 @@
 <div class="section_header" id="tabGroup4">&#x1F53B;Additional Information</div>
 <div class="tab-wrap" id="tabGroup4">
   
-  <input type="radio" id="tab13" name="tabGroup4" class="tab" checked />
-  <label for="tab13">Soccer Starts at Home</label>
-
-  <input type="radio" id="tab14" name="tabGroup4" class="tab" />
-  <label for="tab14">COACHES</label>
+  <input type="radio" id="tab14" name="tabGroup4" class="tab" checked />
+  <label for="tab14">Soccer Starts at Home</label>
 
   <input type="radio" id="tab15" name="tabGroup4" class="tab" />
-  <label for="tab15">CAMPS</label>
+  <label for="tab15">COACHES</label>
+
+  <input type="radio" id="tab16" name="tabGroup4" class="tab" />
+  <label for="tab16">CAMPS</label>
 
     <!-- This begins the content for Tabbed Section 1 -->
     
@@ -923,11 +927,41 @@
     </div>
   
     <div class="tab__content" id="COACHES">
-      <div>Tab Content for COACHES</div>
+      <div>
+        <table class="coaches">
+            <tr>
+              <td class="coaches">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1178/images/staff%20photos/ben_gunter_color.png" width="150px" />
+                <div>Ben Gunter</div>
+                <div>Eastside Director</div>
+              </td>
+              <td class="coaches">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1178/images/staff%20photos/force_photo_coming-01.jpg" width="150px" />
+                <div>David Antonelli</div>
+                <div>Lead Trainer</div>
+              </td>
+              <td class="coaches">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1178/images/staff%20photos/bill_lawrence-01.jpg" width="150px" />
+                <div>Bill Lawrence</div>
+                <div>Lead Trainer</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="coaches">
+                <a href="/cdn-cgi/l/email-protection#4b292e250b2d2439282e66383b24393f3865282426"><img src="https://bsbproduction.s3.amazonaws.com/portals/1178/images/staff%20photos/blocks/email_ben_new-01.png" width="150px" /></a>
+              </td>
+              <td class="coaches"><a href="/cdn-cgi/l/email-protection#3a5e5b544e55545f5656537a5c5548595f17494a55484e4914595557"><img src="https://bsbproduction.s3.amazonaws.com/portals/1178/images/staff%20photos/blocks/email_david-01.png" width="150px" /></a>
+              </td>
+              <td class="coaches">
+                <a href="/cdn-cgi/l/email-protection#63210a0f0f23250c1100064e30130c1117104d000c0e"><img src="https://bsbproduction.s3.amazonaws.com/portals/1178/images/staff%20photos/blocks/new_email_bill-01.png" width="150px" /></a>
+              </td>
+            </tr>
+        </table>
+      </div>
     </div>
 
     <div class="tab__content" id="Camps">
       <div>&#x2139; More information on this program &#x1F51C; coming soon!</div>
     </div>
 </div>
-<!-- End Section - CLEVELAND FORCE SOCCER ACADEMY-->
+<!-- End Section - CLEVELAND FORCE SOCCER ACADEMY--
