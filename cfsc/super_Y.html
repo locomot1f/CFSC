@@ -3,7 +3,7 @@
     line-height: 18pt;
     width: 1200px;
     border-collapse: separate;
-    border-spacing: 0px 15px;
+    border-spacing: 0px 20px;
   }
   td.center {
     background-color: rgb(0, 149, 66);
@@ -20,7 +20,7 @@
   }
   .center_info {
     color: rgb(252, 177, 0);
-    font-size: 14pt;
+    font-size: 16pt;
     font-weight: 600;
     text-align: center;
     padding-top: 10px;
@@ -46,6 +46,56 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+  .box-left {
+    position: relative;
+    float: left;
+    border-right: 5px solid yellow;
+    width: 700px;
+  }
+  .box-right {
+    position: relative;
+    float: left;
+  }
+  .button {
+        background-color:rgb(252, 177, 0); 
+        border: 1px solid rgb(0, 149, 66); 
+        color:  rgb(0, 149, 66); 
+        padding: 10px 10px; /* Some padding */
+        border-radius: 5px;
+        cursor: pointer; /* Pointer/hand icon */
+        text-decoration: none;  
+    }
+    a.button:visited, a.button:any-link {
+        background-color:rgb(252, 177, 0); 
+        border: 1px solid rgb(0, 149, 66); 
+        color:  rgb(0, 149, 66); 
+        padding: 10px 10px; /* Some padding */
+        border-radius: 5px;
+        cursor: pointer; /* Pointer/hand icon */
+    }
+    a.button:hover {
+        background-color:rgb(252, 177, 0);
+    }
+    .email {
+        background-color:white; 
+        border: 1px dashed rgb(0, 149, 66); 
+        color:  rgb(0, 149, 66); 
+        padding: 5px 5px; /* Some padding */
+        border-radius: 2px;
+        cursor: pointer; /* Pointer/hand icon */
+        text-decoration: none;  
+    }
+    a.email:visited, a.email:any-link {
+        background-color:white; 
+        border: 1px dashed rgb(0, 149, 66);
+        border-radius: 2px;
+        color:  rgb(0, 149, 66); 
+        padding: 5px 5px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+    }
+    a.email:hover {
+        background-color:rgb(252, 177, 0);
+    }
 </style>
 
 <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/syl/super_y_pb_21-01.png" alt="Super Y League" />
@@ -102,7 +152,8 @@
     <td class="outer_box">
       <div class="outer_info">Divisions consist of teams from:<br />Illinois, Indiana, Michigan, Missouri & Ohio</div>
     </td>
-    <td class="center"><span class="center_header">LEAGUE OPPONENTS</span></td>
+    <td class="center"><span class="center_header">LEAGUE OPPONENTS</span>
+    <div class="center_info">Midwest Division</div></td>
     <td class="outer_box">
       <div class="outer_info">Divisions consist of teams from:<br />Illinois, Indiana, Michigan, Missouri & Ohio</div> 
     </td>
@@ -128,35 +179,81 @@
 
   <tr class="block" id="COACHING STAFF">
     <td class="outer_box">
-        <div>Chris Green</div>
-        <div>Visnu Maharaj</div>
+        <div>&#x1F464;<a href="https://www.clevelandforcesc.com/Default.aspx?tabid=1005949">Chris Green</a></div>
+        <div>&#x1F464;<a href="https://www.clevelandforcesc.com/Default.aspx?tabid=1005959">Visnu Maharaj</a></div>
     </td>
     <td class="center"><span class="center_header">COACHING STAFF</span></td>
     <td class="outer_box">
-        <div>Everett Palache</div>
+        <div>&#x1F464;<a href="https://www.clevelandforcesc.com/Default.aspx?tabid=1005951">Everett Palache</a></div>
     </td>
   </tr>
 
   <tr class="block" id="QUESTIONS">
     <td class="outer_box">
-      <ul class="lists">
-        <li>&#x1F4CD;Cleveland United Complex - West</li>
-        <li>&#x1F4CD;Lost Nation Sports Park - East</li>
-      </ul>
+        <div><a href="mailto:chris@force-sports.com?subject=Super Y League" class="email">&#x1F4E7; Chris Green</a></li>
     </td>
     <td class="center"><span class="center_header">QUESTIONS</span>
       <div>
         <ul class="lists">
-          <li class="center_info">&#x2714;Boys: Chris Green</li>
-          <li class="center_info">&#x2714;Girls: Everett Palache</li>
+          <li class="center_info">Boys: Chris Green</li>
+          <li class="center_info">Girls: Everett Palache</li>
         </ul>
       </div>
     </td>
     <td class="outer_box">
-      <ul class="lists">
-        <li>&#x1F4CD;Cleveland United Complex - West</li>
-        <li>&#x1F4CD;Lost Nation Sports Park - East</li>
-      </ul>
+      <div><a href="mailto:everett@force-sports.com??subject=Super Y League" class="email">&#x1F4E7; Everett Palache</a></div>
+    </td>
+  </tr>
+
+  <tr class="block" id="MORE INFO">
+    <td class="outer_box">
+        <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSd4mOQNZyrQOwgMdYFC9IzD6WX4qEVGuTv83SOZJJnOYa5m3Q/viewform" class="button">&#x2139; MORE INFO</a></div>
+    </td>
+    <td class="center"><span class="center_header">WANT MORE INFO?</span>
+      <div class="center_info">Click button to left or right, complete Google Form and we will be in touch!</div>
+    </td>
+    <td class="outer_box">
+        <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSd4mOQNZyrQOwgMdYFC9IzD6WX4qEVGuTv83SOZJJnOYa5m3Q/viewform" class="button">&#x2139; MORE INFO</a></div>
     </td>
   </tr>
 </table>
+
+<div class="box-left">
+  <div style="background-color: rgb(252, 177, 0); color: white; font: 700 22pt 'Fira Sans Heavy'; border-left:white 15px double; padding-left: 5px;">
+  WHY SUPER Y LEAGUE FROM CFSC
+  </div>
+  <div style="border-left: rgb(252, 177, 0) 4px solid; font: 300 16pt/20pt 'Fira Sans'; padding-left: 7px; margin: 5px">
+  We are excited to announce that our Cleveland Force SC Boys Program will be participating in Super Y League this Summer 2021! The decision to enter the Super Y League was done with our commitment to our Mission, Vision and Player Development Philosophy. Super Y League provides our members with an experience that is unparalleled in youth soccer. Super Y shares our passion for player development and realizes that in order to be an elite club, we must play in an elite league. With the new Regional Scouting Series, partnerships with some of the leaders in youth soccer, experienced and professional staff, advanced player tracking, and offering the chance to compete for a North American Championship, the Super Y League is the best operated youth league in North America, allowing it to stand above the competition.
+  </div>
+  <div style="background-color: rgb(0, 149, 66); color: white; font: 700 22pt 'Fira Sans Heavy'; border-left:white 15px double; padding-left: 5px;">
+  YEARS OF PROVEN COMPETITION
+  </div>
+  <div style="border-left: rgb(0, 149, 66) 4px solid; font: 300 16pt/20pt 'Fira Sans'; padding-left: 7px; margin: 5px">
+  The benefits that the league provides set the Super Y League and its member clubs apart. These benefits have been developed through 20 years as a mainstay in youth soccer.
+    <ul style="margin-top: 0;">
+      <li>Proven history of upholding the highest standards and accountability.</li>
+      <li>Year-round player involvement and development for clubs.</li>           
+      <li>Access to unparalleled benefits through League Partners.</li>
+      <li>Increased exposure for member clubs and their players.</li>
+      <li>Opportunity to compete for a National Championship.</li>
+      <li>Greater collaboration between clubs, players and the League.</li>
+    </ul>
+  </div>
+  <div style="background-color: #194077; color: white; font: 700 22pt 'Fira Sans Heavy'; border-left:white 15px double; padding-left: 5px;">
+    QUICK LEAGUE FIGURES
+  </div>
+  <div style="border-left: #194077 4px solid; font: 300 16pt/20pt 'Fira Sans'; padding-left: 7px; margin: 5px">
+    <ul style="margin-top: 0;">
+      <li>12, 000+ Players Nationally</li>
+      <li>600+ Teams Nationally</li>
+      <li>90+ Clubs Nationally</li>
+      <li>25 States Participating</li>
+      <li>7 Regional Divisions</li>
+    </ul>
+  </div>
+</div>
+<div class="box-right">
+  <iframe width="100%" height="300px" src="https://www.youtube.com/embed/3vbOm97P5QA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="padding:10px"></iframe>
+  <div><a href="https://www.sylsoccer.com" class="button">https://www.sylsoccer.com</a></div>
+</div>
+  
