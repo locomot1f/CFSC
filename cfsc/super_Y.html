@@ -49,12 +49,17 @@
   .box-left {
     position: relative;
     float: left;
-    border-right: 5px solid yellow;
-    width: 700px;
+    width: 40%;
+  }
+  .box-center {
+    position: relative;
+    float: left;
+    width: 35%;
   }
   .box-right {
     position: relative;
     float: left;
+    width: 25%;
   }
   .button {
         background-color:rgb(252, 177, 0); 
@@ -95,6 +100,28 @@
     }
     a.email:hover {
         background-color:rgb(252, 177, 0);
+    }
+    .bottom_container {
+      clear: both;
+      margin-bottom: 50px;
+    }
+    .container {
+      position: relative;
+      float: left;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+
+    /* Then style the iframe to fit in the container div with full height and width */
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
 </style>
 
@@ -218,42 +245,50 @@
   </tr>
 </table>
 
-<div class="box-left">
-  <div style="background-color: rgb(252, 177, 0); color: white; font: 700 22pt 'Fira Sans Heavy'; border-left:white 15px double; padding-left: 5px;">
-  WHY SUPER Y LEAGUE FROM CFSC
+<div class="bottom_container">
+  <div class="box-left">
+    <div style="background-color: rgb(252, 177, 0); color: white; font: 700 22pt 'Fira Sans Heavy'; border-left:white 15px double; padding-left:  5px;">
+    WHY SUPER Y LEAGUE FROM CFSC
+    </div>
+    <div style="border-left: rgb(252, 177, 0) 4px solid; font: 300 16pt/20pt 'Fira Sans'; padding-left: 7px; margin: 5px">
+    We are excited to announce that our Cleveland Force SC Boys Program will be participating in Super Y League this Summer 2021! The decision to   enter the Super Y League was done with our commitment to our Mission, Vision and Player Development Philosophy. Super Y League provides our   members with an experience that is unparalleled in youth soccer. Super Y shares our passion for player development and realizes that in order   to be an elite club, we must play in an elite league. With the new Regional Scouting Series, partnerships with some of the leaders in youth   soccer, experienced and professional staff, advanced player tracking, and offering the chance to compete for a North American Championship,   the Super Y League is the best operated youth league in North America, allowing it to stand above the competition.
+    </div>
   </div>
-  <div style="border-left: rgb(252, 177, 0) 4px solid; font: 300 16pt/20pt 'Fira Sans'; padding-left: 7px; margin: 5px">
-  We are excited to announce that our Cleveland Force SC Boys Program will be participating in Super Y League this Summer 2021! The decision to enter the Super Y League was done with our commitment to our Mission, Vision and Player Development Philosophy. Super Y League provides our members with an experience that is unparalleled in youth soccer. Super Y shares our passion for player development and realizes that in order to be an elite club, we must play in an elite league. With the new Regional Scouting Series, partnerships with some of the leaders in youth soccer, experienced and professional staff, advanced player tracking, and offering the chance to compete for a North American Championship, the Super Y League is the best operated youth league in North America, allowing it to stand above the competition.
+
+  <div class="box-center">
+    <div style="background-color: rgb(0, 149, 66); color: white; font: 700 22pt 'Fira Sans Heavy'; border-left:white 15px double; padding-left:   5px;">
+    YEARS OF PROVEN COMPETITION
+    </div>
+    <div style="border-left: rgb(0, 149, 66) 4px solid; font: 300 16pt/20pt 'Fira Sans'; padding-left: 7px; margin: 5px">
+    The benefits that the league provides set the Super Y League and its member clubs apart. These benefits have been developed through 20 years  as a mainstay in youth soccer.
+      <ul style="margin-top: 0;">
+        <li>Proven history of upholding the highest standards and accountability.</li>
+        <li>Year-round player involvement and development for clubs.</li>           
+        <li>Access to unparalleled benefits through League Partners.</li>
+        <li>Increased exposure for member clubs and their players.</li>
+        <li>Opportunity to compete for a National Championship.</li>
+        <li>Greater collaboration between clubs, players and the League.</li>
+      </ul>
+    </div>
   </div>
-  <div style="background-color: rgb(0, 149, 66); color: white; font: 700 22pt 'Fira Sans Heavy'; border-left:white 15px double; padding-left: 5px;">
-  YEARS OF PROVEN COMPETITION
-  </div>
-  <div style="border-left: rgb(0, 149, 66) 4px solid; font: 300 16pt/20pt 'Fira Sans'; padding-left: 7px; margin: 5px">
-  The benefits that the league provides set the Super Y League and its member clubs apart. These benefits have been developed through 20 years as a mainstay in youth soccer.
-    <ul style="margin-top: 0;">
-      <li>Proven history of upholding the highest standards and accountability.</li>
-      <li>Year-round player involvement and development for clubs.</li>           
-      <li>Access to unparalleled benefits through League Partners.</li>
-      <li>Increased exposure for member clubs and their players.</li>
-      <li>Opportunity to compete for a National Championship.</li>
-      <li>Greater collaboration between clubs, players and the League.</li>
-    </ul>
-  </div>
-  <div style="background-color: #194077; color: white; font: 700 22pt 'Fira Sans Heavy'; border-left:white 15px double; padding-left: 5px;">
-    QUICK LEAGUE FIGURES
-  </div>
-  <div style="border-left: #194077 4px solid; font: 300 16pt/20pt 'Fira Sans'; padding-left: 7px; margin: 5px">
-    <ul style="margin-top: 0;">
-      <li>12, 000+ Players Nationally</li>
-      <li>600+ Teams Nationally</li>
-      <li>90+ Clubs Nationally</li>
-      <li>25 States Participating</li>
-      <li>7 Regional Divisions</li>
-    </ul>
+
+  <div class="box-right">
+    <div style="background-color: #194077; color: white; font: 700 22pt 'Fira Sans Heavy'; border-left:white 15px double; padding-left: 5px;">
+      QUICK LEAGUE FIGURES
+    </div>
+    <div style="border-left: #194077 4px solid; font: 300 16pt/20pt 'Fira Sans'; padding-left: 7px; margin: 5px">
+      <ul style="margin-top: 0;">
+        <li>12, 000+ Players Nationally</li>
+        <li>600+ Teams Nationally</li>
+        <li>90+ Clubs Nationally</li>
+        <li>25 States Participating</li>
+        <li>7 Regional Divisions</li>
+      </ul>
+      <a href="https://www.sylsoccer.com" class="button">http://www.sylsoccer.com</a>
+    </div>
   </div>
 </div>
-<div class="box-right">
-  <iframe width="100%" height="300px" src="https://www.youtube.com/embed/3vbOm97P5QA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="padding:10px"></iframe>
-  <div><a href="https://www.sylsoccer.com" class="button">https://www.sylsoccer.com</a></div>
+
+<div class="container">
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/3vbOm97P5QA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 </div>
-  
