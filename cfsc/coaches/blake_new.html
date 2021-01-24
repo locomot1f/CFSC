@@ -8,36 +8,48 @@
     }
     .bio {
         padding-top: 30px;
+        display: flex;
+        flex-wrap: nowrap;
     }
-    .profile_pic {
+    .bio .profile_pic {
         position: relative;
         float: left;
-        width: 300px;
+        width: 30%;
         height: 400px;
         padding-top: 20px;
     }
-    .text {
-        width: 50%;
-        float: left;
+    .bio .text {
         position: relative;
+        float: left;
+        padding-left: 20px;
+        font-weight: 200;
+        font-size: 13pt;
+        font-family: 'Fira Sans Book',arial;
+    }
+    ul.lists {
+        line-height: 1.3;
+        margin-top: 0;
     }
     .name {
         color: #194077;
         font-weight: 700;
         font-size: 22pt;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding-bottom:10pt;
     }
     .title {
         font-weight: 600;
         font-size: 16pt;
+        line-height: 1.1;
         font-family: 'Fira Sans Book',arial;
-        padding-bottom: 15pt;
+        padding-bottom: 10px;
     }
     .experience {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 14pt;
         font-family: 'Fira Sans Book',arial;
         text-decoration: underline;
+        padding: 15px 0 5px 0;
     }
     .button {
         border: none;
@@ -46,7 +58,7 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 18px;
         margin: 4px 2px;
         cursor: pointer;
         background-color: #ffe900;
@@ -65,21 +77,21 @@
         <div class="name">Blake New</div> 
         <div class="title">CFSC Boys Staff Coach</div>
         <div class="experience">Coaching Experience:</div>
-            <ul>
+            <ul class="lists">
                 <li>NSCAA Advanced Diploma</li>
                 <li>USSF National "C" License</li>
                 <li>Oberlin College Men’s Soccer Head Coach (1999-present)</li>
                 <li>Oberlin College Women’s Soccer Head Coach (1996-1999)</li>
             </ul>
         <div class="experience">Playing Experience:</div>
-            <ul>
+            <ul class="lists">
                 <li>Played Professionally for the Cleveland Crunch (MISL)</li>
                 <li>Played Professionally for the Canton Invaders (NPSL)</li>
                 <li>Played Professionally for the Cleveland Caps (USISL)</li>
                 <li>Played Collegiately at Cleveland State University (1996-1999)</li>
             </ul>
         <div class="experience">Personal Information:</div>
-            <ul>
+            <ul class="lists">
                 <li>Earned a Bachelor’s Degree in Marketing from CSU</li>
                 <li>Resides in Oberlin with his wife, Jessa, and their daughters, Madalyn and Maia</li>
             </ul>

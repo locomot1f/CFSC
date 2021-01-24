@@ -8,36 +8,47 @@
     }
     .bio {
         padding-top: 30px;
+        display: flex;
+        flex-wrap: nowrap;
     }
-    .profile_pic {
+    .bio .profile_pic {
         position: relative;
         float: left;
-        width: 300px;
+        width: 30%;
         height: 400px;
         padding-top: 20px;
     }
-    .text {
-        width: 50%;
-        float: left;
+    .bio .text {
         position: relative;
+        float: left;
+        padding-left: 20px;
+        font-weight: 200;
+        font-size: 13pt;
+        font-family: 'Fira Sans Book',arial;
+    }
+    ul.lists {
+        line-height: 18pt;
+        margin-top: 0;
     }
     .name {
         color: #194077;
         font-weight: 700;
         font-size: 22pt;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding-bottom:10pt;
     }
     .title {
         font-weight: 600;
         font-size: 16pt;
         font-family: 'Fira Sans Book',arial;
-        padding-bottom: 15pt;
+        padding-bottom: 10px;
     }
     .experience {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 14pt;
         font-family: 'Fira Sans Book',arial;
         text-decoration: underline;
+        padding: 15px 0 5px 0;
     }
     .button {
         border: none;
@@ -46,7 +57,7 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 18px;
         margin: 4px 2px;
         cursor: pointer;
         background-color: #ffe900;
@@ -65,14 +76,14 @@
         <div class="name">Amir Kettani</div> 
         <div class="title">Director of Goalkeeping</div>
         <div class="experience">Coaching Experience:</div>
-            <ul>
+            <ul class="lists">
                 <li>Lakeland Community College Head Men’s Soccer Coach March 2019-Present</li>
                 <li>Cleveland State University Men’s Soccer, Head Assistant/Goalkeeper Coach Jan 2012- Feb 2019</li>
                 <li>Cleveland Goalkeeper Academy, Founder/Director/Owner 2007-2014</li>
                 <li>Cleveland Internationals Developmental Academy</li>
                 <li>Head Goalkeeper/Assistant Coach for men’s U14/U16/ U18 2009-2015</li>
                 <li>Four Former GK’s sign Professional Contracts with respective clubs:
-                    <ul>
+                    <ul class="lists">
                         <li>Charlie Horton - DC United/ U23’s US National Team/Leeds United FC</li>
                         <li>Brad Stuver - Cleveland State University/New York City FC/MLS</li>
                         <li>Evan Bush - Akron University/Montreal Impact/MLS</li>
@@ -86,7 +97,7 @@
                 <li>Coach of ‘83 Cleveland United Boy’s team to the 1999 Region 2 Regional Championship – First boy’s team to achieve this title in Ohio North’s history</li>
             </ul>
         <div class="experience">Playing Experience:</div>
-            <ul>
+            <ul class="lists">
                 <li>Cleveland State University Goalkeeper from Fall 2003-Fall 2005</li>
                 <li>Three-year Full Scholarship Athlete/Freshman Year Attended Ashland University, Fall 2001-Spring 2002</li> 
                 <li>First Team All-Horizon League, 2005</li>

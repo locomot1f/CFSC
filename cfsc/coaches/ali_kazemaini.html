@@ -1,4 +1,7 @@
 <style>
+    * {
+        box-sizing: border-box;
+    }
     img.profile {
         border-radius: 50%;
         height: 250px;
@@ -8,36 +11,47 @@
     }
     .bio {
         padding-top: 30px;
+        display: flex;
+        flex-wrap: nowrap;
     }
-    .profile_pic {
+    .bio .profile_pic {
         position: relative;
         float: left;
-        width: 300px;
+        width: 30%;
         height: 400px;
         padding-top: 20px;
     }
-    .text {
-        width: 50%;
-        float: left;
+    .bio .text {
         position: relative;
+        float: left;
+        padding-left: 40px;
+        font-weight: 200;
+        font-size: 13pt;
+        font-family: 'Fira Sans Book',arial;
+    }
+    ul.lists {
+        line-height: 18pt;
+        margin-top: 0;   
     }
     .name {
         color: #194077;
         font-weight: 700;
         font-size: 22pt;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding-bottom: 10pt;
     }
     .title {
         font-weight: 600;
         font-size: 16pt;
         font-family: 'Fira Sans Book',arial;
-        padding-bottom: 15pt;
+        padding-bottom: 10px;
     }
     .experience {
         font-weight: 400;
         font-size: 14pt;
         font-family: 'Fira Sans Book',arial;
         text-decoration: underline;
+        padding: 15px 0 5px 0;
     }
     .button {
         border: none;
@@ -65,7 +79,7 @@
         <div class="name">Ali Kazemaini</div> 
         <div class="title">CFSC US Development Academy Girls U14 & U15 Head Coach</div>
         <div class="experience">Coaching Experience:</div>
-            <ul>
+            <ul class=lists>
                 <li>USSF A License</li>
                 <li>Founder of Cleveland Soccer Academy and CSA Impact</li>
                 <li>John Carroll University Men’s Head Coach (1992-2005) – 4 NCAA Tournament Appearances and 7 OAC League Titles</li>
@@ -73,7 +87,7 @@
                 <li>U18 Men’s Youth National Team Assistant Coach (2017)</li>
             </ul>
         <div class="experience">Playing Experience:</div>
-            <ul>
+            <ul class=lists>
                 <li>San Diego Sockers  of MISL (drafted in 1984)</li>
                 <li>Cleveland State University (1980-1983)</li>
                 <li>Cleveland Force of MISL (1984-1988)</li>
@@ -83,7 +97,7 @@
                 <li>Canton Invaders of NPSL (1992-1993)</li>
             </ul>
         <div class="experience">Personal Information:</div>
-            <ul>
+            <ul class=lists>
                 <li>Married to his wife, Shelly, and they have two kids (Zahra and Ali Jr)</li>
         </ul>
             <div><a href="https://www.clevelandforcesc.com/Default.aspx?tabid=482235" class="button"> &#x2B05;back to staff listing</a></div>

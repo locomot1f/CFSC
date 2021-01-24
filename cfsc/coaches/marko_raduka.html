@@ -8,23 +8,27 @@
     }
     .bio {
         padding-top: 30px;
+        display: flex;
+        flex-wrap: nowrap;
     }
-    .profile_pic {
+    .bio .profile_pic {
         position: relative;
         float: left;
-        width: 300px;
+        width: 30%;
         height: 400px;
         padding-top: 20px;
     }
-    .text {
-        float: left;
+    .bio .text {
         position: relative;
+        float: left;
+        padding-left: 20px;
         font-weight: 200;
         font-size: 13pt;
         font-family: 'Fira Sans Book',arial;
     }
-    ul {
-        line-height: 16pt;
+    ul.lists {
+        line-height: 1.3;
+        margin-top: 0;
     }
     .name {
         color: #194077;
@@ -36,15 +40,16 @@
     .title {
         font-weight: 600;
         font-size: 16pt;
+        line-height: 1.1;
         font-family: 'Fira Sans Book',arial;
-        padding-bottom: 15pt;
+        padding-bottom: 10px;
     }
     .experience {
-        font-weight: 400;
-        font-size: 18pt;
+        font-weight: 500;
+        font-size: 14pt;
         font-family: 'Fira Sans Book',arial;
         text-decoration: underline;
-        padding-bottom: 10pt;
+        padding: 15px 0 5px 0;
     }
     .button {
         border: none;
@@ -60,22 +65,22 @@
 }
 </style>
 <div>
-<img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/2_admin_coaching_staff_pb-01.png" id="header_banner" />
+<img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/2_admin_coaching_staff_pb-01.png" id="header_banner">
 </div>
 
 <div class="bio">
     <div class="profile_pic">
-        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/20%20staff%20photos/cfsc_marko-01.png" class="profile" />
+        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/20%20staff%20photos/cfsc_marko-01.png" class="profile">
     </div>
 
     <div class="text">
         <div class="name">Marko Raduka</div> 
         <div class="title">Director of Soccer Operations</div>
         <div class="experience">Coaching Experience:</div>
-            <ul>
+            <ul class="lists">
                 <li>USSF National “B” License</li>
                 <li>Cleveland United Soccer Club Club Director (1998-2017)
-                    <ul>
+                    <ul class="lists">
                         <li>1 US Youth National Championship</li>
                         <li>1 US Youth National League Championship</li>
                         <li>2 US Club National Championships</li>
@@ -84,19 +89,19 @@
                 </li>
                 <li>Canton United SC (2008-present)</li>
                 <li>Notre Dame College Men’s Assistant (2006-2013)
-                    <ul>
+                    <ul class="lists">
                         <li>4 NAIA National Tournament Championships</li>
                         <li>2010 National Finalist</li>
                     </ul>
                 </li>
             </ul>
     <div class="experience">Playing Experience:</div>
-    <ul>
+    <ul class="lists">
         <li>Played Semi-professionally for Palm Beach Pumas in the PDL (2003)</li>
         <li>Played Collegiately at Ashland University - 2 time All GLIAC Team (2001-2004)</li>
         <li>Played Collegiately at Duquesne University (2000-2001)</li>
         <li>Former Cleveland United player (81/82 team that won 6 state titles)</li>
     </ul>
-    <div><a href="https://www.clevelandforcesc.com/Default.aspx?tabid=482235" class="button"> &#x2B05;back to staff listing</a></div>
+    <div><a href="/Default.aspx?tabid=482235" class="button">&#x2B05;back to staff listing</a></div>
     </div>
 </div>
