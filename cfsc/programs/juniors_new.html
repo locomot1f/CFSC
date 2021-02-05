@@ -152,46 +152,72 @@
   border-radius: 6px;
 }
 .schedule_inner {
-    border-right: dashed; 
+    border-left: dashed; 
     border-color: #194077;
     border-width: 2px;
-    width: 300px;
-    padding: 10px;
+    max-width: 300px;
+    padding: 5px 5px 10px 5px;
     vertical-align: top;
 }
 .schedule_outer { 
-    width: 300px;
-    padding: 10px;
+    max-width: 300px;
+    padding: 5px 5px 10px 5px;
     vertical-align: top;
 }
 .schedule_item {
-    line-height: 17pt;
+    line-height: 20pt;
 }
 .days {
     font-weight: 800;
     font-size: 15pt;
+    text-decoration: underline;
 }
 .dates {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14pt;
 }
-li {
-    margin-bottom: 12pt;
+.times {
+    font-weight: 400;
+    font-size: 12pt;
 }
-a.infographic:link {
-    text-decoration: underline;
-    font-weight: 500;
-    color: #194077;
+
+.schedule_box {
+    vertical-align: top;
+    
 }
-a.infographic:hover {
-    background-color: #f9eb0d;
+.schedule_header {
+    background-color: #194077;
+    color: white;
+    font: 700 18pt 'Fira Sans Heavy';
+    border-left: #f9eb0d 15px solid;
+    padding: 5pt;
+}
+li.schedule_item, ul.schedule_item {
+    margin: 0 0 12pt 10pt;
+    padding: 0;
+    list-style-type: none;
+}
+a.info:any-link {
     text-decoration: none;
-    color: #194077;
-} 
-a.infographic:visited, a.infographic:active {
-    color: #194077;
-    text-decoration: underline;
+    position: relative;
+    font-weight: 500;
 }
+a.info::after {
+    content: '';
+    background: #f9eb0d;
+    mix-blend-mode: exclusion;
+    width: calc(100% + 5px);
+    height: 0;
+    bottom: -4px;
+    left: -2px;
+    position: absolute;
+    z-index: -1;
+    border-bottom: 1px solid #194077;
+    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+a.info:hover::after {
+    height: calc(100% + 8px);
+} 
 </style>
 
 <div style="text-align: center;">
@@ -223,7 +249,7 @@ a.infographic:visited, a.infographic:active {
 
             <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%); top: 100px;">
                 <span style="font-weight:bold;">Ready To Register?</span>
-                Follow the link to the right to create an account and register for the upcoming program! You will also need to be sure to sign up on <a href="https://www.teamapp.com/clubs/468664" class="infographic" >Team App</a>
+                Follow the link to the right to create an account and register for the upcoming program! You will also need to be sure to sign up on <a href="https://www.teamapp.com/clubs/468664" class="info" >Team App</a>
             </div>    
             <div style="position: fixed; left: 460px; top: 100px;"><a href="https://www.clevelandforcesc.com/Default.aspx?tabid=172937"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_clickhere-01.png" width="200px" /></a></div>
             
@@ -242,7 +268,9 @@ a.infographic:visited, a.infographic:active {
             </div>
             <div style="position:fixed; top: 270px; width: 600px; border-top: 1px dashed #191919; padding-top: 15px;">
                 <div style="font:400 13pt/16pt 'Fira Sans Book',arial; padding-bottom:5px; color: darkorange;">&#x26A0; <span style="color: darkred;">Central Location is currently Full!</span></div>
-                <div style="font:400 13pt/16pt 'Fira Sans Book',arial; color: hsl(0,0%,29%);">&#x2733; Not sure if your little one is ready for this level of commitment or experience? We have classrooms for that too! Check out our Juniors Program Infographic for details on our programming for this age group - &#x1F4C4;<a href="http://bit.ly/juniors_infographic" class="infographic">Juniors Infographic</a><br> ...and then check out our programming at our&#x1F4CD;<a href="http://bit.ly/cfsa_soccer" class="infographic">Force Sports Locations</a> 
+                <div style="font:400 13pt/16pt 'Fira Sans Book',arial; color: hsl(0,0%,29%);">&#x2733; Not sure if your little one is ready for this level of commitment or experience? We have classrooms for that too! Check out our Juniors Program Infographic for details on our programming for this age group<br>
+                &#x1F4C4; <a href="http://bit.ly/juniors_infographic" class="info">Juniors Infographic</a><br>
+                ...and then check out our programming at our&#x1F4CD; <a href="http://bit.ly/cfsa_soccer" class="info">Force Sports Locations</a> 
                 </div>
             </div> 
         </div>
@@ -274,73 +302,114 @@ a.infographic:visited, a.infographic:active {
     </div>
 
     <div class="tab__content" id="Schedule">
-        <table>
+        <table style="max-width: 900px;">
             <tr>
-                <td class="schedule_inner">
+                <td colspan="3" class="schedule_box">
+                    <div class="schedule_header">Classroom Assignments</div>
+                    <div style="padding-left: 20px; border-bottom: #194077 2px solid; padding-bottom: 20px;">
+                        As you can see certain days & locations have 2 Classrooms. Players will be assigned classrooms by the coaching staff to help maintain class structure, and maximize player development. You will only attend 1 class (unless otherwise specified by the coach). If you have questions or concerns about specific classrooms, please do not hesitate to contact myself or Coach Chris (<a href="mailto:chris@force-sports.com" class="info">chris@force-sports.com</a>)
+                    </div>
+                </td>
+            </tr>
+            <tr> <!-- Hide past schedule 
+                <td class="schedule_outer">
                     <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessioni_block_upd-01.png" alt="Session I" width="300px"/></div>
-                    <ul>
+                    <ul class="schedule_item">
                         <li class="schedule_item">
-                            <span class="days">Saturdays 9:00am-10:00am<br>(both locations)</span><br><span class="dates">Sept 12, 19, 26; Oct 3, 10, 17</span></li>
+                            <div class="days">Saturdays 9:00am-10:00am<br>(both locations)</div>
+                            <div class="dates">Sept 12, 19, 26; Oct 3, 10, 17</div>
+                        </li>
                         <li class="schedule_item">
-                            <span class="days">Tuesdays 6:30pm-7:30pm (central)<br></span><span class="dates">Sept 15, 22, 29; Oct 6, 13, 20</span></li>
+                            <div class="days">Tuesdays 6:30pm-7:30pm (central)</div>
+                            <div class="dates">Sept 15, 22, 29; Oct 6, 13, 20</div>
+                        </li>
                         <li class="schedule_item">
-                            <span class="days">Thursdays 6:30pm-7:30pm (west) <br></span><span class="dates">Sept 17, 24; Oct 1, 8, 15, 22</span></li>
+                            <div class="days">Thursdays 6:30pm-7:30pm (west)</div>
+                            <div class="dates">Sept 17, 24; Oct 1, 8, 15, 22</div>
+                        </li>
                     </ul>
                 </td>
                 <td class="schedule_inner">
                     <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessionii_block_upd-01.png" alt="Session II" width="300px" /></div>
-                    <ul>
+                    <ul class="schedule_item">
                         <li class="schedule_item">
-                            <span class="days">Saturdays 9:00am-10:00am (both locations)</span><br><span class="dates">Oct 24, 31; Nov 7, 14, 21 Dec 5</span></li>
+                            <div class="days">Saturdays 9:00am-10:00am (both locations)</div>
+                            <div class="dates">Oct 24, 31; Nov 7, 14, 21 Dec 5</div>
+                        </li>
                         <li class="schedule_item">
-                            <span class="days">Tuesdays 6:00pm-7:00pm (west)</span><br><span class="dates">Oct 27; Nov 3, 10, 17; Dec 1, 8</span></li>
+                            <div class="days">Tuesdays 6:00pm-7:00pm (west)</div>
+                            <div class="dates">Oct 27; Nov 3, 10, 17; Dec 1, 8</div>
+                        </li>
                         <li class="schedule_item">
-                            <span class="days">Wednesdays 6pm-7pm (central)</span><br><span class="dates">Oct 28; Nov 4, 11, 18; Dec 2, 9</span></li>
+                            <div class="days">Wednesdays 6pm-7pm (central)</div>
+                            <div class="dates">Oct 28; Nov 4, 11, 18; Dec 2, 9</div>
+                        </li>
                     </ul>
-                </td>
+                </td> -->
                 <td class="schedule_outer">
                     <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessioniii_block_upd-01.png" alt="Session III" width="300px" /></div>
-                    <ul>
-                        <li class="scheduled_item">
-                            <span class="days">Saturdays 9:00am-10:00am (both locations)</span><br><span class="dates">Jan 9, 16, 23, 30; Feb 6, 13</span></li>
-                        <li class="scheduled_item">
-                            <span class="days">Tuesdays 6:00pm-7:00pm (west)</span><br><span class="dates">Jan 12, 19, 26; Feb 2, 9, 16</span></li>
-                        <li class="scheduled_item">
-                            <span class="days">Wednesdays 6pm-7pm (central)</span><br><span class="dates">Jan 13, 20, 27; Feb 3, 10, 17</span></li>
+                    <ul class="schedule_item">
+                        <li class="schedule_item">
+                            <div class="days">Saturdays 9:00am-10:00am (both locations)</div>
+                            <div class="dates">Jan 9, 16, 23, 30; Feb 6, 13</div>
+                        </li>
+                        <li class="schedule_item">
+                            <div class="days">Tuesdays 6:00pm-7:00pm (west)</div>
+                            <div class="dates">Jan 12, 19, 26; Feb 2, 9, 16</div>
+                        </li>
+                        <li class="schedule_item">
+                            <div class="days">Wednesdays 6pm-7pm (central)</div>
+                            <div class="dates">Jan 13, 20, 27; Feb 3, 10, 17</div>
+                        </li>
                     </ul>
                 </td>
-            </tr>
-            <tr>
                 <td class="schedule_inner">
                     <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessioniv_block_upd-01.png" alt="Session IV" width="300px" /></div>
-                    <ul>
-                        <li class="scheduled_item">
-                            <span class="days">Saturdays 9:00am-10:00am (both locations)</span><br><span class="dates">Feb 20, 27; Mar 6, 13, 20, 27</span>
+                    <ul class="schedule_item">
+                        <li class="schedule_item">
+                            <div class="days">Saturdays</div>
+                            <div class="dates">Feb 20, 27; Mar 6, 13, 20, 27</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST: 9-10am</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL: 9-10am / 10-11am</div>
                         </li>
-                        <li class="scheduled_item">
-                            <span class="days">Tuesdays 6:00pm-7:00pm (west)</span><br><span class="dates">Feb 23; Mar 2, 9, 16, 23, 30</span>
+                        <li class="schedule_item">
+                            <div class="days">Tuesdays (WEST)</div>
+                            <div class="dates">Feb 23; Mar 2, 9, 16, 23, 30</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> 5-6pm / 6pm-7pm</div>
                         </li>
-                        <li class="scheduled_item">
-                            <span class="days">Wednesdays 6pm-7pm (central)</span><br><span class="dates">Feb 24; Mar 3, 10, 17, 24, 31</span>
+                        <li class="schedule_item">
+                            <div class="days">Wednesdays (CENTRAL)</div>
+                            <div class="dates">Feb 24; Mar 3, 10, 17, 24, 31</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> 5-6pm / 6pm-7pm</div>
                         </li>
                     </ul>
                 </td>
                 <td class="schedule_inner">
                     <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessionv_block_upd-01.png" alt="Session V" width="300px" /></div>
-                    <ul>
-                        <li class="scheduled_item">
-                            <span class="days">Saturdays 9:00am-10:00am (both locations)</span><br><span class="dates">Apr 17, 24; May 1, 8, 15, 22</span>
+                    <ul class="schedule_item">
+                        <li class="schedule_item">
+                            <div class="days">Saturdays 9:00am-10:00am (both locations)</div>
+                            <div class="dates">Apr 17, 24; May 1, 8, 15, 22</div>
                         </li>
-                        <li class="scheduled_item">
-                            <span class="days">Tuesdays 6:30pm-7:30pm (central)</span><br><span class="dates">Apr 20, 27; May 4, 11, 18, 25</span>
+                        <li class="schedule_item">
+                            <div class="days">Tuesdays 6:30pm-7:30pm (central)</div>
+                            <div class="dates">Apr 20, 27; May 4, 11, 18, 25</div>
                         </li>
-                        <li class="scheduled_item">
-                            <span class="days"> 6:30pm-7:30pm (west)</span><br><span class="dates">Apr 22, 29; May 6, 13, 20, 27</span>
+                        <li class="schedule_item">
+                            <div class="days"> 6:30pm-7:30pm (west)</div>
+                            <div class="dates">Apr 22, 29; May 6, 13, 20, 27</div>
                         </li>
                     </ul>
                 </td>
-                <td class="schedule_outer" style="text-align: left; line-height: 18pt;">
-                    <div><span class="days">Friendly Dates:</span><br><span class="dates">Oct 25, Dec 13<br>Feb 21, Mar 28, May 23<br>*Time TBD</span></div>
+            </tr>
+            <tr>
+                <td class="schedule_box">
+                    <div class="schedule_header">Friendly Dates:</div>
+                    <div style="padding-left: 20px;">
+                        <div class="dates">Oct 25, Dec 13</div>
+                        <div class="dates">Feb 21, Mar 28, May 23</div>
+                        <div class="times">*Times TBD</div>
+                    </div>
                 </td>
             </tr>
         </table>
