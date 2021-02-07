@@ -208,7 +208,7 @@ a.info::after {
     mix-blend-mode: exclusion;
     width: calc(100% + 5px);
     height: 0;
-    bottom: -4px;
+    bottom: -2px;
     left: -2px;
     position: absolute;
     z-index: -1;
@@ -216,8 +216,19 @@ a.info::after {
     transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 a.info:hover::after {
-    height: calc(100% + 8px);
-} 
+    height: calc(100% + 2px);
+}
+a.button:any-link {
+    background-color: #194077;
+    color: #f9eb0d;
+    font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman';
+    font-weight: 500;
+    font-size: 14pt;
+    padding: 10px;
+    border: 1px solid #f9eb0d;
+    position: relative;
+    text-decoration: none;
+    }
 </style>
 
 <div style="text-align: center;">
@@ -241,24 +252,24 @@ a.info:hover::after {
     <label for="tab5">Training Locations</label>
 
     <div class="tab__content" id="Registration">
-        <div style="height: 375px;">       
+        <div style="height: 380px;">       
             <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%); top: 10px;">
                 <span style="font-weight:bold;">How To Get Started!</span> Follow the link to the right for a step-by-step guide on how to register for Juniors Academy!
             </div>
-            <div style="position: fixed; left: 460px; top: 10px;"><a href="https://bsbproduction.s3.amazonaws.com/portals/1093/docs/how%20to%20get%20started%20with%20cfsa%20juniors%20academy.pdf"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_clickhere-01.png" width="200px" /></a></div>
+            <div style="position: fixed; left: 460px; top: 35px;"><a href="https://bsbproduction.s3.amazonaws.com/portals/1093/docs/how%20to%20get%20started%20with%20cfsa%20juniors%20academy.pdf" class="button">Registration Guide</a></div>
 
             <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%); top: 100px;">
                 <span style="font-weight:bold;">Ready To Register?</span>
                 Follow the link to the right to create an account and register for the upcoming program! You will also need to be sure to sign up on <a href="https://www.teamapp.com/clubs/468664" class="info" >Team App</a>
             </div>    
-            <div style="position: fixed; left: 460px; top: 100px;"><a href="https://www.clevelandforcesc.com/Default.aspx?tabid=172937"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_clickhere-01.png" width="200px" /></a></div>
+            <div style="position: fixed; left: 460px; top: 130px;"><a href="https://www.clevelandforcesc.com/Default.aspx?tabid=172937" class="button">Register Now</a></div>
             
-            <div style="border-right: #ffe900 solid 2px; width: 450px; width: 450px; position: fixed; left: 0; top: 200px; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
+            <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; top: 200px; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
                 <span style="font-weight:bold;">Any Questions?</span> Please reach out to Ben Gunter with any program questions!
             </div>
-            <div style="position: fixed; left: 460px; top: 200px;"><a href="mailto:ben@force-sports.com"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/email_benn_yellow-01.png" width="200px"/></a>
+            <div style="position: fixed; left: 460px; top: 215px;"><a href="mailto:ben@force-sports.com" class="button">EMAIL Ben Gunter</a>
             </div>
-            <div style="position: fixed; left: 675px; width: 200px; text-align: center; top: 10px;">
+            <div style="position: fixed; left: 700px; width: 200px; text-align: center; top: 10px;">
                 <div>
                     <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/ben%20gunter.jpg" width="200px" />
                 </div>
@@ -266,11 +277,11 @@ a.info:hover::after {
                     <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/cfja_director_block-01.png" alt="Program Director" width="200px" />
                 </div>
             </div>
-            <div style="position:fixed; top: 270px; width: 600px; border-top: 1px dashed #191919; padding-top: 15px;">
+            <div style="position:fixed; top: 270px; width: 675px; border-top: 1px dashed #191919; padding-top: 15px;">
                 <div style="font:400 13pt/16pt 'Fira Sans Book',arial; padding-bottom:5px; color: darkorange;">&#x26A0; <span style="color: darkred;">Central Location is currently Full!</span></div>
-                <div style="font:400 13pt/16pt 'Fira Sans Book',arial; color: hsl(0,0%,29%);">&#x2733; Not sure if your little one is ready for this level of commitment or experience? We have classrooms for that too! Check out our Juniors Program Infographic for details on our programming for this age group<br>
-                &#x1F4C4; <a href="http://bit.ly/juniors_infographic" class="info">Juniors Infographic</a><br>
-                ...and then check out our programming at our&#x1F4CD; <a href="http://bit.ly/cfsa_soccer" class="info">Force Sports Locations</a> 
+                <div style="font:400 13pt/17pt 'Fira Sans Book',arial; color: hsl(0,0%,29%);">&#x2733; Not sure if your little one is ready for this level of commitment or experience? We have classrooms for that too! Check out our Juniors Program Infographic for details on our programming for this age group
+                <div>&#x1F4C4; <a href="http://bit.ly/juniors_infographic" class="info">Juniors Infographic</a></div>
+                <div>...and then check out our programming at our&#x1F4CD; <a href="http://bit.ly/cfsa_soccer" class="info">Force Sports Locations</a></div> 
                 </div>
             </div> 
         </div>
