@@ -208,7 +208,7 @@ a.info::after {
     mix-blend-mode: exclusion;
     width: calc(100% + 5px);
     height: 0;
-    bottom: -2px;
+    bottom: 2px;
     left: -2px;
     position: absolute;
     z-index: -1;
@@ -216,7 +216,7 @@ a.info::after {
     transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 a.info:hover::after {
-    height: calc(100% + 2px);
+    height: 100%;
 }
 a.button:any-link {
     background-color: #194077;
@@ -228,6 +228,12 @@ a.button:any-link {
     border: 1px solid #f9eb0d;
     position: relative;
     text-decoration: none;
+    }
+    .underline {
+        font-weight: 475;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        text-decoration-thickness: 2px;
     }
 </style>
 
@@ -294,7 +300,7 @@ a.button:any-link {
         <div style="margin-bottom:5px; font: 500 17pt 'Fira Sans',arial; color: darkred;">&#x2733;$975 For the full year</div>
         <div style="font: 200 14pt 'Fira Sans',arial;">&#x1F539;Paid in monthly installments</div>
         <div style="font: 200 14pt 'Fira Sans',arial;">&#x1F539;Price includes a training shirt</div>
-        <div style="font: 200 12pt 'Fira Sans',arial; margin: 15px 0 15px 0;"><span style="color: darkred;">&#x2733;</span>This is based on registration at the beginning of the year. You will see the pro-rated prices for each session upon registration. As players run out of classes, we can simply just add more sessions to their account.</div>
+        <div style="font: 200 12pt 'Fira Sans',arial; margin: 15px 0 15px 0;"><span style="color: darkred;">&#x2733;</span>This is based on registration at the beginning of the year. You will see the pro-rated prices for each session upon registration. As players run out of classes, you can simply just add more sessions to your account.</div>
         <div>
             <div style="font: 200 14pt 'Fira Sans',arial; text-decoration: underline;">Package break down</div>
             <div style="font: 200 14pt 'Fira Sans',arial; text-indent: 5pt;"><strong>&#x31; Cost: $585 - 36 sessions 2x per week</strong> | <em>$293 - 18 sessions 1x per week</em></div>
@@ -305,9 +311,9 @@ a.button:any-link {
 
     <div class="tab__content" id="Training">
         <div style="margin: 10px; font: 800 20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Where & When Is Training?</div>
-        <div style="margin-bottom: 10pt; line-height: 20pt; font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Athletes will be assigned to either 'Central' or 'West' locations for training 2-times per week based on their geographic home location.</div>
+        <div style="margin-bottom: 10pt; line-height: 20pt; font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Athletes will be assigned to either <span class="underline">Central</span> or <span class="underline">West</span> locations for training up to 2-times per week based on their geographic home location. Certain days & locations have 2 Classrooms. Players will be assigned classrooms by the coaching staff to help maintain class structure, and maximize player development. You will only attend 1 class (unless otherwise specified by the coach). If you have questions or concerns about specific classrooms, please do not hesitate to contact Coach Ben (<a href="mailto:ben@force-sports.com" class="info">ben@force-sports.com</a>) or Coach Chris (<a href="mailto:chris@force-sports.com" class="info">chris@force-sports.com</a>)</div>
         <div style="margin-bottom: 10pt; line-height: 20pt; font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Please see our <em>"Training Locations"</em> tab for more information on location address</div>
-        <div style="margin-top:5px; text-decoration: underline; font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Breaks:</div> 
+        <div style="margin-top:5px; text-decoration: underline double; font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Breaks:</div> 
         <div style="font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Dec 14 - Jan 8 (Winter)</div>
         <div style="font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Apr 4 - 16 (Spring)</div>
     </div>
@@ -386,12 +392,12 @@ a.button:any-link {
                         <li class="schedule_item">
                             <div class="days">Tuesdays (WEST)</div>
                             <div class="dates">Feb 23; Mar 2, 9, 16, 23, 30</div>
-                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> 5-6pm / 6pm-7pm</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> 5-6pm / 6-7pm</div>
                         </li>
                         <li class="schedule_item">
                             <div class="days">Wednesdays (CENTRAL)</div>
                             <div class="dates">Feb 24; Mar 3, 10, 17, 24, 31</div>
-                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> 5-6pm / 6pm-7pm</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> 5-6pm / 6-7pm</div>
                         </li>
                     </ul>
                 </td>
@@ -433,7 +439,12 @@ a.button:any-link {
                 <div style="padding:3px; margin: 7px; border-left: 1px solid #194077;">
                     <span style="font-weight: 650; font-size: 15pt;">Force Sports Rocky River</span><br>
                     21220 Center Ridge Road<br>
-                    Rocky River, OH 44116<br>
+                    Rocky River, OH 44116
+                </div>
+                <div style="padding:3px; margin: 7px; border-left: 1px solid #194077;">
+                    <span style="font-weight: 650; font-size: 15pt;">Cleveland United Fields</span><br>
+                    32760 Bagley Rd,<br> 
+                    North Ridgeville, OH 44039
                 </div>
             </div>
             <div style="position: fixed; left: 330px; width: 325px;">
@@ -443,17 +454,14 @@ a.button:any-link {
                     26555 Richmond Road<br>
                     Bedford, Heights OH 44146<br>
                 </div>
-            </div>
-            <div style="position: fixed; left: 655px; width: 325px;">
-                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/affliate_site_block-01.png" width="300px" />
                 <div style="padding:3px; margin: 7px; border-left: 1px solid #194077;">
-                    <span style="font-weight: 650; font-size: 15pt;">NEO - Force Juniors</span><br>
-                    Follow the link below for program information and registration!<br>
+                    <span style="font-weight: 650; font-size: 15pt;">Orange Village Park</span><br>
+                    29550 Emery Rd<br>
+                    Chagrin Falls, OH 44022
                 </div>
-        <a href="https://www.neoforcesoccer.com/"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_clickhere-01.png" width="200px" style="padding: 10px;" /></a>
             </div>
-            <div style="position: fixed; left: 155px; top: 220px;">
-                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/u9-u14/aam_ch-01.png" width="500px" />
+            <div style="position: fixed; top: 220px; margin: auto; width: 50%; display: block;">
+                <a href="https://www.clevelandforcesc.com/Default.aspx?tabid=482252" ><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/u9-u14/aam_ch-01.png" width="500px" /></a>
             </div>
         </div>
     </div>
