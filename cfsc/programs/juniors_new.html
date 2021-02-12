@@ -185,6 +185,20 @@
     vertical-align: top;
     
 }
+.location_container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    width: 80%;
+}
+.location_west {
+    flex: 50%;
+    padding: 10px;
+}
+.location_east {
+    flex: 50%;
+    padding: 10px;
+}
 .schedule_header {
     background-color: #194077;
     color: white;
@@ -410,14 +424,14 @@ p.training, p.schedule {
                             <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL: 9-10am / 10-11am</div>
                         </li>
                         <li class="schedule_item">
-                            <div class="days">Tuesdays (WEST)</div>
+                            <div class="days">Tuesdays</div>
                             <div class="dates">Feb 23; Mar 2, 9, 16, 23, 30</div>
-                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> 5-6pm / 6-7pm</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST: 5-6pm / 6-7pm</div>
                         </li>
                         <li class="schedule_item">
-                            <div class="days">Wednesdays (CENTRAL)</div>
+                            <div class="days">Wednesdays</div>
                             <div class="dates">Feb 24; Mar 3, 10, 17, 24, 31</div>
-                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> 5-6pm / 6-7pm</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL 5-6pm / 6-7pm</div>
                         </li>
                     </ul>
                 </td>
@@ -425,16 +439,20 @@ p.training, p.schedule {
                     <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessionv_block_upd-01.png" alt="Session V" width="300px" /></div>
                     <ul class="schedule_item">
                         <li class="schedule_item">
-                            <div class="days">Saturdays 9:00am-10:00am (both locations)</div>
+                            <div class="days">Saturdays</div>
                             <div class="dates">Apr 17, 24; May 1, 8, 15, 22</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST: 9-10am</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL: 9-10am</div>
                         </li>
                         <li class="schedule_item">
-                            <div class="days">Tuesdays 6:30pm-7:30pm (central)</div>
+                            <div class="days">Tuesdays</div>
                             <div class="dates">Apr 20, 27; May 4, 11, 18, 25</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL: 6:30-7:30pm</div>
                         </li>
                         <li class="schedule_item">
-                            <div class="days">Wednesdays 6:30pm-7:30pm (west)</div>
-                            <div class="dates">Apr 22, 29; May 6, 13, 20, 27</div>
+                            <div class="days">Wednesdays</div>
+                            <div class="dates">April 21, 28; May 5, 12, 19, 26</div>
+                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST: 5:30-6:30pm</div>
                         </li>
                     </ul>
                 </td>
@@ -453,9 +471,9 @@ p.training, p.schedule {
     </div>
 
     <div class="tab__content" id="Training Locations">
-        <div style="height: 250px;">
-            <div style="position: fixed; left: 0px; width: 325px;">
-                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_westside-01.png" width="300px" />
+        <div class="location_container">
+            <div class="location_west">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_westside-01.png" style="margin-left: auto; margin-right: auto; display: block; width:100%;" />
                 <div style="padding:3px; margin: 7px; border-left: 1px solid #194077;">
                     <span style="font-weight: 650; font-size: 15pt;">Force Sports Rocky River</span><br>
                     21220 Center Ridge Road<br>
@@ -467,8 +485,8 @@ p.training, p.schedule {
                     North Ridgeville, OH 44039
                 </div>
             </div>
-            <div style="position: fixed; left: 330px; width: 325px;">
-                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_central-01.png" width="300px" />
+            <div class="location_east">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_central-01.png" style="margin-left: auto; margin-right: auto; display: block; width:100%;" />
                 <div style="padding:3px; margin: 7px; border-left: 1px solid #194077;">
                     <span style="font-weight: 650; font-size: 15pt;">Force Sports Richmond</span><br>
                     26555 Richmond Road<br>
@@ -480,9 +498,9 @@ p.training, p.schedule {
                     Chagrin Falls, OH 44022
                 </div>
             </div>
-            <div style="position: fixed; top: 220px; margin: auto; width: 50%; display: block;">
-                <a href="https://www.clevelandforcesc.com/Default.aspx?tabid=482252" ><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/u9-u14/aam_ch-01.png" width="500px" /></a>
-            </div>
+        </div>
+        <div>
+            <a href="https://www.clevelandforcesc.com/Default.aspx?tabid=482252" ><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/u9-u14/aam_ch-01.png" style="margin-left: auto; margin-right: auto; display: block; width:50%;" /></a>
         </div>
     </div>
     
