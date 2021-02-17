@@ -274,6 +274,22 @@
     border-left: #f9eb0d 15px solid;
     padding: 5pt;
 }
+.academy_info {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 3px 0 3px 0;
+}
+.academy_location {
+    flex: 30%;
+    flex-wrap: nowrap;
+    border-right: #194077 2px solid;
+}
+.academy_times {
+    flex: 70%;
+    flex-wrap: nowrap;
+    margin-left: 3px;
+}
 li.schedule_item, ul.schedule_item {
     margin: 0 0 12pt 10pt;
     padding: 0;
@@ -488,18 +504,41 @@ p.training, p.schedule {
                         <li class="schedule_item">
                             <div class="days">Saturdays</div>
                             <div class="dates">Feb 20, 27; Mar 6, 13, 20, 27</div>
-                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST: 9-10am</div>
-                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL: 9-10am / 10-11am</div>
+                            <div class="times academy_info">
+                                <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST</div>
+                                <div class="academy_times">
+                                    <div>9-10am</div>  
+                                </div>
+                            </div>
+                            <div class="times academy_info">
+                                <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL</div>
+                                <div class="academy_times">
+                                    <div>9-10am -- La Masia</div>
+                                    <div>10-11am -- Hale End</div>
+                                </div>
+                            </div>
                         </li>
                         <li class="schedule_item">
                             <div class="days">Tuesdays</div>
                             <div class="dates">Feb 23; Mar 2, 9, 16, 23, 30</div>
-                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST: 5-6pm / 6-7pm</div>
+                            <div class="times academy_info">
+                                <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST</div>
+                                <div class="academy_times">
+                                    <div>5-6pm</div>
+                                    <div>6-7pm</div>
+                                </div>
+                            </div>
                         </li>
                         <li class="schedule_item">
                             <div class="days">Wednesdays</div>
                             <div class="dates">Feb 24; Mar 3, 10, 17, 24, 31</div>
-                            <div class="times"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL 5-6pm / 6-7pm</div>
+                            <div class="times academy_info">
+                                <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL</div>
+                                <div class="academy_times">
+                                    <div>5-6pm -- La Masia</div>
+                                    <div>6-7pm -- Hale End</div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </td>
