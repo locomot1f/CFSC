@@ -199,6 +199,74 @@
     flex: 50%;
     padding: 10px;
 }
+.location {
+    font-weight: 650; 
+    font-size: 15pt;
+}
+.inside_west, .inside_east {
+    position: relative;
+    padding:3px; 
+    margin: 7px 0 7px 35px; 
+    border-left: 1px solid #194077;
+}
+.inside_west::before {
+    position: absolute;
+    left: -35px;
+    top: 25px;
+    content: 'INSIDE';
+    font-weight: 500;
+    font-size: 13pt;
+    font-variant-caps: all-small-caps;
+    color: gray;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+}
+.inside_east::before {
+    position: absolute;
+    left: -35px;
+    top: 25px;
+    content: 'INSIDE';
+    font-weight: 500;
+    font-size: 13pt;
+    font-variant-caps: all-small-caps;
+    color: gray;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+}
+.outside_west, .outside_east {
+    padding:3px; 
+    margin: 7px 0 7px 35px; 
+    border-left: 1px solid #194077;
+    position: relative;
+}
+.outside_west::before {
+    position: absolute;
+    left: -40px;
+    top: 25px;
+    content: 'OUTSIDE';
+    font-weight: 500;
+    font-size: 13pt;
+    font-variant-caps: all-small-caps;
+    color: gray;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+}
+.outside_east::before {
+    position: absolute;
+    left: -40px;
+    top: 25px;
+    content: 'OUTSIDE';
+    font-weight: 500;
+    font-size: 13pt;
+    font-variant-caps: all-small-caps;
+    color: gray;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+}
+.address {
+    font-weight: 350; 
+    font-size: 13pt;
+}
 .schedule_header {
     background-color: #194077;
     color: white;
@@ -474,28 +542,28 @@ p.training, p.schedule {
         <div class="location_container">
             <div class="location_west">
                 <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_westside-01.png" style="margin-left: auto; margin-right: auto; display: block; width:100%;" />
-                <div style="padding:3px; margin: 7px; border-left: 1px solid #194077;">
-                    <span style="font-weight: 650; font-size: 15pt;">Force Sports Rocky River</span><br>
-                    21220 Center Ridge Road<br>
-                    Rocky River, OH 44116
+                <div class="inside_west">
+                    <div class="location">Force Sports Rocky River</div>
+                    <div class="address">21220 Center Ridge Road</div>
+                    <div class="address">Rocky River, OH 44116</div>
                 </div>
-                <div style="padding:3px; margin: 7px; border-left: 1px solid #194077;">
-                    <span style="font-weight: 650; font-size: 15pt;">Cleveland United Fields</span><br>
-                    32760 Bagley Rd,<br> 
-                    North Ridgeville, OH 44039
+                <div class="outside_west">
+                    <div class="location">Cleveland United Fields</div>
+                    <div class="address">32760 Bagley Rd.</div>
+                    <div class="address">North Ridgeville, OH 44039</div>
                 </div>
             </div>
             <div class="location_east">
                 <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_central-01.png" style="margin-left: auto; margin-right: auto; display: block; width:100%;" />
-                <div style="padding:3px; margin: 7px; border-left: 1px solid #194077;">
-                    <span style="font-weight: 650; font-size: 15pt;">Force Sports Richmond</span><br>
-                    26555 Richmond Road<br>
-                    Bedford, Heights OH 44146<br>
+                <div class="inside_east">
+                    <div class="location">Force Sports Richmond</div>
+                    <div class="address">26555 Richmond Road</div>
+                    <div class="address">Bedford, Heights OH 44146</div>
                 </div>
-                <div style="padding:3px; margin: 7px; border-left: 1px solid #194077;">
-                    <span style="font-weight: 650; font-size: 15pt;">Orange Village Park</span><br>
-                    29550 Emery Rd<br>
-                    Chagrin Falls, OH 44022
+                <div class="outside_east">
+                    <div class="location">Orange Village Park</div>
+                    <div class="address">29550 Emery Rd</div>
+                    <div class="address">Chagrin Falls, OH 44022</div>
                 </div>
             </div>
         </div>
