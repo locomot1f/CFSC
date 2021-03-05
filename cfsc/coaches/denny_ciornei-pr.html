@@ -8,6 +8,7 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        width: 100%;
     }
     .flex_container .testimonials {
         position: relative;
@@ -30,7 +31,13 @@
         font-weight: 300;
         font-size: 10pt;
         line-height: 1.6;
-        
+    }
+    .testimonials .video {
+        position: relative;
+        border: #ffe900 5px solid;
+        overflow: hidden;
+        width: 99%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     }
     ul.lists {
         line-height: 1.8;
@@ -96,12 +103,14 @@
         cursor: pointer;
         background-color: #ffe900;
 }
-.container {
-      position: relative;
-      float: left;
-      overflow: hidden;
+.responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
       width: 100%;
-      
+      height: 100%;
     }
 </style>
 
@@ -121,10 +130,9 @@
         <div class="testimonial">
             “I started working with Denny when I was 10 years old, and he built me into a professional from the ground up. His knowledge of the game and goalkeeping itself is unparalleled, but it’s his ability to instill confidence in his goalkeepers that truly sets Denny apart.” - <span class="quote">Minnesota United, Alec Ferrell</span>
         </div>
-        <div class="testimonial">
-            <div class="container">
-                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/SPG4wnv48uc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-            </div>
+        <div class="video">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/SPG4wnv48uc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            
         </div>
     </div>
 
