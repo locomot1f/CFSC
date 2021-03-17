@@ -1,7 +1,7 @@
 <style>
     .flexbox {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
     .snippet:nth-child(even) {
         border-left: 10px #ffe900 double;
@@ -13,7 +13,7 @@
     }
     .flexbox .snippet {
         width: 90%;
-        margin: 0 0 20px 0;
+        margin: 0 20px 0 0;
         padding: 5px;
     }
     .segment {
@@ -40,27 +40,18 @@
     .header::before {
         content: "Press Releases";
         position: relative;
-        top: 25px;
+        top: 0px;
         font-family: 'Fira Sans Ultra', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 45pt;
         color: white;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: #194077;
     }
-    .leader {
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        width: fit-content;
-        padding: 5px 0 5px 0;
-    }
     .date {
         color: #194077;
         font-family: 'Fira Sans ExtraLight', Arial, Helvetica, sans-serif;
         font-weight: 500;
         font-size: 10pt;
-        position: relative;
-        left: 0px;
         margin: auto;
         vertical-align: middle;
     }
@@ -70,8 +61,7 @@
         font-weight: 600;
         font-style: italic;
         font-size: 13pt;
-        position: relative;
-        left: 0px;
+        margin-bottom: 4px;
     }
     a.button:any-link {
         border: none;
@@ -95,25 +85,21 @@
 <div class="header"></div>
 <div class="flexbox">
     <article class="snippet">
-        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/u15-u18/pre_pro_program_info_pb-01.png" class="pixel"     />
-        <div class="leader">
-            <div class="date">OCTOBER 28, 2020 🔹</div>
-            <div class="title">Cleveland Force SC Announces Intention to Join USL League Two</div>
-        </div>
-            <div class="segment">
-            Youth soccer organization Cleveland Force SC today announced its intention to purchase a USL League Two franchise in the coming years. As one of the top youth development clubs in Ohio, Force SC leadership is seeking to add both a senior team in USL League Two and an elite pre-professional side competing in the USL Academy League to the apex of its development pyramid...
+        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/u15-u18/pre_pro_program_info_pb-01.png" class="pixel" />
+        <div class="date">OCTOBER 28, 2020</div>
+        <div class="title">Cleveland Force SC Announces Intention to Join USL League Two</div>
+        <div class="segment">
+        Youth soccer organization Cleveland Force SC today announced its intention to purchase a USL League Two franchise in the coming years. As one of the top youth development clubs in Ohio, Force SC leadership is seeking to add both a senior team in USL League Two and an elite pre-professional side competing in the USL Academy League to the apex of its development pyramid...
         </div>
         <a href="https://www.clevelandforcesc.com/Default.aspx?tabid=971388" class="button">click for more</a>
     </article>
 
     <article class="snippet">
-        <img src="https://lh5.googleusercontent.com/G9Xaq5viosW2WbA-fhMRd3BGo0FdOVYGAMfdpZe_lpAxCcTtUtHFKOsdssNG2HlIbr-2s8kWtFw2XDkbjQ6N8PaMyaXjuAtcq57czWSkBjq4kUTFH_dsBZIql46vyYdCs4hAJU3q" class="pixel"     />
-        <div class="leader">
-            <div class="date">MARCH 2, 2021 🔹</div>
-            <div class="title">Denny Ciornei announced as CFSC Goalkeeping Director</div>
-        </div>
-            <div class="segment">
-            The addition of Coach Denny is an example of our commitment to providing an unparalleled club structure for all members/positions within the organization. Coach Denny shares our commitment and passion to empower intelligent, humble, and hard-working boys and girls, who approach goals with a positive outlook, both on and off the field. We are blessed to have him join and look forward to seeing the growth of our keepers and the culture of the program...
+        <img src="https://lh5.googleusercontent.com/G9Xaq5viosW2WbA-fhMRd3BGo0FdOVYGAMfdpZe_lpAxCcTtUtHFKOsdssNG2HlIbr-2s8kWtFw2XDkbjQ6N8PaMyaXjuAtcq57czWSkBjq4kUTFH_dsBZIql46vyYdCs4hAJU3q" class="pixel" />
+        <div class="date">MARCH 2, 2021</div>
+        <div class="title">Denny Ciornei announced as CFSC Goalkeeping Director</div>
+        <div class="segment">
+        The addition of Coach Denny is an example of our commitment to providing an unparalleled club structure for all members/positions within the organization. Coach Denny shares our commitment and passion to empower intelligent, humble, and hard-working boys and girls, who approach goals with a positive outlook, both on and off the field. We are blessed to have him join and look forward to seeing the growth of our keepers and the culture of the program...
         </div>
         <a href="https://www.clevelandforcesc.com/Default.aspx?tabid=1066378" class="button">click for more</a>
     </article>
