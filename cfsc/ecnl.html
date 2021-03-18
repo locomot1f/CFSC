@@ -10,7 +10,7 @@
 p.txt {
     text-indent: 5pt;
     font-family: 'Fira Sans Book', Arial, Helvetica, sans-serif;
-    font-size: 12pt;
+    font-size: 14pt;
     font-weight: 400;
     line-height: 18pt;
 }
@@ -20,7 +20,7 @@ p.clear {
 p.intro {
         font-family: 'Fira Sans Book', Arial, Helvetica, sans-serif;
         font-weight: 550;
-        font-size: 14pt;
+        font-size: 16pt;
         line-height: 1.3;
     }
 .intro::first-letter {
@@ -62,7 +62,7 @@ p.intro {
 .quote_text {
     font-family: 'Fira Sans Bold';
     font-style: italic;
-    font-size: 11pt;
+    font-size: 12pt;
     line-height: 17pt;
     color: #194077;
     text-align: justify;
@@ -77,23 +77,27 @@ p.intro {
     font-weight: 550;
     font-family: 'Fira Sans Semi-bold';
     font-style: italic;
-    font-size: 13pt;
+    font-size: 15pt;
 }
 .ecnl_block {
     display: flex;
     flex-wrap: nowrap;
+    font-family: 'Fira Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12.5pt;
 }
 .ecnl-video {
-    position: relative;
-    float: left;
-    overflow: hidden;
-    width: 100%;
-    top: 0;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    width: 70%;
 }
 .ecnl-info {
+    width: 30%;
+    padding-left: 10px;
+    background-color: #f9eb0d;
+}
+.video_container {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    padding: 10px;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 .responsive_video{
     position: absolute;
@@ -103,6 +107,7 @@ p.intro {
     right: 0;
     width: 100%;
     height: 100%;
+    border: none;
 }
 a.academy:link {
     text-decoration: underline;
@@ -179,16 +184,18 @@ a.academy:visited, a.academy:active {
 
     <div class="ecnl_block">
         <div class="ecnl-video">
+        <div class="video_container">
             <iframe class="responsive_video" src="https://youtube.com/embed/zyOUSJZJ71U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         </div>
         <div class="ecnl-info">
             <div style="margin: 10px;"><a href="http://www.TheECNL.com" class="academy">www.TheECNL.com</a></div>
             <div>
-                <a href="https://www.facebook.com/theECNL" class="academy">Girls FB: /theECNL</a> | 
-                <a href="https://www.instagram.com/theecnl/" class="academy">Girls IG: @theECNL</a> | 
-                <a href="https://twitter.com/theECNL" class="academy">Girls TW: @theECNL</a>
+                <div><a href="https://www.facebook.com/theECNL" class="academy">Girls FB: /theECNL</a></div>
+                <div><a href="https://www.instagram.com/theecnl/" class="academy">Girls IG: @theECNL</a></div>
+                <div><a href="https://twitter.com/theECNL" class="academy">Girls TW: @theECNL</a></div>
+                <img src="/portals/1093/images/ecnl/force%20ecnl.jpg" style="display: block; width: 80%; margin: auto; padding-top: 30px;" />
             </div>
         </div>
     </div>
-
 </div>
