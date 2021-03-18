@@ -79,6 +79,31 @@ p.intro {
     font-style: italic;
     font-size: 13pt;
 }
+.ecnl_block {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.ecnl-video {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.ecnl-info {
+    width: 100%;
+    padding: 10px;
+}
+.responsive_video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
 a.academy:link {
     text-decoration: underline;
     font-weight: 500;
@@ -96,6 +121,7 @@ a.academy:visited, a.academy:active {
 </style>
 
 <div>
+<img src="https://www.clevelandforcesc.com/portals/1093/contentrotator/contentrotator637515181445481260.png" style="width: 100%; margin-bottom: 20px;" />
 <div class="header">GIRLS ELITE CLUBS NATIONAL LEAGUE FOR 2021-2022 SEASON</div>
 <div class="leader">Cleveland, OH (March 16, 2021) </div> 
     <p class="intro">
@@ -151,8 +177,18 @@ a.academy:visited, a.academy:active {
         We will lead, set our eyes on new horizons, and pursue them relentlessly. Born out of the belief in a better way. Continued in the ever-evolving pursuit of excellence.        
     </p>
 
-    <div>
-        <iframe width="640" height="355" src="https://youtube.com/embed/zyOUSJZJ71U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="ecnl_block">
+        <div class="ecnl-video">
+            <iframe class="responsive_video" src="https://youtube.com/embed/zyOUSJZJ71U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="ecnl-info">
+            <div style="margin: 10px;"><a href="http://www.TheECNL.com" class="academy">www.TheECNL.com</a></div>
+            <div>
+                <a href="https://www.facebook.com/theECNL" class="academy">Girls FB: /theECNL</a> | 
+                <a href="https://www.instagram.com/theecnl/" class="academy">Girls IG: @theECNL</a> | 
+                <a href="https://twitter.com/theECNL" class="academy">Girls TW: @theECNL</a>
+            </div>
+        </div>
     </div>
 
 </div>
