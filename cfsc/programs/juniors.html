@@ -1,332 +1,583 @@
-<table style="width: 865.602px; height: 129px;" align="center" class="">
-  <tbody>
-    <tr>
-      <td colspan="3">
-        &nbsp;<img
-          src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/_20-21_infopb-01.png"/>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        &nbsp;
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><strong>Where &amp; When Is Training?</strong><br /><br />Athletes
-            will be assigned to either <br /><br />'Central' or
-            'West'&nbsp;locations for <br /><br />2x per week training based
-            on<br /><br />
-            their geographic home location.</span
-          >
+<style>
+.tab-wrap {
+  /* -webkit-transition: 0.3s box-shadow ease; */
+  /* transition: 0.3s box-shadow ease; */
+  /* border-radius: 6px; */
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  list-style: none;
+  background-color: #fff;
+  /* margin: 40px 0; */
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+}
+/**************************
+.tab-wrap:hover {
+  box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
+}
+*****************************/
+
+.tab {
+  display: none;
+}
+.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
+  opacity: 1;
+  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
+  position: relative;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  text-shadow: 0 0 0;
+}
+.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
+  opacity: 1;
+  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
+  position: relative;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  text-shadow: 0 0 0;
+}
+.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
+  opacity: 1;
+  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
+  position: relative;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  text-shadow: 0 0 0;
+}
+.tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4) {
+  opacity: 1;
+  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
+  position: relative;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  text-shadow: 0 0 0;
+}
+.tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
+  opacity: 1;
+  -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease;
+  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
+  position: relative;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  text-shadow: 0 0 0;
+}
+.tab:first-of-type:not(:last-of-type) + label {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.tab:not(:first-of-type):not(:last-of-type) + label {
+  border-radius: 0;
+}
+.tab:last-of-type:not(:first-of-type) + label {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.tab:checked + label {
+  background-color: #f9eb0d;
+  box-shadow: 0 -1px 0 #fff inset;
+  cursor: default;
+}
+.tab:checked + label:hover {
+  box-shadow: 0 -1px 0 #fff inset;
+  background-color: #f9eb0d;
+}
+.tab + label {
+  box-shadow: 0 -1px 0 #eee inset;
+  /* border-radius: 6px 6px 0 0; */
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: #194077;
+  font-weight: 500;
+  font-size: 18pt;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  text-align: center;
+  background-color: #f2f2f2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
+  transition: 0.3s background-color ease, 0.3s box-shadow ease;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.tab + label:hover {
+  background-color: #f9f9f9;
+  /* box-shadow: 0 1px 0 #f4f4f4 inset; */
+}
+.tab__content {
+  padding: 10px;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  left: 0;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  border-radius: 6px;
+}
+.days {
+    font-weight: 800;
+    font-size: 15pt;
+    text-decoration: underline;
+}
+.dates {
+    font-weight: 600;
+    font-size: 14pt;
+}
+.times {
+    font-weight: 400;
+    font-size: 12pt;
+}
+
+.schedule_box {
+    vertical-align: top;
+    
+}
+.location_container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    width: 80%;
+}
+.location_west {
+    flex: 50%;
+    padding: 10px;
+}
+.location_east {
+    flex: 50%;
+    padding: 10px;
+}
+.location {
+    font-weight: 650; 
+    font-size: 15pt;
+}
+.inside_west, .inside_east {
+    position: relative;
+    padding:3px; 
+    margin: 7px 0 7px 35px; 
+    border-left: 1px solid #194077;
+}
+.inside_west::before {
+    position: absolute;
+    left: -35px;
+    top: 25px;
+    content: 'INSIDE';
+    font-weight: 500;
+    font-size: 13pt;
+    font-variant-caps: all-small-caps;
+    color: gray;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+}
+.inside_east::before {
+    position: absolute;
+    left: -35px;
+    top: 25px;
+    content: 'INSIDE';
+    font-weight: 500;
+    font-size: 13pt;
+    font-variant-caps: all-small-caps;
+    color: gray;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+}
+.outside_west, .outside_east {
+    padding:3px; 
+    margin: 7px 0 7px 35px; 
+    border-left: 1px solid #194077;
+    position: relative;
+}
+.outside_west::before {
+    position: absolute;
+    left: -40px;
+    top: 25px;
+    content: 'OUTSIDE';
+    font-weight: 500;
+    font-size: 13pt;
+    font-variant-caps: all-small-caps;
+    color: gray;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+}
+.outside_east::before {
+    position: absolute;
+    left: -40px;
+    top: 25px;
+    content: 'OUTSIDE';
+    font-weight: 500;
+    font-size: 13pt;
+    font-variant-caps: all-small-caps;
+    color: gray;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+}
+.address {
+    font-weight: 350; 
+    font-size: 13pt;
+}
+.schedule_header {
+    background-color: #194077;
+    color: white;
+    font: 700 18pt 'Fira Sans Heavy';
+    border-left: #f9eb0d 15px solid;
+    padding: 5pt;
+}
+.flex_container {
+    display: flex;
+    border-bottom: #194077 2px solid;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.session {
+    padding: 5px 5px 0 5px;
+}
+.session:not(:last-of-type) {
+    border-right: 2px dashed #194077;
+}
+.block {
+    flex: 300px;
+    padding: 3px 10px 0 15px;
+    height: 100%;
+}
+.schedule_item {
+    line-height: 20pt;
+    white-space: nowrap;
+}
+.schedule_item:not(:last-of-type) {
+    border-bottom: 2px dotted #ffe900;
+}
+.academy_info {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 3px 0 3px 0;
+}
+.academy_location {
+    flex: 40%;
+    flex-wrap: nowrap;
+    border-right: #194077 2px solid;
+    padding-right: 5px;
+}
+.academy_times {
+    flex: 60%;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+a.info:any-link {
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+}
+a.info::after {
+    content: '';
+    background: #f9eb0d;
+    mix-blend-mode: exclusion;
+    width: calc(100% + 5px);
+    height: 0;
+    bottom: 2px;
+    left: -2px;
+    position: absolute;
+    z-index: -1;
+    border-bottom: 1px solid #194077;
+    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+a.info:hover::after {
+    height: calc(100% - 5px);
+}
+a.button:any-link {
+    background-color: #194077;
+    color: #f9eb0d;
+    font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman';
+    font-weight: 500;
+    font-size: 14pt;
+    padding: 10px;
+    border: 1px solid #f9eb0d;
+    position: relative;
+    text-decoration: none;
+    }
+p.training, p.schedule {
+    text-indent: 5pt; 
+    font-weight: 400;
+    font-size: 14pt;
+    font-family: 'Fira Sans',arial;
+    color: hsl(0,0%,29%);
+    margin: 0 0 5pt 0;
+    padding-bottom: 5px;
+    line-height: 17pt;
+}
+.underline {
+    font-weight: 475;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+    }
+.triangle {
+	width: 0;
+	height: 0;
+	border-top: 6px solid transparent;
+	border-left: 8px solid #194077;
+	border-bottom: 6px solid transparent;
+    display: inline-block;
+    margin: 7px 5px 0 15px;
+}
+</style>
+
+<div style="text-align: center;">
+    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/_20-21_infopb-01.png" width="100%" />
+</div>
+
+<div class="tab-wrap">
+    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+    <label for="tab1">Registration</label>
+    
+    <input type="radio" id="tab2" name="tabGroup1" class="tab">
+    <label for="tab2">&#x1F195;Price</label>
+    
+    <input type="radio" id="tab3" name="tabGroup1" class="tab">
+    <label for="tab3">Training</label>
+    
+    <input type="radio" id="tab4" name="tabGroup1" class="tab">
+    <label for="tab4">Schedule</label>
+
+    <input type="radio" id="tab5" name="tabGroup1" class="tab">
+    <label for="tab5">Training Locations</label>
+
+    <div class="tab__content" id="Registration">
+        <div style="height: 380px;">       
+            <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%); top: 10px;">
+                <span style="font-weight:bold;">How To Get Started!</span> Follow the link to the right for a step-by-step guide on how to register for Juniors Academy!
+            </div>
+            <div style="position: fixed; left: 460px; top: 35px;"><a href="https://bsbproduction.s3.amazonaws.com/portals/1093/docs/how%20to%20get%20started%20with%20cfsa%20juniors%20academy.pdf" class="button">Registration Guide</a></div>
+
+            <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%); top: 100px;">
+                <span style="font-weight:bold;">Ready To Register?</span>
+                Follow the link to the right to create an account and register for the upcoming program! You will also need to be sure to sign up on <a href="https://www.teamapp.com/clubs/468664" class="info" >Team App</a>
+            </div>    
+            <div style="position: fixed; left: 460px; top: 130px;"><a href="https://www.clevelandforcesc.com/Default.aspx?tabid=172937" class="button">Register Now</a></div>
+            
+            <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; top: 200px; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
+                <span style="font-weight:bold;">Any Questions?</span> Please reach out to Ben Gunter with any program questions!
+            </div>
+            <div style="position: fixed; left: 460px; top: 215px;"><a href="mailto:ben@force-sports.com" class="button">EMAIL Ben Gunter</a>
+            </div>
+            <div style="position: fixed; left: 700px; width: 200px; text-align: center; top: 10px;">
+                <div>
+                    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/ben%20gunter.jpg" width="200px" />
+                </div>
+                <div>
+                    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/cfja_director_block-01.png" alt="Program Director" width="200px" />
+                </div>
+            </div>
+            <div style="position:fixed; top: 270px; width: 675px; border-top: 1px dashed #191919; padding-top: 15px;">
+                <div style="font:400 13pt/17pt 'Fira Sans Book',arial; color: hsl(0,0%,29%);">&#x2733; Not sure if your little one is ready for this level of commitment or experience? We have classrooms for that too! Check out our Juniors Program Infographic for details on our programming for this age group
+                <div>&#x1F4C4; <a href="http://bit.ly/juniors_infographic" class="info">Juniors Infographic</a></div>
+                <div>...and then check out our programming at our&#x1F4CD; <a href="http://bit.ly/cfsa_soccer" class="info">Force Sports Locations</a></div> 
+                </div>
+            </div> 
         </div>
-      </td>
-      <td>
-        &nbsp;
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><strong>Price per Player</strong><br /><br />$575 (30
-            sessions)&nbsp;<br /><br />$975 (60 sessions)</span
-          >
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><br />*Paid in monthly installments</span
-          >
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><br />*Price includes a training shirt</span
-          >
-        </div>
-      </td>
-      <td style="text-align: center;">
-        &nbsp;<br /><strong style="font-size: 18px; text-align: center;"
-          >Breaks:&nbsp;</strong
-        >
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><br />Dec&nbsp;14 -&nbsp;Jan&nbsp;8 (Winter);&nbsp;<br />Apr&nbsp;4
-            - 16 (Spring)</span
-          >
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"><br /></span>
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><strong>Friendly Dates:&nbsp;</strong
-            ><br /><br />Oct&nbsp;25;&nbsp;Dec&nbsp;13;&nbsp;Feb&nbsp;21;&nbsp;Mar&nbsp;28;&nbsp;May&nbsp;23</span
-          >
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;">*Time TBD</span>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td style="text-align: center;">&nbsp;</td>
-      <td style="text-align: center;">&nbsp;</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">
-        &nbsp;<img
-          src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program info/juniors/jr_sessioni_block_upd-01.png"
-          style="width: 300px; height: 87px;"
-        />
-      </td>
-      <td style="text-align: center;">
-        <img
-          src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessionii_block_upd-01.png"
-          style="width: 300px; height: 87px;"
-        />
-      </td>
-      <td style="text-align: center;">
-        &nbsp;<img
-          src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessioniii_block_upd-01.png"
-          style="width: 300px; height: 87px;"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">
-        &nbsp;
+    </div>
+
+    <div class="tab__content" id="Price">
+        <div style="margin-bottom: 10pt; font: 600 18pt 'Fira Sans',arial; text-decoration:underline;">Price Per Player</div>
+        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">This is based on a yearly commitment. It is expected that for any package, the player commits to training twice a week to get the full experience.<br>&#x1F195;We now have new packages setup for more convenience to our customers. You are able to purchase individual packages (see Package break down below) to fit your schedule.</div> 
+        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Once you sign up for a package, you are free to use them as you see fit. We take attendance to keep track of your package usage. Once you have used up the classes in your package, you will need to sign up for additional package(s). When you click to register you will see packages for the remaining year! </div>
+        <div style="margin-bottom:5px; font: 500 17pt 'Fira Sans',arial; color: darkred;">&#x2733;$975 For the full year</div>
+        <div style="font: 200 14pt 'Fira Sans',arial;">&#x1F539;Paid in monthly installments</div>
+        <div style="font: 200 14pt 'Fira Sans',arial;">&#x1F539;Price includes a training shirt</div>
+        <div style="font: 200 12pt 'Fira Sans',arial; margin: 15px 0 15px 0;"><span style="color: darkred;">&#x2733;</span>This is based on registration at the beginning of the year. You will see the pro-rated prices for each session upon registration. As players run out of classes, you can simply just add more sessions to your account.</div>
         <div>
-          <span style="font-size: 18px;"
-            ><strong>Saturdays 9:00am-10:00am</strong>&nbsp;<br />(both
-            locations)</span
-          >
+            <div style="font: 400 15pt/18pt 'Fira Sans',arial; text-decoration: underline dashed;">Package break down</div>
+            <div style="font: 200 14pt/22pt 'Fira Sans',arial;"><span class="triangle"></span>$585 - 36 sessions 2x per week | <em>$293 - 18 sessions 1x per week</em></div>
+            <div style="font: 200 14pt/22pt 'Fira Sans',arial;"><span class="triangle"></span>$390 - 24 sessions 2x per week</strong> | <em>$195 - 12 sessions 1x per week</em></div>
+            <div style="font: 200 14pt/22pt 'Fira Sans',arial;"><span class="triangle"></span>$195 - 12 sessions 2x per week</strong> | <em>$98 - 6 sessions 1x per week</em></div>
+        </div>
+    </div>
+
+    <div class="tab__content" id="Training">
+        <div style="margin: 10px; font: 800 20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Where & When Is Training?</div>
+        <p class="training">Athletes will be assigned to either <span class="underline">Central</span> or <span class="underline">West</span> locations for training up to 2-times per week based on their geographic home location.</p> 
+        <p class="training">Certain days & locations may have 2 Classrooms. Players will be assigned classrooms by the coaching staff to help maintain class structure, and maximize player development. You will only attend 1 class (unless otherwise specified by the coach).</p>
+        <p class="training">If you have questions or concerns about specific classrooms, please do not hesitate to contact:<br>Coach Ben (<a href="mailto:ben@force-sports.com" class="info">ben@force-sports.com</a>) or Coach Chris (<a href="mailto:chris@force-sports.com" class="info">chris@force-sports.com</a>)</p>
+        <p class="training">Please see our <em>"Training Locations"</em> tab for more information on location address</p>
+        <div style="margin-top:5px; text-decoration: underline double; font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Breaks:</div> 
+        <div style="font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Dec 14 - Jan 8 (Winter)</div>
+        <div style="font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Apr 4 - 16 (Spring)</div>
+    </div>
+
+    <div class="tab__content" id="Schedule">
+        <div class="schedule_header">Classroom Assignments</div>
+        <div style="padding-left: 20px; border-bottom: #194077 2px solid;">
+            <p class="schedule">As you can see certain days & locations have 2 Classrooms. Players will be assigned classrooms by the coaching staff to help maintain class structure, and maximize player development. You will only attend 1 class (unless otherwise specified by the coach). If you have questions or concerns about specific classrooms, please do not hesitate to contact:<br>Coach Ben (<a href="mailto:ben@force-sports.com" class="info">ben@force-sports.com</a>) or Coach Chris (<a href="mailto:chris@force-sports.com" class="info">chris@force-sports.com</a>)</p>
+        </div>
+        <div class="flex_container">
+            <div class="session">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessioniv_block_upd-01.png" alt="Session IV" style="width:300px" />
+                <div class="block">
+                    <div class="schedule_item">
+                        <div class="days">Saturdays</div>
+                        <div class="dates">Feb 20, 27; Mar 6, 13, 20, 27</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST</div>
+                            <div class="academy_times">
+                                <div>9-10am</div>
+                            </div>
+                        </div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL</div>
+                            <div class="academy_times">
+                                <div>9-10am -- La Masia</div>
+                                <div>10-11am -- Hale End</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Tuesdays</div>
+                        <div class="dates">Feb 23; Mar 2, 9, 16, 23, 30</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST(Inside)</div>
+                            <div class="academy_times">
+                                <div>5-6pm</div>
+                                <div>6-7pm</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Wednesdays</div>
+                        <div class="dates">Feb 24; Mar 3, 10, 17, 24, 31</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL(Inside)</div>
+                            <div class="academy_times">
+                                <div>5-6pm -- La Masia</div>
+                                <div>6-7pm -- Hale End</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="session">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessionv_block_upd-01.png" alt="Session V" style="width:300px" />
+                <div class="block">
+                    <div class="schedule_item">
+                        <div class="days">Saturdays</div>
+                        <div class="dates">Apr 17, 24; May 1, 8, 15, 22</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST(Inside)</div>
+                            <div class="academy_times">
+                                <div>9-10am</div>  
+                            </div>
+                        </div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL(Inside)</div>
+                            <div class="academy_times">
+                                <div>9-10am -- La Masia</div>
+                                <div>10-11am -- Hale End</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Tuesdays</div>
+                        <div class="dates">Apr 20, 27; May 4, 11, 18, 25</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL(Outside)</div>
+                            <div class="academy_times">
+                                <div>6:30-7:30pm</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Wednesdays</div>
+                        <div class="dates">April 21, 28; May 5, 12, 19, 26</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST(Inside)</div>
+                            <div class="academy_times">
+                                <div>5:30-6:30pm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="session">
+                <div class="schedule_item">
+                <div class="schedule_header">Friendly Dates:</div>
+                <div style="padding-left: 20px;">
+                    <div class="dates">Oct 25, Dec 13</div>
+                    <div class="dates">Feb 21, Mar 28, May 23</div>
+                    <div class="times">*Times TBD</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab__content" id="Training Locations">
+        <div class="location_container">
+            <div class="location_west">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_westside-01.png" style="margin-left: auto; margin-right: auto; display: block; width:100%;" />
+                <div class="inside_west">
+                    <div class="location">Force Sports Rocky River</div>
+                    <div class="address">21220 Center Ridge Road</div>
+                    <div class="address">Rocky River, OH 44116</div>
+                </div>
+                <div class="outside_west">
+                    <div class="location">Cleveland United Fields</div>
+                    <div class="address">32760 Bagley Rd.</div>
+                    <div class="address">North Ridgeville, OH 44039</div>
+                </div>
+            </div>
+            <div class="location_east">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/new_central-01.png" style="margin-left: auto; margin-right: auto; display: block; width:100%;" />
+                <div class="inside_east">
+                    <div class="location">Force Sports Richmond</div>
+                    <div class="address">26555 Richmond Road</div>
+                    <div class="address">Bedford, Heights OH 44146</div>
+                </div>
+                <div class="outside_east">
+                    <div class="location">Orange Village Park</div>
+                    <div class="address">29550 Emery Rd</div>
+                    <div class="address">Chagrin Falls, OH 44022</div>
+                </div>
+            </div>
         </div>
         <div>
-          <span style="font-size: 18px;"
-            ><br />Sept&nbsp;12, 19, 26;&nbsp;Oct&nbsp;3, 10, 17</span
-          >
+            <a href="https://www.clevelandforcesc.com/Default.aspx?tabid=482252" ><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/u9-u14/aam_ch-01.png" style="margin-left: auto; margin-right: auto; display: block; width:50%;" /></a>
         </div>
-        <div><br /></div>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Tuesdays 6:30pm-7:30pm</strong>&nbsp;(central)</span
-          >
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Sept&nbsp;15, 22, 29;&nbsp;Oct&nbsp;6, 13, 20</span
-          >
-        </div>
-        <div>
-          <span style="font-size: 18px;"><br /></span>
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Thursdays 6:30pm-7:30pm</strong>&nbsp;(west)</span
-          >
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Sept&nbsp;17, 24;&nbsp;Oct&nbsp;1, 8, 15, 22</span
-          >
-        </div>
-      </td>
-      <td style="text-align: center;">
-        &nbsp;<br /><strong></strong>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Saturdays 9:00am-10:00am</strong></span
-          >
-        </div>
-        <div><span style="font-size: 18px;">(both locations)</span></div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Oct&nbsp;24, 31;&nbsp;Nov&nbsp;7, 14, 21 Dec&nbsp;5</span
-          >
-        </div>
-        <div>
-          <span style="font-size: 18px;"><br /></span>
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Tuesdays 6:00pm-7:00pm&nbsp;</strong>(west)</span
-          >
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Oct&nbsp;27;&nbsp;Nov&nbsp;3, 10, 17; Dec&nbsp;1, 8</span
-          >
-        </div>
-        <div>
-          <span style="font-size: 18px;"><br /></span>
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Wednesdays&nbsp;6pm-7pm&nbsp;</strong></span
-          ><span style="font-size: 18px;">(central)</span>
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Oct&nbsp;28;&nbsp;Nov&nbsp;4, 11, 18; Dec&nbsp;2, 9</span
-          >
-        </div>
-      </td>
-      <td style="text-align: center;">
-        &nbsp;<br /><strong></strong>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Saturdays 9:00am-10:00am</strong></span
-          >
-        </div>
-        <div><span style="font-size: 18px;">(both locations)</span></div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Jan&nbsp;9, 16, 23, 30;&nbsp;Feb&nbsp;6, 13</span
-          >
-        </div>
-        <div><br /></div>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Tuesdays 6:00pm-7:00pm&nbsp;</strong></span
-          ><span style="font-size: 18px;">(west)</span>
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Jan&nbsp;12, 19, 26;&nbsp;Feb&nbsp;2, 9, 16</span
-          >
-        </div>
-        <div><br /></div>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Wednesdays&nbsp;6pm-7pm&nbsp;</strong></span
-          ><span style="font-size: 18px;">(central)</span>
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Jan&nbsp;13, 20, 27;&nbsp;Feb&nbsp;3, 10, 17</span
-          >
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">&nbsp;</td>
-      <td style="text-align: center;">&nbsp;</td>
-      <td style="text-align: center;">&nbsp;</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">
-        &nbsp;<img
-          src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessioniv_block_upd-01.png"
-          style="width: 300px; height: 87px;"
-        />
-      </td>
-      <td style="text-align: center;">
-        &nbsp;<img
-          src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_sessionv_block_upd-01.png"
-          style="width: 300px; height: 87px;"
-        />
-      </td>
-      <td style="text-align: center;">
-        &nbsp;<img
-          src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/cfja_director_block-01.png"
-          style="width: 300px; height: 87px;"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">
-        &nbsp;
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><strong>Saturdays 9:00am-10:00am</strong></span
-          >
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;">(both locations)</span>
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><br />Feb&nbsp;20, 27;&nbsp;Mar&nbsp;6, 13, 20, 27</span
-          >
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"><br /></span>
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><strong>Tuesdays 6:00pm-7:00pm&nbsp;</strong>(west)</span
-          >
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><br />Feb&nbsp;23;&nbsp;Mar 2, 9, 16, 23, 30</span
-          >
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"><br /></span>
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><strong>Wednesdays&nbsp;6pm-7pm&nbsp;</strong>(central)</span
-          >
-        </div>
-        <div style="text-align: center;">
-          <span style="font-size: 18px;"
-            ><br />Feb&nbsp;24;&nbsp;Mar 3, 10, 17, 24, 31</span
-          >
-        </div>
-      </td>
-      <td style="text-align: center;">
-        &nbsp;<br />
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Saturdays 9:00am-10:00am</strong></span
-          >
-        </div>
-        <div><span style="font-size: 18px;">(both locations)</span></div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Apr&nbsp;17, 24;&nbsp;May 1, 8, 15, 22</span
-          >
-        </div>
-        <div>
-          <span style="font-size: 18px;"><br /></span>
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Tuesdays 6:30pm-7:30pm&nbsp;</strong>(central)</span
-          >
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Apr&nbsp;20, 27;&nbsp;May&nbsp;4, 11, 18, 25</span
-          >
-        </div>
-        <div>
-          <span style="font-size: 18px;"><br /></span>
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><strong>Thursdays 6:30pm-7:30pm&nbsp;</strong></span
-          ><span style="font-size: 18px;">(west)</span>
-        </div>
-        <div>
-          <span style="font-size: 18px;"
-            ><br />Apr&nbsp;22, 29;&nbsp;May&nbsp;6, 13, 20, 27</span
-          >
-        </div>
-      </td>
-      <td style="text-align: center;">
-        &nbsp;<img
-          src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/ben%20gunter.jpg"
-          style="width: 150px; height: 227px;"
-        /><br /><br /><a href="mailto:Ben@Force-Sports.com"
-          ><img
-            src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/email_benn_yellow-01.png"
-            style="width: 200px; height: 34px;"
-        /></a>
-      </td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-  </tbody>
-</table>
-<br />
+    </div>
+    
+</div>
