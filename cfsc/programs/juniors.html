@@ -1,4 +1,12 @@
 <style>
+@font-face {
+    font-family: 'Kensmark-02';
+    src: url('/portals/1093/templates/Fonts/Kensmark-02/Kensmark-02-BlackSoft.ttf');
+}
+@font-face {
+    font-family: 'Kensmark-03';
+    src: url('/portals/1093/templates/Fonts/Kensmark-03/Kensmark-03-BlackSoft.ttf')
+}
 .tab-wrap {
   /* -webkit-transition: 0.3s box-shadow ease; */
   /* transition: 0.3s box-shadow ease; */
@@ -254,9 +262,10 @@
 .schedule_header {
     background-color: #194077;
     color: white;
-    font: 700 18pt 'Fira Sans Heavy';
+    font: 700 22pt 'Kensmark-02';
     border-left: #f9eb0d 15px solid;
     padding: 5pt;
+    text-align: center;
 }
 .flex_container {
     display: flex;
@@ -417,12 +426,9 @@ p.training, p.schedule {
 
     <div class="tab__content" id="Price">
         <div style="margin-bottom: 10pt; font: 600 18pt 'Fira Sans',arial; text-decoration:underline;">Price Per Player</div>
-        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">This is based on a yearly commitment. It is expected that for any package, the player commits to training twice a week to get the full experience.<br>&#x1F195;We now have new packages setup for more convenience to our customers. You are able to purchase individual packages (see Package break down below) to fit your schedule.</div> 
+        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">This program is based on subscription of packages. With our packages, the player has the opportunity to train twice a week to get the full experience!<br>
+        We now have new packages setup for more convenience to our customers. You are able to purchase individual packages (see Package break down below) to fit your schedule.</div> 
         <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Once you sign up for a package, you are free to use them as you see fit. We take attendance to keep track of your package usage. Once you have used up the classes in your package, you will need to sign up for additional package(s). When you click to register you will see packages for the remaining year! </div>
-        <div style="margin-bottom:5px; font: 500 17pt 'Fira Sans',arial; color: darkred;">&#x2733;$975 For the full year</div>
-        <div style="font: 200 14pt 'Fira Sans',arial;">&#x1F539;Paid in monthly installments</div>
-        <div style="font: 200 14pt 'Fira Sans',arial;">&#x1F539;Price includes a training shirt</div>
-        <div style="font: 200 12pt 'Fira Sans',arial; margin: 15px 0 15px 0;"><span style="color: darkred;">&#x2733;</span>This is based on registration at the beginning of the year. You will see the pro-rated prices for each session upon registration. As players run out of classes, you can simply just add more sessions to your account.</div>
         <div>
             <div style="font: 400 15pt/18pt 'Fira Sans',arial; text-decoration: underline dashed;">Package break down</div>
             <div style="font: 200 14pt/22pt 'Fira Sans',arial;"><span class="triangle"></span>$585 - 36 sessions 2x per week | <em>$293 - 18 sessions 1x per week</em></div>
@@ -513,6 +519,16 @@ p.training, p.schedule {
                         </div>
                     </div>
                     <div class="schedule_item">
+                        <div class="days">Mondays &#x1F195;</div>
+                        <div class="dates">May 10, 17, 24</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST(Outside)</div>
+                            <div class="academy_times">
+                                <div>6-7pm</div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
                         <div class="days">Tuesdays</div>
                         <div class="dates">Apr 20, 27; May 4, 11, 18, 25</div>
                         <div class="times academy_info">
@@ -534,16 +550,63 @@ p.training, p.schedule {
                     </div>
                 </div>
             </div>
+            <div class="session" id="Summer Session">
+                <div class="schedule_header">2020-21 Summer Session<br>Dates</div>
+                <div class="block">
+                    <div class="schedule_item">
+                        <div class="days">Mondays</div>
+                        <div class="dates">June 7, 14, 21, 28; July 12, 19, 26; August 2</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> West (Outside)</div>
+                            <div class="academy_times">
+                                <div>6-7pm</div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Tuesdays</div>
+                        <div class="dates">June 8, 15, 22, 29; July 13, 20, 27; August 3</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> Central (Inside)</div>
+                            <div class="academy_times">
+                                <div>6-7pm</div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Wednesdays</div>
+                        <div class="dates">June 9, 16, 23, 30; July 14, 21, 28; August 4</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> West (Inside)</div>
+                            <div class="academy_times">
+                                <div>5:30-6:30pm</div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Thursdays</div>
+                        <div class="dates">June 10, 17, 24; July 1, 14, 22, 29; August 5</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> Central (Outside)</div>
+                            <div class="academy_times">
+                                <div>6-7pm</div>  
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <!-- Friendlies Dates Section 
             <div class="session">
                 <div class="schedule_item">
                 <div class="schedule_header">Friendly Dates:</div>
                 <div style="padding-left: 20px;">
                     <div class="dates">Oct 25, Dec 13</div>
-                    <div class="dates">Feb 21, Mar 28, May 23</div>
+                    <div class="dates">Feb 21, Mar 28</div>
                     <div class="times">*Times TBD</div>
                 </div>
+                </div>
             </div>
-            </div>
+            End Friedlies Date Section -->
         </div>
     </div>
     <div class="tab__content" id="Training Locations">
