@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
-
     <channel>
         <title>Cleveland Force Soccer Club</title>
         <link>https://clevelandforcesc.com</link>
+        <description>Cleveland Force Soccer Club Press Release v.1</description>
         <item>
             <title>Cleveland Force SC and Internationals SC Boys Academy Join Boys Elite Clubs National League</title>
             <link>https://www.clevelandforcesc.com/Default.aspx?tabid=1102774</link>
@@ -40,3 +40,4 @@
             <enclosure url="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/u15-u18/pre_pro_program_info_pb-01.png"type="image/png" />
         </item>
     </channel>
+</rss>
