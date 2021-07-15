@@ -39,7 +39,7 @@
   transition: 0.5s opacity ease-in, 0.8s transform ease;
   transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
   position: relative;
-  top: 0;
+  top: 0px;
   z-index: 100;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -78,7 +78,7 @@
   transition: 0.5s opacity ease-in, 0.8s transform ease;
   transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
   position: relative;
-  top: 0;
+  top: 0px;
   z-index: 100;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -91,7 +91,7 @@
   transition: 0.5s opacity ease-in, 0.8s transform ease;
   transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
   position: relative;
-  top: 0;
+  top: 0px;
   z-index: 100;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -106,7 +106,7 @@
 }
 .tab:last-of-type:not(:first-of-type) + label {
   border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;    
 }
 .tab:checked + label {
   background-color: #f9eb0d;
@@ -125,8 +125,8 @@
   text-decoration: none;
   color: #194077;
   font-weight: 500;
-  font-size: 18pt;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 17pt;
+  font-family: Kensmark-02, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
@@ -136,12 +136,18 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  text-align: center;
   -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
   transition: 0.3s background-color ease, 0.3s box-shadow ease;
-  height: 50px;
+  height: 100%;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 10px 0;
+}
+.tab:not(:last-of-type) + label{
+    content: " ";
+    background-image: radial-gradient(circle, #f2f2f2 9%, #194077 40%, #f2f2f2 9%);
+    background-position: right;
+    background-size: 9px 9px;
+    background-repeat: repeat-y;
 }
 .tab + label:hover {
   background-color: #f9f9f9;
@@ -165,11 +171,12 @@
     text-decoration: underline;
 }
 .dates {
-    font-weight: 600;
-    font-size: 14pt;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-weight: 400;
+    font-size: 13.5pt;
 }
 .times {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 12pt;
 }
 
@@ -363,11 +370,12 @@ p.training, p.schedule {
 .triangle {
 	width: 0;
 	height: 0;
+    text-align: center;
 	border-top: 6px solid transparent;
 	border-left: 8px solid #194077;
 	border-bottom: 6px solid transparent;
     display: inline-block;
-    margin: 7px 5px 0 15px;
+    margin: 7px 5px 0 7px;
 }
 </style>
 
@@ -377,19 +385,16 @@ p.training, p.schedule {
 
 <div class="tab-wrap">
     <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
-    <label for="tab1">Registration</label>
+    <label for="tab1">&#x1F4DD;Registration</label>
     
     <input type="radio" id="tab2" name="tabGroup1" class="tab">
     <label for="tab2">&#x1F195;Price</label>
     
     <input type="radio" id="tab3" name="tabGroup1" class="tab">
-    <label for="tab3">Training</label>
-    
-    <input type="radio" id="tab4" name="tabGroup1" class="tab">
-    <label for="tab4">Schedule</label>
+    <label for="tab3">&#x1F4C5;Schedule</label>
 
-    <input type="radio" id="tab5" name="tabGroup1" class="tab">
-    <label for="tab5">Training Locations</label>
+    <input type="radio" id="tab4" name="tabGroup1" class="tab">
+    <label for="tab4">&#x1F4CD;Training Locations</label>
 
     <div class="tab__content" id="Registration">
         <div style="height: 380px;">       
@@ -400,14 +405,14 @@ p.training, p.schedule {
 
             <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%); top: 100px;">
                 <span style="font-weight:bold;">Ready To Register?</span>
-                Follow the link to the right to create an account and register for the upcoming program! You will also need to be sure to sign up on <a href="https://www.teamapp.com/clubs/468664" class="info" >Team App</a>
+                Follow the link to the right to create an account and register for the upcoming program!
             </div>    
             <div style="position: fixed; left: 460px; top: 130px;"><a href="https://www.clevelandforcesc.com/Default.aspx?tabid=172937" class="button">Register Now</a></div>
             
             <div style="border-right: #ffe900 solid 2px; width: 450px; position: fixed; left: 0; top: 200px; font: 400 14pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
                 <span style="font-weight:bold;">Any Questions?</span> Please reach out to Ben Gunter with any program questions!
             </div>
-            <div style="position: fixed; left: 460px; top: 215px;"><a href="mailto:ben@force-sports.com" class="button">EMAIL Ben Gunter</a>
+            <div style="position: fixed; left: 460px; top: 215px;"><a href="mailto:ben@force-sports.com?subject=Juniors Academy Programming" class="button">EMAIL Ben Gunter</a>
             </div>
             <div style="position: fixed; left: 700px; width: 200px; text-align: center; top: 10px;">
                 <div>
@@ -428,26 +433,30 @@ p.training, p.schedule {
 
     <div class="tab__content" id="Price">
         <div style="margin-bottom: 10pt; font: 600 18pt 'Fira Sans',arial; text-decoration:underline;">Price Per Player</div>
-        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">This program is based on subscription of packages. With our packages, the player has the opportunity to train twice a week to get the full experience!<br>
+        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">This program is based on subscription of packages within a Session. With our packages, the player has the opportunity to train at any of our geographical locations to get the full experience!<br>
         We now have new packages setup for more convenience to our customers. You are able to purchase individual packages (see Package break down below) to fit your schedule.</div> 
-        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Once you sign up for a package, you are free to use them as you see fit. We take attendance to keep track of your package usage. Once you have used up the classes in your package, you will need to sign up for additional package(s). When you click to register you will see packages for the remaining year! </div>
-    </div>
-
-    <div class="tab__content" id="Training">
-        <div style="margin: 10px; font: 800 20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Where & When Is Training?</div>
-        <p class="training">Athletes will be assigned to either <span class="underline">Central</span> or <span class="underline">West</span> locations for training up to 2-times per week based on their geographic home location.</p> 
-        <p class="training">Certain days & locations may have 2 Classrooms. Players will be assigned classrooms by the coaching staff to help maintain class structure, and maximize player development.</p>
-        <p class="training">If you have questions or concerns about specific classrooms, please do not hesitate to contact:<br>Coach Ben (<a href="mailto:ben@force-sports.com" class="info">ben@force-sports.com</a>) or Coach Chris (<a href="mailto:chris@force-sports.com" class="info">chris@force-sports.com</a>)</p>
-        <p class="training">Please see our <em>"Training Locations"</em> tab for more information on location address</p>
-        <div style="margin-top:5px; text-decoration: underline double; font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Breaks:</div> 
-        <div style="font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Dec 14 - Jan 8 (Winter)</div>
-        <div style="font: 400 15pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Apr 4 - 16 (Spring)</div>
+        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">Once you sign up for a package, you are free to use them as you see fit. Once you have used up the classes in your package, you will need to sign up for additional package(s). When you click to register you will see packages for the remaining year! The class packages will not be rolled over into the next Session</div>
+        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">There will also be the option for a Package including Games. Games will be used as an extension of the training to give real life experience for the players. Games will be played on Saturdays. Rosters will be set by the Coaching staff on a weekly basis.
+        </div>
+        <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
+            <ul style="list-style-type: none; margin: 0 0 2pt 0; padding: 0;">
+                <li style="font-weight: 450;"><span class="triangle"></span>Package 1: Fall Session
+                    <li style="margin: 0 0 5pt 20pt; font-size: smaller;">This package gives you access to the full Session. Our most complete package</li>
+                </li>
+                <li style="font-weight: 450;"><span class="triangle"></span>Package 2: Fall Session 8 classes
+                    <li style="margin: 0 0 5pt 20pt; font-size: smaller;">This package gives you access to the half the Session. Our most complete package</li>
+                </li>
+                <li style="font-weight: 450;"><span class="triangle"></span>Package 3: Weekly Games
+                    <li style="margin: 0 0 5pt 20pt; font-size: smaller;">This package gives you access to the Weekly Games. You will recieve weekly updates through Playmetrics on your team assignments. </li>
+                </li>
+            </ol>
+        </div>
     </div>
 
     <div class="tab__content" id="Schedule">
-        <div class="schedule_header">Classroom Assignments</div>
+        <div class="schedule_header">Classrooms</div>
         <div style="padding-left: 20px; border-bottom: #194077 2px solid;">
-            <p class="schedule">If you have questions or concerns about specific classrooms, please do not hesitate to contact:<br>Coach Ben (<a href="mailto:ben@force-sports.com" class="info">ben@force-sports.com</a>) or Coach Chris (<a href="mailto:chris@force-sports.com" class="info">chris@force-sports.com</a>)</p>
+            <p class="schedule">If you have questions or concerns about specific classrooms, please do not hesitate to contact:<br>Coach Ben (<a href="mailto:ben@force-sports.com?subject=Juniors Academy Programming" class="info">ben@force-sports.com</a>) or Coach Chris (<a href="mailto:chris@force-sports.com?subject=Juniors Academy Programming" class="info">chris@force-sports.com</a>)</p>
         </div>
         <div class="flex_container">
             <div class="session" id="Summer Session">
@@ -495,18 +504,71 @@ p.training, p.schedule {
                     </div>    
                 </div>
             </div>
-            <!-- Friendlies Dates Section 
-            <div class="session">
-                <div class="schedule_item">
-                <div class="schedule_header">Friendly Dates:</div>
-                <div style="padding-left: 20px;">
-                    <div class="dates">Oct 25, Dec 13</div>
-                    <div class="dates">Feb 21, Mar 28</div>
-                    <div class="times">*Times TBD</div>
-                </div>
+            <div class="session" id="Fall Session">
+                <div class="schedule_header">2021-22 Fall<br> Session Dates</div>
+                <div class="block">
+                    <div class="schedule_item">
+                        <div class="days">Mondays</div>
+                        <div class="dates">August 23, 30; September 13, 20, 27; October 4, 11, 18</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> West (CUF)</div>
+                            <div class="academy_times">
+                                <div>6-7pm</div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Tuesdays</div>
+                        <div class="dates">August 24, 31, September 7, 14, 21, 28; October 5, 12</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> Central (Richmond)</div>
+                            <div class="academy_times">
+                                <div>6:30-7:30pm</div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Wednesdays</div>
+                        <div class="dates">August 25; September 1, 8, 15, 22, 29; October 6, 13</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> West (Rocky River)</div>
+                            <div class="academy_times">
+                                <div>5:30-6:30pm</div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Thursdays</div>
+                        <div class="dates">August 26; September 2, 9, 16, 23, 30; October 7, 14</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> EAST (LNSP)</div>
+                            <div class="academy_times">
+                                <div>6-7pm</div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Fridays</div>
+                        <div class="dates">August 27; September 3, 10, 17, 24; October 1, 8, 15</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL (Richmond)</div>
+                            <div class="academy_times">
+                                <div>6-7pm</div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_item">
+                        <div class="days">Sundays</div>
+                        <div class="dates">August 29; September 5, 12, 19, 26; October 3, 10, 17</div>
+                        <div class="times academy_info">
+                            <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> WEST (T3)</div>
+                            <div class="academy_times">
+                                <div>6-7pm</div>  
+                            </div>
+                        </div>
+                    </div>  
                 </div>
             </div>
-            End Friedlies Date Section -->
         </div>
     </div>
     <div class="tab__content" id="Training Locations">
