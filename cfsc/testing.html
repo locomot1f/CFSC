@@ -14,9 +14,13 @@
       xhttp.send();
 
       function myFunction(xml) {
-        var xmlDoc = xml.responseXML;
-        document.getElementById("demo").innerHTML =
-          xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        var xmlDoc, x, i, txt;
+        xmlDoc = xml.responseXML;
+        x = xmlDoc.documentElement.childNodes;
+        for (i = 0; i < x.length; i++) {
+          txt += x[i].nodeName + ": " + x[i].childNodes[0].nodeValue + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
       }
     </script>
   </body>

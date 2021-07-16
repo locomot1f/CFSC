@@ -75,9 +75,13 @@
   xhttp.send();
 
   function myFunction(xml) {
-    var xmlDoc = xml.responseXML;
-    document.getElementById("rss_feed").innerHTML =
-      xmlDoc.getElementsByTagName("item")[0].childNodes[0].nodeValue;
+    var xmlDoc, i, x;
+    xmlDoc = xml.responseXML;
+    x = xmlDoc.documentElement.childNodes;
+    for (i = 0; i < x.length; i++) {
+      html += x[i].childNodes[0].nodeValue;
+    }
+    document.getElementById("rss_feed").innerHTML = html;
   }
 </script>
 
