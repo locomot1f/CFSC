@@ -37,9 +37,8 @@
               .nodeValue +
             "</div>";
           "<div>" +
-            x[i]
-              .getElementsByTagName("enclosure")[0]
-              .childNodes[0].getAttributeNode("url").nodeValue +
+            x[i].getElementsByTagName("enclosure")[0].getAttributeNode("url")
+              .nodeValue +
             "</div>";
         }
         document.getElementById("demo").innerHTML = html;
