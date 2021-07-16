@@ -20,12 +20,13 @@
         x = xmlDoc.getElementsByTagName("item");
         for (i = 0; i < x.length; i++) {
           html +=
-            "<div>" +
-            x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-            "</div>" +
-            "<div>" +
+            "<div class='title'> <a href='" +
             x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
-            "</div>" +
+            "'>" +
+            x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+            "</a>" +
+            "<div>" +
+            +"</div>" +
             "<div>" +
             x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue +
             "</div>" +
