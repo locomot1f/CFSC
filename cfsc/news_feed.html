@@ -61,14 +61,30 @@
   }
 </style>
 
-<div class="header press"></div>
-<div>
-  [youtubevideo class="rss_feeds"
-  src="https://rss.app/embed/v1/list/PogqyEUQDCcWFnQL" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-  picture-in-picture" allowfullscreen][/youtubevideo]
-</div>
+<div class="header press" id="rss_feed"></div>
+<script>
+  var rss = new XMLHttpRequest();
+  rss.onreadystatechange = function () {
+    if (rss.this == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  rss.open("GET", "rss_feed.xml", true);
+  rss.send();
+
+  function myFunction(xml) {
+    var x, i, xmlDoc, html;
+    xmlDoc = xml.responseXML;
+    x = xmlDoc.getElementsByTagName("item");
+    for (i = 0; i < x.length; i++) {
+      html = "<div>" + x[i].childNodes[0].nodeValue + "<div>";
+    }
+    document.getElementById("rss_feed").innerHTML = html;
+  }
+</script>
+
 <div class="divider"></div>
+
 <div class="header social"></div>
 <div>
   [youtubevideo class="rss_feeds"
