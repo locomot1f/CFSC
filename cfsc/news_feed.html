@@ -76,7 +76,7 @@
   function myFunction(xml) {
     var x, i, xmlDoc, html;
     xmlDoc = xml.responseXML;
-    x = xmlDoc.getElementsByTagName("item");
+    x = xmlDoc.getElementsByTagName("title");
     for (i = 0; i < x.length; i++) {
       html = "<div>" + x[i].childNodes[0].nodeValue + "<div>";
     }
