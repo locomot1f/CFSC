@@ -74,13 +74,10 @@
   rss.send();
 
   function myFunction(xml) {
-    var x, i, xmlDoc, html;
+    var xmlDoc;
     xmlDoc = xml.responseXML;
-    x = xmlDoc.getElementsByTagName("title");
-    for (i = 0; i < x.length; i++) {
-      html = "<div>" + x[i].childNodes[0].nodeValue + "<div>";
-    }
-    document.getElementById("rss_feed").innerHTML = html;
+    document.getElementsById("rss_feed").innerHTML =
+      xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodevalue;
   }
 </script>
 
