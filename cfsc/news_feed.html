@@ -65,18 +65,17 @@
 <div class="header press"></div>
 <div id="rss_feed"></div>
 <script>
-  var rss = new XMLHttpRequest();
-  rss.onreadystatechange = function () {
-    if (rss.this == 4 && this.status == 200) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
       myFunction(this);
     }
   };
-  rss.open("GET", "rss_feed.xml", true);
-  rss.send();
+  xhttp.open("GET", "rss_feed.xml", true);
+  xhttp.send();
 
   function myFunction(xml) {
-    var xmlDoc;
-    xmlDoc = xml.responseXML;
+    var xmlDoc = xml.responseXML;
     document.getElementById("rss_feed").innerHTML =
       xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
   }
