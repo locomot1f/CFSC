@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <p id="demo">code will go here</p>
+    <div id="demo">code will go here</div>
 
     <script>
       var xhttp = new XMLHttpRequest();
@@ -14,18 +14,33 @@
       xhttp.send();
 
       function myFunction(xml) {
-        var x, i, xmlDoc, txt;
+        var x, i, xmlDoc, html;
         xmlDoc = xml.responseXML;
-        txt = "";
+        html = "";
         x = xmlDoc.getElementsByTagName("item");
         for (i = 0; i < x.length; i++) {
-          txt +=
-            i +
-            "." +
+          html +=
+            "<div>" +
+            x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+            "</div>";
+          "<div>" +
+            x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
+            "</div>";
+          "<div>" +
             x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue +
-            "<br>";
+            "</div>";
+          "<div>" +
+            x[i].getElementsByTagName("author")[0].childNodes[0].nodeValue +
+            "</div>";
+          "<div>" +
+            x[i].getElementsByTagName("description")[0].childNodes[0]
+              .nodeValue +
+            "</div>";
+          "<div>" +
+            x[i].getElementsByTagName("enclosure")[0].childNodes[0].nodeValue +
+            "</div>";
         }
-        document.getElementById("demo").innerHTML = txt;
+        document.getElementById("demo").innerHTML = html;
       }
     </script>
   </body>
