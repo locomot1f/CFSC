@@ -14,10 +14,13 @@
       xhttp.send();
 
       function myFunction(xml) {
-        var xmlDoc = xml.responseXML;
-        var x = xmlDoc.documentElement.childNodes;
-        document.getElementById("demo").innerHTML =
-          "Number of child nodes: " + x.length;
+        var xmlDoc, x, i;
+        xmlDoc = xml.responseXML;
+        x = xmlDoc.documentElement.childNodes;
+        for (i = 0; i < x.length; i++) {
+          txt += x[i].nodeName + ": " + x[i].childNodes[0].nodeValue + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
       }
     </script>
   </body>
