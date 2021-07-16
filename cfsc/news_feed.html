@@ -62,7 +62,8 @@
   }
 </style>
 
-<div class="header press" id="rss_feed"></div>
+<div class="header press"></div>
+<div id="rss_feed"></div>
 <script>
   var rss = new XMLHttpRequest();
   rss.onreadystatechange = function () {
@@ -70,7 +71,7 @@
       myFunction(this);
     }
   };
-  rss.open("GET", "./rss_feed.xml", true);
+  rss.open("GET", "rss_feed.xml", true);
   rss.send();
 
   function myFunction(xml) {
