@@ -77,7 +77,7 @@
   function myFunction(xml) {
     var xmlDoc;
     xmlDoc = xml.responseXML;
-    document.getElementsById("rss_feed").innerHTML =
+    document.getElementById("rss_feed").innerHTML =
       xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodevalue;
   }
 </script>
