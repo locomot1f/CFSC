@@ -16,6 +16,7 @@
       function myFunction(xml) {
         var xmlDoc, x, i, txt;
         xmlDoc = xml.responseXML;
+        txt = "";
         x = xmlDoc.documentElement.childNodes;
         for (i = 0; i < x.length; i++) {
           txt += x[i].nodeName + ": " + x[i].childNodes[0].nodeValue + "<br>";
