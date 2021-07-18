@@ -9,6 +9,7 @@
       width: 10px;
     }
     .InnerHTML {
+      float: left;
       max-height: 25pt;
     }
     .OuterHTML {
@@ -36,7 +37,7 @@
         x = xmlDoc.getElementsByTagName("item");
         for (i = 0; i < x.length; i++) {
           html +=
-          "<div class='OuterHTML'> <div class='InnerHTML'> <div style='float: left;'>" +
+          "<div class='OuterHTML'> <div class='InnerHTML'>" +
             x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue +
             "</div><div class='line-1'> x </div>" +
             "<div>" +
@@ -54,7 +55,7 @@
             "<div>" +
             x[i].getElementsByTagName("enclosure")[0].getAttributeNode("url")
               .nodeValue +
-            "</div>";
+            "</div></div>";
         }
         document.getElementById("demo").innerHTML = html;
       }
