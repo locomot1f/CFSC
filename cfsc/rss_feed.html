@@ -10,16 +10,16 @@
       src: url("https://locomot1f.github.io/cfsc/Kensmark/Kensmark-03/Kensmark-03-BoldSoft.ttf");
     }
     .header {
-    border-bottom: 15px #194077 double;
-    margin-bottom: 10px;
-    padding-top: 20px;
+      border-bottom: 15px #194077 double;
+      margin-bottom: 10px;
+      padding-top: 20px;
     }
     .press::before {
       content: "Press Releases";
       position: relative;
       top: 0px;
       font-family: "Kensmark-05", "Fira Sans Ultra", Impact, Haettenschweiler,
-      "Arial Narrow Bold", sans-serif;
+        "Arial Narrow Bold", sans-serif;
       font-size: 45pt;
       color: white;
       -webkit-text-stroke-width: 1px;
@@ -43,13 +43,13 @@
       padding-bottom: 7px;
     }
     .pubDate {
-      font-family: 'Fira Sans',Helvetica, sans-serif;
+      font-family: "Fira Sans", Helvetica, sans-serif;
       font-size: 13.5pt;
       font-weight: 200;
       padding-right: 5px;
     }
     .author {
-      font-family: 'Fira Sans', Georgia, 'Times New Roman', Times, serif;
+      font-family: "Fira Sans", Georgia, "Times New Roman", Times, serif;
       font-size: 11pt;
       font-weight: 200;
       padding: 0 5px;
@@ -69,7 +69,7 @@
     a.title:hover {
       text-decoration: #f9eb0d underline;
     }
-    .pubDate::after{
+    .pubDate::after {
       content: " ";
       position: relative;
       display: inline-block;
@@ -81,14 +81,14 @@
       height: 12px;
       left: 5px;
     }
-    .RSS_FLEX{
+    .RSS_FLEX {
       display: flex;
       width: fit-content;
       padding-bottom: 20px;
     }
     .RSS_TEXT {
-      width:100%;
-      padding:10px;
+      width: 100%;
+      padding: 10px;
       float: right;
     }
     .RSS_IMAGE {
@@ -100,7 +100,7 @@
       width: auto;
     }
     .RSS_IMAGE::before {
-      content: ' ';
+      content: " ";
       background: #fff;
       width: calc(100% + 80px + 4px - 120px);
       height: calc(100% + 4px);
@@ -111,7 +111,7 @@
       position: absolute;
     }
     .RSS_IMAGE::after {
-      content: ' ';
+      content: " ";
       background: #fff;
       height: calc(100% + 80px + 4px - 120px);
       width: calc(100% + 4px);
@@ -123,8 +123,8 @@
     }
     img.rss {
       border-radius: 5px;
-      height: 180px;
-      width: 250px;
+      height: 150px;
+      width: 270px;
       object-fit: cover;
       object-position: 50% 50%;
       position: relative;
@@ -132,7 +132,8 @@
       z-index: 5;
     }
     .description {
-      font-family: 'Fira Sans', Helvetica, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-family: "Fira Sans", Helvetica, "Gill Sans", "Gill Sans MT", Calibri,
+        "Trebuchet MS", sans-serif;
       font-size: 1em;
       font-weight: 300;
       display: block; /* Fallback for non-webkit */
@@ -165,19 +166,21 @@
         x = xmlDoc.getElementsByTagName("item");
         for (i = 0; i < x.length; i++) {
           html +=
-          "<div class='RSS_FLEX'><div class='RSS_IMAGE'><div><img src='" +
-          x[i].getElementsByTagName("enclosure")[0].getAttributeNode("url").nodeValue +
-          "' class='rss'/></div></div><div class='RSS_TEXT'><div class='headline'><div class='pubDate'>" +
-          x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue +
-          "</div><div class='author'>" + 
-          x[i].getElementsByTagName("author")[0].childNodes[0].nodeValue +
-          "</div></div><div class='title'> <a href='" + 
-          x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
-          "' class='title'>" + 
-          x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-          "</a></div><div class='description'>" +
-          x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
-          "</div></div></div>"; 
+            "<div class='RSS_FLEX'><div class='RSS_IMAGE'><div><img src='" +
+            x[i].getElementsByTagName("enclosure")[0].getAttributeNode("url")
+              .nodeValue +
+            "' class='rss'/></div></div><div class='RSS_TEXT'><div class='headline'><div class='pubDate'>" +
+            x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue +
+            "</div><div class='author'>" +
+            x[i].getElementsByTagName("author")[0].childNodes[0].nodeValue +
+            "</div></div><div class='title'> <a href='" +
+            x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
+            "' class='title'>" +
+            x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+            "</a></div><div class='description'>" +
+            x[i].getElementsByTagName("description")[0].childNodes[0]
+              .nodeValue +
+            "</div></div></div>";
         }
         document.getElementById("rss_feed").innerHTML = html;
       }
