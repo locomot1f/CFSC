@@ -7,7 +7,7 @@
       width: fit-content;
       padding-bottom: 7px;
     }
-    .date {
+    .pubDate {
       font-family: Helvetica, sans-serif;
       font-size: 11.5pt;
       padding-right: 5px;
@@ -24,7 +24,7 @@
       font-weight: 600;
       font-size: 1.7em;
     }
-    .date::after{
+    .pubDate::after{
       content: " ";
       position: relative;
       display: inline-block;
@@ -100,7 +100,7 @@
     }
   </style>
   <body>
-    <div id="rss_feed">...loading...</div>
+    <div id="demo">...loading...</div>
 
     <script>
       var xhttp = new XMLHttpRequest();
@@ -121,10 +121,10 @@
           html +=
           "<div class='RSS_FLEX'><div class='RSS_IMAGE'><div><img src='" +
           x[i].getElementsByTagName("enclosure")[0].getAttributeNode("url").nodeValue +
-          "' class='rss'/></div></div><div class='RSS_TEXT'><div class='headline'><div class='date'>" +
-          x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue +
+          "' class='rss'/></div></div><div class='RSS_TEXT'><div class='headline'><div class='pubDate'>" +
+          x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue +
           "</div><div class='author'>" + 
-          x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue +
+          x[i].getElementsByTagName("author")[0].childNodes[0].nodeValue +
           "</div></div><div class='title'> <a href='" + 
           x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
           "'>" + 
@@ -133,7 +133,7 @@
           x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
           "</div></div></div>"; 
         }
-        document.getElementById("rss_feed").innerHTML = html;
+        document.getElementById("demo").innerHTML = html;
       }
     </script>
   </body>
