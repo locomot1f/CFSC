@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html>
   <style>
+    @font-face {
+      font-family: "Kensmark-05";
+      src: url("/portals/1093/templates/  Fonts/Kensmark-05/      Kensmark-05-BlackSoft.ttf");
+    }
+    @font-face {
+      font-family: "Kensmark-03";
+      src: url("/portals/1093/templates/Fonts/Kensmark-03/Kensmark-03-BoldSlant.ttf");
+    }
+    .header {
+    border-bottom: 15px #194077 double;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    }
+    .press::before {
+      content: "Press Releases";
+      position: relative;
+      top: 0px;
+      font-family: "Kensmark-05", "Fira Sans Ultra", Impact, Haettenschweiler,
+      "Arial Narrow Bold", sans-serif;
+      font-size: 45pt;
+      color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #194077;
+    }
+    .social::before {
+      content: "Instagram";
+      position: relative;
+      top: 0px;
+      font-family: "Kensmark-05", "Fira   Sans Ultra", Impact, Haettenschweiler,
+        "Arial Narrow Bold", sans-serif;
+      font-size: 45pt;
+      color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #194077;
+    }
     .headline {
       display: flex;
       flex-wrap: nowrap;
@@ -101,7 +136,8 @@
     }
   </style>
   <body>
-    <div id="demo">...loading...</div>
+    <div class="header press"></div>
+    <div id="rss_feed">...loading...</div>
 
     <script>
       var xhttp = new XMLHttpRequest();
@@ -134,7 +170,7 @@
           x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
           "</div></div></div>"; 
         }
-        document.getElementById("demo").innerHTML = html;
+        document.getElementById("rss_feed").innerHTML = html;
       }
     </script>
   </body>
