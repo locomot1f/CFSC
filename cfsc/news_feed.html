@@ -1,96 +1,141 @@
 <!DOCTYPE html>
-<style>
-  @font-face {
-    font-family: "Kensmark-05";
-    src: url("/portals/1093/templates/Fonts/Kensmark-05/Kensmark-05-BlackSoft.ttf");
-  }
-  @font-face {
-    font-family: "Kensmark-03";
-    src: url("/portals/1093/templates/Fonts/Kensmark-03/Kensmark-03-BoldSlant.ttf");
-  }
-  .flexbox {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  img.pixel {
-    border-radius: 15px;
-    height: 50px;
-    width: 350px;
-    object-fit: cover;
-    object-position: 0% 20%;
-    margin: 5px;
-    padding: 2px;
-    border: #194077 1px solid;
-  }
-  .header {
-    border-bottom: 15px #194077 double;
-    margin-bottom: 10px;
-    padding-top: 20px;
-  }
-  .press::before {
-    content: "Press Releases";
-    position: relative;
-    top: 0px;
-    font-family: "Kensmark-05", "Fira Sans Ultra", Impact, Haettenschweiler,
-      "Arial Narrow Bold", sans-serif;
-    font-size: 45pt;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #194077;
-  }
-  .social::before {
-    content: "Instagram";
-    position: relative;
-    top: 0px;
-    font-family: "Kensmark-05", "Fira Sans Ultra", Impact, Haettenschweiler,
-      "Arial Narrow Bold", sans-serif;
-    font-size: 45pt;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #194077;
-  }
-  .divider {
-    margin: 10px 0;
-    width: 100%;
-    height: 10px;
-    border-top: 5px #f9eb0d dotted;
-  }
-  .rss_feeds {
-    width: 100%;
-    height: 800px;
-  }
-</style>
-
-<div class="header press"></div>
-<div id="rss_feed"></div>
-<script>
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
+<html>
+  <style>
+    .headline {
+      display: flex;
+      flex-wrap: nowrap;
+      width: fit-content;
+      padding-bottom: 7px;
     }
-  };
-  xhttp.open("GET", "rss_feed.xml", true);
-  xhttp.send();
-
-  function myFunction(xml) {
-    var xmlDoc, i, x;
-    xmlDoc = xml.responseXML;
-    x = xmlDoc.documentElement.childNodes;
-    for (i = 0; i < x.length; i++) {
-      html += x[i].childNodes[0].nodeValue;
+    .pubDate {
+      font-family: Helvetica, sans-serif;
+      font-size: 11.5pt;
+      padding-right: 5px;
     }
-    document.getElementById("rss_feed").innerHTML = html;
-  }
-</script>
+    .author {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 10pt;
+      font-weight: 200;
+      padding: 0 5px;
+      color: slategray;
+    }
+    .title {
+      font-family: Kensmark-05;
+      font-weight: 600;
+      font-size: 1.7em;
+    }
+    .pubDate::after{
+      content: " ";
+      position: relative;
+      display: inline-block;
+      background-image: radial-gradient(circle, #194077 50%, #fff 50%);
+      background-position: center;
+      background-size: 10px 10px;
+      background-repeat: repeat-y;
+      width: 12px;
+      height: 12px;
+      left: 5px;
+    }
+    .RSS_FLEX{
+      display: flex;
+      width: fit-content;
+      padding-bottom: 15px;
+    }
+    .RSS_TEXT {
+      width:100%;
+      padding:10px;
+      float: right;
+    }
+    .RSS_IMAGE {
+      border: 2px solid #194077;
+      border-radius: 5px;
+      display: inline-block;
+      padding: 3px;
+      position: relative;
+      width: auto;
+    }
+    .RSS_IMAGE::before {
+      content: ' ';
+      background: #fff;
+      width: calc(100% + 80px + 4px - 120px);
+      height: calc(100% + 4px);
+      top: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      position: absolute;
+    }
+    .RSS_IMAGE::after {
+      content: ' ';
+      background: #fff;
+      height: calc(100% + 80px + 4px - 120px);
+      width: calc(100% + 4px);
+      left: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      position: absolute;
+    }
+    img.rss {
+      border-radius: 5px;
+      height: 180px;
+      width: 250px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      position: relative;
+      display: block;
+      z-index: 5;
+    }
+    .description {
+      font-family: 'Fira Sans-book', Helvetica, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.2em;
+      font-weight: 360;
+      display: block; /* Fallback for non-webkit */
+      display: -webkit-box;
+      height: 3.8em; /* Fallback for non-webkit, line-height * 2 */
+      line-height: 1.3em;
+      -webkit-line-clamp: 3; /* if you change this, make sure to change the fallback line-height    and height */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+  <body>
+    <div id="demo">...loading...</div>
 
-<div class="divider"></div>
+    <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          myFunction(this);
+        }
+      };
+      xhttp.open("GET", "rss_feed.xml", true);
+      xhttp.send();
 
-<div class="header social"></div>
-<div>
-  [youtubevideo class="rss_feeds"
-  src="https://rss.app/embed/v1/wall/j46qXCALVSajG6Nw" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-  picture-in-picture" allowfullscreen][/youtubevideo]
-</div>
+      function myFunction(xml) {
+        var x, i, xmlDoc, html;
+        xmlDoc = xml.responseXML;
+        html = "";
+        x = xmlDoc.getElementsByTagName("item");
+        for (i = 0; i < x.length; i++) {
+          html +=
+          "<div class='RSS_FLEX'><div class='RSS_IMAGE'><div><img src='" +
+          x[i].getElementsByTagName("enclosure")[0].getAttributeNode("url").nodeValue +
+          "' class='rss'/></div></div><div class='RSS_TEXT'><div class='headline'><div class='pubDate'>" +
+          x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue +
+          "</div><div class='author'>" + 
+          x[i].getElementsByTagName("author")[0].childNodes[0].nodeValue +
+          "</div></div><div class='title'> <a href='" + 
+          x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
+          "'>" + 
+          x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+          "</a></div><div class='description'>" +
+          x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
+          "</div></div></div>"; 
+        }
+        document.getElementById("demo").innerHTML = html;
+      }
+    </script>
+  </body>
+</html>
