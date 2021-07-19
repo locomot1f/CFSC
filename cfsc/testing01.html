@@ -100,41 +100,19 @@
     }
   </style>
   <body>
-    <div id="rss_feed">...loading...</div>
 
-    <script>
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          myFunction(this);
-        }
-      };
-      xhttp.open("GET", "rss_feed.xml", true);
-      xhttp.send();
-
-      function myFunction(xml) {
-        var x, i, xmlDoc, html;
-        xmlDoc = xml.responseXML;
-        html = "";
-        x = xmlDoc.getElementsByTagName("item");
-        for (i = 0; i < x.length; i++) {
-          html +=
-          "<div class='RSS_FLEX'><div class='RSS_IMAGE'><div><img src='" +
-          x[i].getElementsByTagName("enclosure")[0].getAttributeNode("url").nodeValue +
-          "' class='rss'/></div></div><div class='RSS_TEXT'><div class='headline'><div class='date'>" +
-          x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue +
-          "</div><div class='author'>" + 
-          x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue +
-          "</div></div><div class='title'> <a href='" + 
-          x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
-          "'>" + 
-          x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-          "</a></div><div class='description'>" +
-          x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
-          "</div></div></div>"; 
-        }
-        document.getElementById("rss_feed").innerHTML = html;
-      }
-    </script>
+  <div class='RSS_FLEX'>
+    <div class='RSS_IMAGE'>
+      <div><img src='https://www.soccerwire.com/wp-content/uploads/2021/07/LehighWSocRecruit.jpeg' class="rss"/></div>
+    </div>
+    <div class='RSS_TEXT'>
+    <div class='headline'>
+      <div class='date'>july 14, 2021</div>
+      <div class="author">Marko Raduka</div>
+    </div>
+    <div class='title'> <a href='clevelandforcesc.com'>Title Goes Here</a> </div>
+    <div class='description'>Cleveland Force Soccer Club is excited to announce our acceptance into the Girls Elite Clubs National League (ECNL) for the2021-2022 season to begin August 2021 for the U13-U19 age groups. The ECNL will provide our top female athletes with the nation’shighest level of competition and will serve as the top of our player pathway pyramid with the ECNL-Regional league just below....</div>
+  </div>
+</div>
   </body>
 </html>
