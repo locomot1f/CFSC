@@ -1,11 +1,11 @@
 <style>
 @font-face {
     font-family: 'Kensmark-02';
-    src: url('https://bsbproduction.s3.amazonaws.com//portals/1093/templates/Fonts/Kensmark-02/Kensmark-02-BlackSoft.ttf');
+    src: url('/portals/1093/templates/Fonts/Kensmark-02/Kensmark-02-BlackSoft.ttf');
 }
 @font-face {
     font-family: 'Kensmark-03';
-    src: url('https://bsbproduction.s3.amazonaws.com//portals/1093/templates/Fonts/Kensmark-03/Kensmark-03-RegularSoft.ttf')
+    src: url('/portals/1093/templates/Fonts/Kensmark-03/Kensmark-03-RegularSoft.ttf')
 }
 * {
     box-sizing: border-box;
@@ -147,9 +147,9 @@
 }
 .tab:not(:last-of-type) + label{
     content: " ";
-    background-image: radial-gradient(circle, #f2f2f2 9%, #194077 40%, #f2f2f2 9%);
+    background-image: radial-gradient(circle, #f2f2f2 30%, #194077 40%, #f2f2f2 30%);
     background-position: right;
-    background-size: 9px 9px;
+    background-size: 8px 8px;
     background-repeat: repeat-y;
 }
 .tab + label:hover {
@@ -170,9 +170,9 @@
 }
 .first-letter::first-letter {
     text-transform: capitalize;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #194077;
-    font-family: 'Kensmark-05', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Kensmark-03', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0 .2rem 0 0;
     padding: 0 .1rem;
     float: left;
@@ -467,10 +467,27 @@ p.training, p.schedule {
     display: inline-block;
     margin: 7px 5px 0 7px;
 }
+.header_bar {
+    font-family: 'Kensmark-03', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 800;
+    font-size: 5rem;
+    width: 100%;
+    background-color: #194077;
+    color: #f9eb0d;
+    text-align: center;
+    white-space: nowrap;
+}
+img.logos {
+    height: 6.2rem;
+    margin: auto;
+    padding: .3rem;
+    vertical-align: text-top;
+}
 </style>
 
-<div style="text-align: center;">
-    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/_20-21_infopb-01.png" width="100%" />
+<div class="header_bar">
+    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/logos/cf_logo_2019_wb.png" class="logos" />
+    2021-22 information
 </div>
 
 <div class="tab-wrap">
@@ -577,7 +594,7 @@ p.training, p.schedule {
                 <div class="flex-data">*No combo pricing available*</div>
             </div>
             <div class="flex-row">
-                <div class="flex-data">25% OFF 2nd Child Automatically Processed at Registration!</div>
+                <div class="flex-data"><span style="color: darkgreen;">25% OFF 2nd Child Automatically Processed at Registration!</span></div>
             </div>
         </div>
     </div>
