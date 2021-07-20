@@ -5,7 +5,10 @@
 }
 @font-face {
     font-family: 'Kensmark-03';
-    src: url('/portals/1093/templates/Fonts/Kensmark-03/Kensmark-03-BlackSoft.ttf')
+    src: url('/portals/1093/templates/Fonts/Kensmark-03/Kensmark-03-Regular.ttf')
+}
+* {
+    box-sizing: border-box;
 }
 .tab-wrap {
   /* -webkit-transition: 0.3s box-shadow ease; */
@@ -126,7 +129,7 @@
   color: #194077;
   font-weight: 500;
   font-size: 17pt;
-  font-family: Kensmark-02, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Kensmark-03', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
@@ -319,6 +322,32 @@
     padding-left: 5px;
     vertical-align: middle;
 }
+.flex-row {
+    display: flex;
+    -webkit-box-flex: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 70vw;
+    min-width: 40vw;
+    border-top: steelblue 1px solid;
+}
+.flex-data {
+    font-family: 'Fira Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11.5pt;
+    flex: 0 100%;
+    white-space: nowrap;
+}
+.flex-row:last-of-type {
+    border: none;
+}
+.flex-data:last-of-type {
+    max-width: fit-content;
+}
+.flex-data:not(:last-of-type) {
+    border-right: dashed #194147 1px;
+    margin-right: 5px;
+}
 a.info:any-link {
     text-decoration: none;
     position: relative;
@@ -439,17 +468,44 @@ p.training, p.schedule {
         <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">There will also be the option for a Package including Games. Games will be used as an extension of the training to give real life experience for the players. Games will be played on Saturdays. Rosters will be set by the Coaching staff on a weekly basis.
         </div>
         <div style="margin-bottom: 10pt; font: 300 15pt/20pt 'Fira Sans',arial; color: hsl(0,0%,29%);">
-            <ul style="list-style-type: none; margin: 0 0 2pt 0; padding: 0;">
-                <li style="font-weight: 450;"><span class="triangle"></span>Package 1: Fall Session
-                    <li style="margin: 0 0 5pt 20pt; font-size: smaller;">This package gives you access to the full Session. Our most complete package</li>
-                </li>
-                <li style="font-weight: 450;"><span class="triangle"></span>Package 2: Fall Session 8 classes
-                    <li style="margin: 0 0 5pt 20pt; font-size: smaller;">This package gives you access to the half the Session. Our most complete package</li>
-                </li>
-                <li style="font-weight: 450;"><span class="triangle"></span>Package 3: Weekly Games
-                    <li style="margin: 0 0 5pt 20pt; font-size: smaller;">This package gives you access to the Weekly Games. You will recieve weekly updates through Playmetrics on your team assignments. </li>
-                </li>
-            </ol>
+            <div class="flex-registration">
+                <div class="flex-row">
+                    <div class="flex-data">Fall - WEST - North Ridgeville - Mondays</div>
+                    <div class="flex-data">Cleveland United Fields Monday</div>
+                    <div class="flex-data flex-price">$140</div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-data">Fall - WEST - Rocky River - Wednesdays</div>
+                    <div class="flex-data">Force - Rocky River Wednesday</div>
+                    <div class="flex-data flex-price">$140</div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-data">Fall - EAST - Bedford Heights - Tuesdays</div>
+                    <div class="flex-data">Force - Richmond Tuesday</div>
+                    <div class="flex-data flex-price">$140</div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-data">Fall - EAST - Bedford Heights - Fridays</div>
+                    <div class="flex-data">Force - Richmond Friday</div>
+                    <div class="flex-data flex-price">$140</div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-data">FALL - EAST - Willoughby - Thursdays</div>
+                    <div class="flex-data">Lost Nation Sports Park Thursday</div>
+                    <div class="flex-data flex-price">$140</div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-data">Fall - SOUTH - Copley/Fairlawn - Tuesdays</div>
+                    <div class="flex-data">Springside Athletic Club Tuesday</div>
+                    <div class="flex-data flex-price">$140</div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-data">*No combo pricing available*</div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-data">25% OFF 2nd Child Automatically Processed at Registration!</div>
+                </div>
+            </div>
         </div>
     </div>
 
