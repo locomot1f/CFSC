@@ -22,6 +22,10 @@
     position: -webkit-sticky;
     top: 0;
     background-color: #194077;
+    z-index: 100;
+}
+.container {
+    scroll-margin-top: 2.5em;
 }
 .container_col {
     display: flex;
@@ -99,6 +103,7 @@ img.navbar::after {
 }
 img.logos, img.logos-hover {
     width: 20vmax;
+    margin: 0 0 2em 0;
 }
 div.nav_button > div > a:any-link {
     font-family: 'Kensmark-03';
@@ -111,11 +116,31 @@ div.nav_button > div > a:hover {
     text-decoration: underline;
 }
 .title {
-    font-family: 'Kensmark-03';
+    font-family: 'Kensmark-05';
     font-size: 1.75em;
     font-weight: 600;
     color: #194077;
-    margin: .35em 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    padding-top: .3em;
+}
+.title::before {
+    content: "";
+    background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(215, 65%, 28%));
+    margin-right: 1vh;
+    height: .09em;
+    min-width: 20vw;
+    display: block;
+}
+.title::after {
+    content: "";
+    background-image: linear-gradient(to right, hsl(215, 65%, 28%), hsl(0, 0%, 100%));
+    margin-left: 1vh;
+    height: .09em;
+    min-width: 20vw;
+    display: block;
 }
 .days {
     background-color: aliceblue;
@@ -129,13 +154,7 @@ div.nav_button > div > a:hover {
     font-weight: 200;
     font-size: 1.2em;
 }
-hr.divider {
-    border: 0;
-    background-image: linear-gradient(90deg, hsl(0, 0%, 100%), hsl(215, 65%, 28%), hsl(0, 0%, 100%));
-    height: 2px;
-    width: 70vw;
-}
-#Home > p, #Registration > p, #Registration > div, #Price > p, #Schedule > p {
+#Home > p, #Registration > p, #Registration > div > p, #Price > p, #Schedule > p {
     font-size: 1.15em;
     font-weight: 350;
     margin: .25em;
@@ -365,10 +384,10 @@ a.links:hover::after {
     <p>This is done by using progressive methods of training to introduce new ideas and information in a manner that is easy to understand and apply by our youngest players.</p>
     <p>Furthermore, <span style="font-weight: 600;">this program is an introduction to the Cleveland Force Soccer Club</span> and opportunities to prepare players to advance into the full competitive program starting at U9. Players can attend <span style="font-weight: 600;">training options in convenient geographical locations:</span> East, West and South.</p>
 </div>
-<hr class="divider"/>
 <div id="Registration" class="container">
+    <div class="title">Ready to Register?</div>
     <div class="container_row">
-        <div><em>Ready To Register?</em> Follow the link to the right to create an account and register for the upcoming program on our new <a href="https://bit.ly/juniors_registration" class="links">Playmetrics</a> system!</div>
+        <p>Follow the link to the right to create an account and register for the upcoming program on our new <a href="https://bit.ly/juniors_registration" class="links">Playmetrics</a> system!</p>
         <div class="playmetrics">
             <a href="https://bit.ly/juniors_registration">
                 <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/logos/playmetrics-logo-color.png" class="logos" />
@@ -377,11 +396,10 @@ a.links:hover::after {
         </div>
     </div>
     <p>Not sure if your little one is ready for this level of commitment or experience? We have classrooms for that too! Check out our Juniors Program Infographic for details on our programming for this age group
-    <div>&#x1F4C4; <a href="http://bit.ly/juniors_infographic" class="links">Juniors Infographic</a></div>
-    <div>...and then check out our programming at our&#x1F4CD; <a href="http://bit.ly/cfsa_soccer" class="links">Force Sports Locations</a></div>
+    <p>&#x1F4C4; <a href="http://bit.ly/juniors_infographic" class="links">Juniors Infographic</a></p>
+    <p>...and then check out our programming at our&#x1F4CD; <a href="http://bit.ly/cfsa_soccer" class="links">Force Sports Locations</a>
     </p>
 </div>
-<hr class="divider" />
 <div id="Price" class="container">
     <div class="title"> Price Per Player</div>
     <p>This program is based on subscription of packages within a Session. With our packages, the player has the opportunity to train at any of our geographical locations to get the full experience!<br>
@@ -433,8 +451,8 @@ a.links:hover::after {
         </div>
     </div>
 </div>
-<hr class="divider" />
 <div id="Schedule" class="container">
+    <div class="title">Schedule</div>
     <div class="container_row">
         <div class="container_col">
             <div class="schedule_header">2021-22 Fall<br> Session Dates</div>
@@ -495,8 +513,8 @@ a.links:hover::after {
         </div>
     </div>
 </div>
-<hr class="divider" />
 <div id="Locations" class="container">
+    <div class="title">Locations</div>
     <div class="container_row">
         <div class="location_west">
             <div class="location_header">westside</div>
@@ -525,4 +543,7 @@ a.links:hover::after {
             </div>
         </div>
     </div>
+</div>
+<div id="Camps" class="container">
+    <div class="title">Camps / Specialty Clinics</div>
 </div>
