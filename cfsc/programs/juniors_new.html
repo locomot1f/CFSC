@@ -97,13 +97,8 @@ img.navbar::after {
     clear: both;
     display: table;
 }
-img.logos {
-    border-radius: 50%;
-    width: 75px;
-    object-fit: cover;
-    object-position: 0% 15%;
-    margin: 1em;
-    border: #f9eb0d 5px solid;
+img.logos, img.logos-hover {
+    width: 20vmax;
 }
 div.nav_button > div > a:any-link {
     font-family: 'Kensmark-03';
@@ -169,6 +164,26 @@ hr.divider {
     font-weight: 550;
     color: #194077;
     font-size: 1.15em;
+}
+.playmetrics  {
+    width: 20%;
+    position: relative;
+}
+.playmetrics img.logos-hover {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+    transition: ease-out;
+}
+.playmetrics:hover img.logos-hover {
+    opacity: 1;
+}
+.playmetrics:hover img.logos {
+    opacity: 0;
 }
 a.links:any-link {
     text-decoration: none;
@@ -354,7 +369,12 @@ a.links:hover::after {
 <div id="Registration" class="container">
     <div class="container_row">
         <div><em>Ready To Register?</em> Follow the link to the right to create an account and register for the upcoming program on our new <a href="https://bit.ly/juniors_registration" class="links">Playmetrics</a> system!</div>
-        <div><a href="https://bit.ly/juniors_registration" class="logos"><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/logos/playmetrics_400x400.jpg" class="logos"/></a></div>
+        <div class="playmetrics">
+            <a href="https://bit.ly/juniors_registration">
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/logos/playmetrics-logo-color.png" class="logos" />
+                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/logos/playmetrics-logo-hover.png" class="logos-hover" />
+            </a>
+        </div>
     </div>
     <p>Not sure if your little one is ready for this level of commitment or experience? We have classrooms for that too! Check out our Juniors Program Infographic for details on our programming for this age group
     <div>&#x1F4C4; <a href="http://bit.ly/juniors_infographic" class="links">Juniors Infographic</a></div>
