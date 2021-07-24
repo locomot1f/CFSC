@@ -11,6 +11,11 @@
     font-family: 'Kensmark-05';
     src: url('/portals/1093/templates/Fonts/Kensmark-05/Kensmark-05-RegularSoft.ttf')
 }
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
 * {
     box-sizing: border-box;
     font-family: 'Fira Sans Book', Helvetica, sans-serif;
@@ -23,6 +28,17 @@
     top: 0;
     background-color: #194077;
     z-index: 100;
+}
+#topFunction {
+    position: absolute;
+    top: 150vh;
+    right: 0.25rem;
+    bottom: -5em;
+    width: 3em;
+    pointer-events: none;
+}
+main {
+    position: relative;
 }
 .container {
     scroll-margin-top: 2.5em;
@@ -51,14 +67,14 @@
 .flex-header {
     font-family: 'Fira Sans', Helvetica, sans-serif;
     font-weight: 650;
-    font-size: 1.2em;
+    font-size: 1.5em;
     white-space: nowrap;
     flex: 0 45%;
 }
 .flex-data {
     font-family: 'Fira Sans', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 300;
-    font-size: 1em;
+    font-size: 1.15em;
     flex: 0 45%;
     white-space: nowrap;
 }
@@ -105,9 +121,14 @@ img.logos, img.logos-hover {
     width: 20vmax;
     margin: 0 0 2em 0;
 }
+img.cartoon {
+    width: 15vw;
+    margin: auto;
+    padding-right: 3.5vw;
+}
 div.nav_button > div > a:any-link {
     font-family: 'Kensmark-03';
-    font-size: 1.3em;
+    font-size: 1.7em;
     font-weight: 750;
     color: #f9eb0d;
     text-decoration: none;
@@ -117,21 +138,21 @@ div.nav_button > div > a:hover {
 }
 .title {
     font-family: 'Kensmark-05';
-    font-size: 1.75em;
+    font-size: 2.25em;
     font-weight: 600;
     color: #194077;
     display: flex;
     justify-content: center;
     align-items: center;
     white-space: nowrap;
-    padding-top: .3em;
+    padding: .5em 0;
 }
 .title::before {
     content: "";
     background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(215, 65%, 28%));
     margin-right: 1vh;
     height: .09em;
-    min-width: 20vw;
+    min-width: 5vw;
     display: block;
 }
 .title::after {
@@ -139,23 +160,23 @@ div.nav_button > div > a:hover {
     background-image: linear-gradient(to right, hsl(215, 65%, 28%), hsl(0, 0%, 100%));
     margin-left: 1vh;
     height: .09em;
-    min-width: 20vw;
+    min-width: 5vw;
     display: block;
 }
 .days {
     background-color: aliceblue;
     font-weight: 800;
-    font-size: 1.3em;
+    font-size: 1.7em;
     padding: .35rem .15rem;
     letter-spacing: .02em;
 }
 .dates {
     font-family: 'Fira Sans-Light';
     font-weight: 200;
-    font-size: 1.2em;
+    font-size: 1.6em;
 }
 #Home > p, #Registration > p, #Registration > div > p, #Price > p, #Schedule > p {
-    font-size: 1.15em;
+    font-size: 1.5em;
     font-weight: 350;
     margin: .25em;
     line-height: 1.5;
@@ -164,6 +185,7 @@ div.nav_button > div > a:hover {
     margin: 2 2em;
     padding: 0 0;
     line-height: 1.5;
+    font-size: 1.3em;
 }
 #Home > p > i, #Home > ul > li > span {
     font-weight: bold;
@@ -171,7 +193,7 @@ div.nav_button > div > a:hover {
 }
 #Registration > p:first-of-type::first-letter {
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: 4rem;
     color: #194077;
     font-family: 'Kensmark-02', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: .7rem 0;
@@ -182,7 +204,7 @@ div.nav_button > div > a:hover {
 #Registration > div > div > em, #Price > p > em {
     font-weight: 550;
     color: #194077;
-    font-size: 1.15em;
+    font-size: 1.4em;
 }
 .playmetrics  {
     width: 20%;
@@ -258,7 +280,7 @@ a.links:hover::after {
     border-right: #194077 2px solid;
     padding-right: 5px;
     font-weight: 400;
-    font-size: 1.15em;
+    font-size: 1.4em;
     font-family: 'Fira Sans-Medium';
 }
 .academy_times {
@@ -268,7 +290,7 @@ a.links:hover::after {
     padding-left: 5px;
     vertical-align: middle;
     font-weight: 350;
-    font-size: 1.05em;
+    font-size: 1.5em;
 }
 .location_west {
     flex: 50%;
@@ -280,7 +302,7 @@ a.links:hover::after {
 }
 .location {
     font-weight: 650; 
-    font-size: 15pt;
+    font-size: 1.5em;
 }
 .inside_west, .inside_east {
     position: relative;
@@ -294,7 +316,7 @@ a.links:hover::after {
     top: 25px;
     content: 'INSIDE';
     font-weight: 500;
-    font-size: 13pt;
+    font-size: 1.3em;
     font-variant-caps: all-small-caps;
     color: gray;
     -ms-transform: rotate(-90deg); /* IE 9 */
@@ -306,7 +328,7 @@ a.links:hover::after {
     top: 25px;
     content: 'INSIDE';
     font-weight: 500;
-    font-size: 13pt;
+    font-size: 1.3em;
     font-variant-caps: all-small-caps;
     color: gray;
     -ms-transform: rotate(-90deg); /* IE 9 */
@@ -324,7 +346,7 @@ a.links:hover::after {
     top: 25px;
     content: 'OUTSIDE';
     font-weight: 500;
-    font-size: 13pt;
+    font-size: 1.3em;
     font-variant-caps: all-small-caps;
     color: gray;
     -ms-transform: rotate(-90deg); /* IE 9 */
@@ -336,7 +358,7 @@ a.links:hover::after {
     top: 25px;
     content: 'OUTSIDE';
     font-weight: 500;
-    font-size: 13pt;
+    font-size: 1.3em;
     font-variant-caps: all-small-caps;
     color: gray;
     -ms-transform: rotate(-90deg); /* IE 9 */
@@ -344,7 +366,7 @@ a.links:hover::after {
 }
 .address {
     font-weight: 350; 
-    font-size: 13pt;
+    font-size: 1.3em;
 }
 .triangle {
 	width: 0;
@@ -356,7 +378,27 @@ a.links:hover::after {
     display: inline-block;
     margin: 7px 5px 0 7px;
 }
+.topBtn {
+    display: inline-block;
+    background-image: url(https://bsbproduction.s3.amazonaws.com/portals/1093/images/iconsets/arrow_top.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: fixed;
+    position: sticky;
+    pointer-events: all;
+    top: calc(100vh - 5rem);
+}
 </style>
+<header id="top"></header>
+<main>
 <div>
     <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_ages5-8_pb-01.png" class="navbar"/>
 </div>
@@ -383,6 +425,12 @@ a.links:hover::after {
     </ul>
     <p>This is done by using progressive methods of training to introduce new ideas and information in a manner that is easy to understand and apply by our youngest players.</p>
     <p>Furthermore, <span style="font-weight: 600;">this program is an introduction to the Cleveland Force Soccer Club</span> and opportunities to prepare players to advance into the full competitive program starting at U9. Players can attend <span style="font-weight: 600;">training options in convenient geographical locations:</span> East, West and South.</p>
+    <p>Through our progamming, we offer a multitude of Classrooms including:</p>
+        <ul>
+            <li><a href="#Schedule">Training / Classes</a></li>
+            <li><a href="#Camps">Camps / Specialty Clinics</a></li>
+            <li>Games within our JA Development League</li>
+        </ul>
 </div>
 <div id="Registration" class="container">
     <div class="title">Ready to Register?</div>
@@ -546,4 +594,33 @@ a.links:hover::after {
 </div>
 <div id="Camps" class="container">
     <div class="title">Camps / Specialty Clinics</div>
+    <div id="Fall_2021" class="container_row">
+        <div>
+        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/juniors_academy/cartoon.png" class="cartoon" />
+        </div>
+        <div class="container_col">
+            <div class="schedule_header">Fall 2021</div>
+            <div class="schedule_item">
+                <div>
+                    <p> We will be holding a Pre-Season Camp from August 16 - 20 at our Force Locations</p>
+                </div>
+                <div class="dates">August 16 -- 18</div>
+                <div class="flex-academy_info">
+                    <div class="academy_location">Force Sports Rocky River</div>
+                    <div class="academy_times">6:00pm - 7:30pm</div>
+                </div>
+                <div class="dates">August 18 -- 20</div>
+                <div class="flex-academy_info">
+                    <div class="academy_location">Force Sports Richmond</div>
+                    <div class="academy_times">6:00pm - 7:30pm</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </div>
+<!-- don't edit below here Scroll to top function -->
+<div id="topFunction">
+<a href="#top" class="topBtn"></a>
+</div>
+</main>
