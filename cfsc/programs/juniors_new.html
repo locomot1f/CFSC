@@ -52,7 +52,6 @@ main {
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
-    align-items: center;
 }
 .flex-row {
     display: flex;
@@ -123,6 +122,13 @@ img.cartoon {
     margin: auto;
     padding-right: 3.5vw;
 }
+img.circle {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: 0% 10%;
+}
 div.nav_button > div > a:any-link {
     font-family: 'Kensmark-03';
     font-size: 2vw;
@@ -172,7 +178,7 @@ div.nav_button > div > a:hover {
     font-weight: 200;
     font-size: 1.6em;
 }
-#Home > p, #Registration > p, #Registration > div > p, #Price > p, #Schedule > p {
+#Home > p, #Registration > p, #Registration > div > p, #Price > p, #Schedule > p, #Locations > div > div > p {
     font-size: 1.5em;
     font-weight: 350;
     margin: .25em;
@@ -202,6 +208,16 @@ div.nav_button > div > a:hover {
     font-weight: 550;
     color: #194077;
     font-size: 1.4em;
+}
+#Locations > div.container_row {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgba(231, 231, 231, 0.25);
+    border-radius: 25px;
+    align-items: baseline;
+    justify-content: left;
 }
 .playmetrics  {
     width: 20%;
@@ -252,7 +268,7 @@ a.links:hover::after {
     font-size: 2em;
     line-height: 1.13;
     border-left: #f9eb0d 15px solid;
-    padding: 5pt;
+    padding: 1rem;
     text-align: center;
     letter-spacing: .08rem;
 }
@@ -289,81 +305,58 @@ a.links:hover::after {
     font-weight: 350;
     font-size: 1.5em;
 }
-.location_west {
-    flex: 50%;
+.location_east, .location_west, .location_south {
+    min-width: 33.3vmin;
     padding: 10px;
 }
-.location_east {
-    flex: 50%;
-    padding: 10px;
-}
-.location {
-    font-weight: 650; 
-    font-size: 1.5em;
-}
-.inside_west, .inside_east {
+.inside_west, .inside_east, .inside_south {
     position: relative;
     padding:3px; 
     margin: 7px 0 7px 35px; 
     border-left: 1px solid #194077;
 }
-.inside_west::before {
+.inside_east::before, .inside_west::before, .inside_south::before {
     position: absolute;
-    left: -35px;
+    left: -40px;
     top: 25px;
-    content: 'INSIDE';
+    content: 'inside';
     font-weight: 500;
     font-size: 1.3em;
-    font-variant-caps: all-small-caps;
-    color: gray;
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    transform: rotate(-90deg);
-}
-.inside_east::before {
-    position: absolute;
-    left: -35px;
-    top: 25px;
-    content: 'INSIDE';
-    font-weight: 500;
-    font-size: 1.3em;
-    font-variant-caps: all-small-caps;
+    text-transform: uppercase;
     color: gray;
     -ms-transform: rotate(-90deg); /* IE 9 */
     transform: rotate(-90deg);
 }
 .outside_west, .outside_east {
+    position: relative;
     padding:3px; 
     margin: 7px 0 7px 35px; 
     border-left: 1px solid #194077;
-    position: relative;
 }
-.outside_west::before {
+.outside_east::before, .outside_west::before {
     position: absolute;
-    left: -40px;
+    left: -50px;
     top: 25px;
-    content: 'OUTSIDE';
+    content: 'outside';
     font-weight: 500;
     font-size: 1.3em;
-    font-variant-caps: all-small-caps;
+    text-transform: uppercase;
     color: gray;
     -ms-transform: rotate(-90deg); /* IE 9 */
     transform: rotate(-90deg);
 }
-.outside_east::before {
-    position: absolute;
-    left: -40px;
-    top: 25px;
-    content: 'OUTSIDE';
-    font-weight: 500;
-    font-size: 1.3em;
-    font-variant-caps: all-small-caps;
-    color: gray;
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    transform: rotate(-90deg);
+.location {
+    font-weight: 650; 
+    font-size: 1.5em;
 }
 .address {
     font-weight: 350; 
     font-size: 1.3em;
+}
+.directors {
+    display: flex;
+    align-items: flex-start;
+    max-width: 50vw;
 }
 .triangle {
 	width: 0;
@@ -577,10 +570,24 @@ a.links:hover::after {
                 <div class="address">Bedford, Heights OH 44146</div>
             </div>
             <div class="outside_east">
-                <div class="location">Orange Village Park</div>
-                <div class="address">29550 Emery Rd</div>
-                <div class="address">Chagrin Falls, OH 44022</div>
+                <div class="location">Lost Nation Sports Park</div>
+                <div class="address">38630 Jet Center Drive</div>
+                <div class="address">Willoughby, OH 44094</div>
             </div>
+        </div>
+        <div class="location_south">
+            <div class="location_header">south</div>
+            <div class="inside_south">
+                <div class="location">Springside Athletic Club</div>
+                <div class="address">215 Springside Dr</div>
+                <div class="address">Akron, OH 44333</div>
+            </div>
+        </div>
+    </div>
+    <div class="container_row">
+        <div class="directors">
+            <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/ben%20gunter.jpg" class="circle" /></div>
+            <p>Any Questions?</span> Please reach out to <a href="mailto:ben@force-sports.com?subject=Juniors Academy" class="links" >Ben Gunter</a> with any program questions!</p>
         </div>
     </div>
 </div>
