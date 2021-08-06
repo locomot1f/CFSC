@@ -1,648 +1,648 @@
 <style>
-@font-face {
-    font-family: 'Kensmark-02';
-    src: url('/portals/1093/templates/Fonts/Kensmark-02/Kensmark-02-BlackSoft.ttf');
-}
-@font-face {
-    font-family: 'Kensmark-03';
-    src: url('/portals/1093/templates/Fonts/Kensmark-03/Kensmark-03-RegularSoft.ttf')
-}
-@font-face {
-    font-family: 'Kensmark-05';
-    src: url('/portals/1093/templates/Fonts/Kensmark-05/Kensmark-05-RegularSoft.ttf')
-}
-@media screen and (prefers-reduced-motion: no-preference) {
-    html {
-        scroll-behavior: smooth;
+    @font-face {
+        font-family: 'Kensmark-02';
+        src: url('/portals/1093/templates/Fonts/Kensmark-02/Kensmark-02-BlackSoft.ttf');
     }
-}
-* {
-    box-sizing: border-box;
-    font-family: 'Fira Sans Book', Helvetica, sans-serif;
-}
-#navigation {
-    display: flex;
-    display: -webkit-box-flex;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    background-color: #194077;
-    z-index: 100;
-}
-#topFunction {
-    position: absolute;
-    top: 150vh;
-    right: 0.25rem;
-    bottom: -5em;
-    width: 3em;
-    pointer-events: none;
-}
-main {
-    position: relative;
-}
-.container {
-    scroll-margin-top: 2.75em;
-}
-.container_col {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-}
-.container_row {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: row;
-}
-.flex-row {
-    display: flex;
-    -webkit-box-flex: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: min(75vw, 700px);
-    border-top: #194077 1px solid;
-    padding: 5px 0;
-}
-.flex-header {
-    font-family: 'Fira Sans', Helvetica, sans-serif;
-    font-weight: 650;
-    font-size: 2vw;
-    white-space: nowrap;
-    border-bottom: #194077 solid 2px;
-}
-.flex-data {
-    font-family: 'Fira Sans', Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 300;
-    font-size: 1.5vw;
-    white-space: nowrap;
-}
-.flex-row:last-of-type {
-    border: none;
-}
-#flex-table > .container_col > div {
-    margin: .25em .35em;
-}
-#flex-table > .container_col:not(:last-of-type) {
-    border-right: dashed #194147 1px;
-}
-.flex-academy_info {
-    display: flex;
-    flex-wrap: nowrap;
-    margin: auto;
-    padding: 3px 0 3px 0;
-}
-div.nav_button > div {
-    padding: 1vh 0;
-    margin: 0.5vh -0.8vw;
-    display: block;
-    flex-grow: 2;
-    -webkit-box-flex: 2;
-    text-align: center;
-}
-div.nav_button > div:not(:last-of-type) {
-    content: "";
-    background-image: radial-gradient(circle, #194077 25%, #f9eb0d 45%, #194077 25%);
-    background-position: right;
-    background-size: 10px 10px;
-    background-repeat: repeat-y;
-}
-img.navbar {
-    width: 100%;
-}
-img.navbar::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-img.logos, img.logos-hover {
-    width: 15vmax;
-    margin: 0 0 2em 0;
-}
-img.cartoon {
-    width: 15vw;
-    margin: auto;
-    padding-right: 3.5vw;
-}
-img.circle {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: 0 .5em 1em .5em;
-    object-fit: cover;
-    object-position: top;
-    border:hsl(215, 65%, 28%) .2rem solid;
-    background-color: white;
-    box-shadow: 0 .35rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .6rem .25rem 0 rgba(0, 0, 0, 0.19);
-}
-figcaption {
-    text-align: center;
-}
-div.nav_button > div > a:any-link {
-    font-family: 'Kensmark-03';
-    font-size: 2vw;
-    font-weight: 750;
-    color: #f9eb0d;
-    text-decoration: none;
-}
-div.nav_button > div > a:hover {
-    text-decoration: underline;
-}
-.title {
-    font-family: 'Kensmark-05';
-    font-size: 2.5vw;
-    font-weight: 600;
-    color: #194077;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    padding: .5em 0;
-}
-.title::before {
-    content: "";
-    background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(215, 65%, 28%));
-    margin-right: 1vh;
-    height: .09em;
-    min-width: 5vw;
-    display: block;
-}
-.title::after {
-    content: "";
-    background-image: linear-gradient(to right, hsl(215, 65%, 28%), hsl(0, 0%, 100%));
-    margin-left: 1vh;
-    height: .09em;
-    min-width: 5vw;
-    display: block;
-}
-.days {
-    background-color: aliceblue;
-    font-weight: 800;
-    font-size: 1.7em;
-    padding: .35rem .15rem;
-    letter-spacing: .02em;
-}
-.dates {
-    font-family: 'Fira Sans-Light';
-    font-weight: 200;
-    font-size: 1.6em;
-}
-#Home > p, #Registration > p, #Registration > div > p, #Price > p, #Schedule > p, #Locations > div > div > p {
-    font-size: 1.5em;
-    font-weight: 350;
-    margin: .25em;
-    line-height: 1.5;
-}
-#Home > ul {
-    margin: 2 2em;
-    padding: 0 0;
-    line-height: 1.5;
-    font-size: 1.3em;
-}
-#Home > p > i, #Home > ul > li > span, div.schedule_item > div > i {
-    font-weight: bold;
-    color: #194077;
-}
-#Registration > p:first-of-type::first-letter {
-    text-transform: capitalize;
-    font-size: 4rem;
-    color: #194077;
-    font-family: 'Kensmark-02', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: .7rem 0;
-    margin:  0 .25rem 0 0;
-    float: left;
-    line-height: 0;
-}
-#Registration > div > div > em, #Price > p > em {
-    font-weight: 550;
-    color: #194077;
-    font-size: 1.4em;
-}
-#Locations > div.container_row {
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: rgba(231, 231, 231, 0.25);
-    border-radius: 25px;
-    align-items: baseline;
-    justify-content: left;
-}
-.playmetrics  {
-    width: 20%;
-    position: relative;
-}
-.playmetrics img.logos-hover {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: contain;
-    transition: ease-out;
-}
-.playmetrics:hover img.logos-hover {
-    opacity: 1;
-}
-.playmetrics:hover img.logos {
-    opacity: 0;
-}
-a.links:any-link {
-    text-decoration: none;
-    position: relative;
-    font-weight: 500;
-    color: #194077;
-    white-space: nowrap;
-}
-a.links::after {
-    content: '';
-    background: #f9eb0d;
-    mix-blend-mode: exclusion;
-    width: calc(100% + .05rem);
-    height: 0;
-    bottom: 0.25rem;
-    left: 0rem;
-    position: absolute;
-    z-index: -1;
-    border-bottom: 1px solid #194077;
-    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-a.links:hover::after {
-    height: calc(100% - 5px);
-}
-.schedule_header, .location_header {
-    background-color: #194077;
-    color: white;
-    font-family:'Kensmark-05';
-    font-size: 2em;
-    line-height: 1.13;
-    border-left: #f9eb0d 15px solid;
-    padding: 1rem;
-    text-align: center;
-    letter-spacing: .08rem;
-}
-.schedule_item {
-    line-height: 20pt;
-    white-space: nowrap;
-    border-left: 1px solid #194077;
-    border-right: 1px solid #194077;
-    border-bottom: 1px solid #194077;
-    padding: 0 1em 0 1em; 
-}
-.schedule_item:last-of-type {
-    border-bottom-right-radius: 2%;
-    border-bottom-left-radius: 2%;
-}
-.schedule_item:not(:last-of-type) {
-    border-bottom: 2px dotted #ffe900;
-}
-.academy_location {
-    flex: 50%;
-    flex-wrap: nowrap;
-    border-right: #194077 2px solid;
-    padding-right: 5px;
-    font-weight: 400;
-    font-size: 1.4em;
-    font-family: 'Fira Sans-Medium';
-}
-.academy_times {
-    flex: 50%;
-    flex-wrap: nowrap;
-    margin: auto;
-    padding-left: 5px;
-    vertical-align: middle;
-    font-weight: 350;
-    font-size: 1.5em;
-}
-.location_east, .location_west, .location_south {
-    min-width: 33.3vmin;
-    padding: 10px;
-}
-.inside_west, .inside_east, .inside_south {
-    position: relative;
-    padding:3px; 
-    margin: 7px 0 7px 35px; 
-    border-left: 1px solid #194077;
-}
-.inside_east::before, .inside_west::before, .inside_south::before {
-    position: absolute;
-    left: -40px;
-    top: 25px;
-    content: 'inside';
-    font-weight: 500;
-    font-size: 1.3em;
-    text-transform: uppercase;
-    color: gray;
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    transform: rotate(-90deg);
-}
-.outside_west, .outside_east {
-    position: relative;
-    padding:3px; 
-    margin: 7px 0 7px 35px; 
-    border-left: 1px solid #194077;
-}
-.outside_east::before, .outside_west::before {
-    position: absolute;
-    left: -50px;
-    top: 25px;
-    content: 'outside';
-    font-weight: 500;
-    font-size: 1.3em;
-    text-transform: uppercase;
-    color: gray;
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    transform: rotate(-90deg);
-}
-.location {
-    font-weight: 650; 
-    font-size: 1.5em;
-}
-.address {
-    font-weight: 350; 
-    font-size: 1.3em;
-}
-.directors {
-    display: flex;
-    align-items: center;
-    max-width: 70vmax;
-}
-.directors > p {
-    color: red;
-}
-.triangle {
-	width: 0;
-	height: 0;
-    text-align: center;
-	border-top: 6px solid transparent;
-	border-left: 8px solid #194077;
-	border-bottom: 6px solid transparent;
-    display: inline-block;
-    margin: 7px 5px 0 7px;
-}
-.topBtn {
-    display: inline-block;
-    background-image: url(https://bsbproduction.s3.amazonaws.com/portals/1093/images/iconsets/arrow_top.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #f9eb0d;
-    text-decoration: none;
-    font-size: 2rem;
-    line-height: 3rem;
-    text-align: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    position: fixed;
-    position: sticky;
-    pointer-events: all;
-    top: calc(100vh - 5rem);
-}
-</style>
-<header id="top"></header>
-<main>
-<div>
-    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_ages5-8_pb-01.png" class="navbar"/>
-</div>
-<div id="navigation" class="nav_button">
-    <div><a href="#Home" class="navbar">Home</a></div>
-    <div><a href="#Registration" class="navbar">Registration</a></div>
-    <div><a href="#Price" class="navbar">Price</a></div>
-    <div><a href="#Schedule" class="navbar">Schedule</a></div>
-    <div><a href="#Locations" class="navbar">Locations</a></div>
-    <div><a href="#Camps" class="navbar">Camps</a></div>
-</div>
-
-<div id="Home" class="container">
-    <div class="title">What is the Juniors Academy Program?</div>
-    <p><i>The Cleveland Force SC Juniors Academy</i> is a year round program designed for young players that are beginning to show a great love for the game, and those families looking for a challenging environment, with more advanced coaching. The program is comprised of male and female athletes between 5 — 8 years of age.</p>
-
-    <p><i>The Program's primary objective</i> is to maximize the development of every child in each of the four elements of the game in a FUN & SAFE environment!
-    </p>
-    <ul>
-        <li><span>Technical</span> - ball manipulation</li>
-        <li><span>Physical/ Mobility</span> - coordination, balance</li>
-        <li><span>Mental</span> - decision making, spacial recognition</li>
-        <li><span>Tactical</span> - teamwork</li>
-    </ul>
-    <p>This is done by using progressive methods of training to introduce new ideas and information in a manner that is easy to understand and apply by our youngest players.</p>
-    <p>Furthermore, <span style="font-weight: 600;">this program is an introduction to the Cleveland Force Soccer Club</span> and opportunities to prepare players to advance into the full competitive program starting at U9. Players can attend <span style="font-weight: 600;">training options in convenient geographical locations:</span> East, West and South.</p>
-    <p>Through our progamming, we offer a multitude of Classrooms including:</p>
+    @font-face {
+        font-family: 'Kensmark-03';
+        src: url('/portals/1093/templates/Fonts/Kensmark-03/Kensmark-03-RegularSoft.ttf')
+    }
+    @font-face {
+        font-family: 'Kensmark-05';
+        src: url('/portals/1093/templates/Fonts/Kensmark-05/Kensmark-05-RegularSoft.ttf')
+    }
+    @media screen and (prefers-reduced-motion: no-preference) {
+        html {
+            scroll-behavior: smooth;
+        }
+    }
+    * {
+        box-sizing: border-box;
+        font-family: 'Fira Sans Book', Helvetica, sans-serif;
+    }
+    #navigation {
+        display: flex;
+        display: -webkit-box-flex;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        background-color: #194077;
+        z-index: 100;
+    }
+    #topFunction {
+        position: absolute;
+        top: 150vh;
+        right: 0.25rem;
+        bottom: -5em;
+        width: 3em;
+        pointer-events: none;
+    }
+    main {
+        position: relative;
+    }
+    .container {
+        scroll-margin-top: 2.75em;
+    }
+    .container_col {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+    }
+    .container_row {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+    }
+    .flex-row {
+        display: flex;
+        -webkit-box-flex: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: min(75vw, 700px);
+        border-top: #194077 1px solid;
+        padding: 5px 0;
+    }
+    .flex-header {
+        font-family: 'Fira Sans', Helvetica, sans-serif;
+        font-weight: 650;
+        font-size: 2vw;
+        white-space: nowrap;
+        border-bottom: #194077 solid 2px;
+    }
+    .flex-data {
+        font-family: 'Fira Sans', Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+        white-space: nowrap;
+    }
+    .flex-row:last-of-type {
+        border: none;
+    }
+    #flex-table > .container_col > div {
+        margin: .25em .35em;
+    }
+    #flex-table > .container_col:not(:last-of-type) {
+        border-right: dashed #194147 1px;
+    }
+    .flex-academy_info {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: auto;
+        padding: 3px 0 3px 0;
+    }
+    div.nav_button > div {
+        padding: 1vh 0;
+        margin: 0.5vh -0.8vw;
+        display: block;
+        flex-grow: 2;
+        -webkit-box-flex: 2;
+        text-align: center;
+    }
+    div.nav_button > div:not(:last-of-type) {
+        content: "";
+        background-image: radial-gradient(circle, #194077 25%, #f9eb0d 45%, #194077 25%);
+        background-position: right;
+        background-size: 10px 10px;
+        background-repeat: repeat-y;
+    }
+    img.navbar {
+        width: 100%;
+    }
+    img.navbar::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    img.logos, img.logos-hover {
+        width: 15vmax;
+        margin: 0 0 2em 0;
+    }
+    img.cartoon {
+        width: 15vw;
+        margin: auto;
+        padding-right: 3.5vw;
+    }
+    img.circle {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin: 0 .5em 1em .5em;
+        object-fit: cover;
+        object-position: top;
+        border:hsl(215, 65%, 28%) .2rem solid;
+        background-color: white;
+        box-shadow: 0 .35rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .6rem .25rem 0 rgba(0, 0, 0, 0.19);
+    }
+    figcaption {
+        text-align: center;
+    }
+    div.nav_button > div > a:any-link {
+        font-family: 'Kensmark-03';
+        font-size: 2vw;
+        font-weight: 750;
+        color: #f9eb0d;
+        text-decoration: none;
+    }
+    div.nav_button > div > a:hover {
+        text-decoration: underline;
+    }
+    .title {
+        font-family: 'Kensmark-05';
+        font-size: 2.5vw;
+        font-weight: 600;
+        color: #194077;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        padding: .5em 0;
+    }
+    .title::before {
+        content: "";
+        background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(215, 65%, 28%));
+        margin-right: 1vh;
+        height: .09em;
+        min-width: 5vw;
+        display: block;
+    }
+    .title::after {
+        content: "";
+        background-image: linear-gradient(to right, hsl(215, 65%, 28%), hsl(0, 0%, 100%));
+        margin-left: 1vh;
+        height: .09em;
+        min-width: 5vw;
+        display: block;
+    }
+    .days {
+        background-color: aliceblue;
+        font-weight: 800;
+        font-size: 1.7em;
+        padding: .35rem .15rem;
+        letter-spacing: .02em;
+    }
+    .dates {
+        font-family: 'Fira Sans-Light';
+        font-weight: 200;
+        font-size: 1.6em;
+    }
+    #Home > p, #Registration > p, #Registration > div > p, #Price > p, #Schedule > p, #Locations > div > div > p {
+        font-size: 1.5em;
+        font-weight: 350;
+        margin: .25em;
+        line-height: 1.5;
+    }
+    #Home > ul {
+        margin: 2 2em;
+        padding: 0 0;
+        line-height: 1.5;
+        font-size: 1.3em;
+    }
+    #Home > p > i, #Home > ul > li > span, div.schedule_item > div > i {
+        font-weight: bold;
+        color: #194077;
+    }
+    #Registration > p:first-of-type::first-letter {
+        text-transform: capitalize;
+        font-size: 4rem;
+        color: #194077;
+        font-family: 'Kensmark-02', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding: .7rem 0;
+        margin:  0 .25rem 0 0;
+        float: left;
+        line-height: 0;
+    }
+    #Registration > div > div > em, #Price > p > em {
+        font-weight: 550;
+        color: #194077;
+        font-size: 1.4em;
+    }
+    #Locations > div.container_row {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: rgba(231, 231, 231, 0.25);
+        border-radius: 25px;
+        align-items: baseline;
+        justify-content: left;
+    }
+    .playmetrics  {
+        width: 20%;
+        position: relative;
+    }
+    .playmetrics img.logos-hover {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: contain;
+        transition: ease-out;
+    }
+    .playmetrics:hover img.logos-hover {
+        opacity: 1;
+    }
+    .playmetrics:hover img.logos {
+        opacity: 0;
+    }
+    a.links:any-link {
+        text-decoration: none;
+        position: relative;
+        font-weight: 500;
+        color: #194077;
+        white-space: nowrap;
+    }
+    a.links::after {
+        content: '';
+        background: #f9eb0d;
+        mix-blend-mode: exclusion;
+        width: calc(100% + .05rem);
+        height: 0;
+        bottom: 0.25rem;
+        left: 0rem;
+        position: absolute;
+        z-index: -1;
+        border-bottom: 1px solid #194077;
+        transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+    a.links:hover::after {
+        height: calc(100% - 5px);
+    }
+    .schedule_header, .location_header {
+        background-color: #194077;
+        color: white;
+        font-family:'Kensmark-05';
+        font-size: 2em;
+        line-height: 1.13;
+        border-left: #f9eb0d 15px solid;
+        padding: 1rem;
+        text-align: center;
+        letter-spacing: .08rem;
+    }
+    .schedule_item {
+        line-height: 20pt;
+        white-space: nowrap;
+        border-left: 1px solid #194077;
+        border-right: 1px solid #194077;
+        border-bottom: 1px solid #194077;
+        padding: 0 1em 0 1em; 
+    }
+    .schedule_item:last-of-type {
+        border-bottom-right-radius: 2%;
+        border-bottom-left-radius: 2%;
+    }
+    .schedule_item:not(:last-of-type) {
+        border-bottom: 2px dotted #ffe900;
+    }
+    .academy_location {
+        flex: 50%;
+        flex-wrap: nowrap;
+        border-right: #194077 2px solid;
+        padding-right: 5px;
+        font-weight: 400;
+        font-size: 1.4em;
+        font-family: 'Fira Sans-Medium';
+    }
+    .academy_times {
+        flex: 50%;
+        flex-wrap: nowrap;
+        margin: auto;
+        padding-left: 5px;
+        vertical-align: middle;
+        font-weight: 350;
+        font-size: 1.5em;
+    }
+    .location_east, .location_west, .location_south {
+        min-width: 33.3vmin;
+        padding: 10px;
+    }
+    .inside_west, .inside_east, .inside_south {
+        position: relative;
+        padding:3px; 
+        margin: 7px 0 7px 35px; 
+        border-left: 1px solid #194077;
+    }
+    .inside_east::before, .inside_west::before, .inside_south::before {
+        position: absolute;
+        left: -40px;
+        top: 25px;
+        content: 'inside';
+        font-weight: 500;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        color: gray;
+        -ms-transform: rotate(-90deg); /* IE 9 */
+        transform: rotate(-90deg);
+    }
+    .outside_west, .outside_east {
+        position: relative;
+        padding:3px; 
+        margin: 7px 0 7px 35px; 
+        border-left: 1px solid #194077;
+    }
+    .outside_east::before, .outside_west::before {
+        position: absolute;
+        left: -50px;
+        top: 25px;
+        content: 'outside';
+        font-weight: 500;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        color: gray;
+        -ms-transform: rotate(-90deg); /* IE 9 */
+        transform: rotate(-90deg);
+    }
+    .location {
+        font-weight: 650; 
+        font-size: 1.5em;
+    }
+    .address {
+        font-weight: 350; 
+        font-size: 1.3em;
+    }
+    .directors {
+        display: flex;
+        align-items: center;
+        max-width: 70vmax;
+    }
+    .directors > p {
+        color: red;
+    }
+    .triangle {
+        width: 0;
+        height: 0;
+        text-align: center;
+        border-top: 6px solid transparent;
+        border-left: 8px solid #194077;
+        border-bottom: 6px solid transparent;
+        display: inline-block;
+        margin: 7px 5px 0 7px;
+    }
+    .topBtn {
+        display: inline-block;
+        background-image: url(https://bsbproduction.s3.amazonaws.com/portals/1093/images/iconsets/arrow_top.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #f9eb0d;
+        text-decoration: none;
+        font-size: 2rem;
+        line-height: 3rem;
+        text-align: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        position: fixed;
+        position: sticky;
+        pointer-events: all;
+        top: calc(100vh - 5rem);
+    }
+    </style>
+    <header id="top"></header>
+    <main>
+    <div>
+        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/program%20info/juniors/jr_ages5-8_pb-01.png" class="navbar"/>
+    </div>
+    <div id="navigation" class="nav_button">
+        <div><a href="#Home" class="navbar">Home</a></div>
+        <div><a href="#Registration" class="navbar">Registration</a></div>
+        <div><a href="#Price" class="navbar">Price</a></div>
+        <div><a href="#Schedule" class="navbar">Schedule</a></div>
+        <div><a href="#Locations" class="navbar">Locations</a></div>
+        <div><a href="#Camps" class="navbar">Camps</a></div>
+    </div>
+    
+    <div id="Home" class="container">
+        <div class="title">What is the Juniors Academy Program?</div>
+        <p><i>The Cleveland Force SC Juniors Academy</i> is a year round program designed for young players that are beginning to show a great love for the game, and those families looking for a challenging environment, with more advanced coaching. The program is comprised of male and female athletes between 5 — 8 years of age.</p>
+    
+        <p><i>The Program's primary objective</i> is to maximize the development of every child in each of the four elements of the game in a FUN & SAFE environment!
+        </p>
         <ul>
-            <li><a href="#Schedule" class="links">Training / Classes</a></li>
-            <li><a href="#Camps" class="links">Camps / Specialty Clinics</a></li>
-            <li>Games within our JA Development League</li>
+            <li><span>Technical</span> - ball manipulation</li>
+            <li><span>Physical/ Mobility</span> - coordination, balance</li>
+            <li><span>Mental</span> - decision making, spacial recognition</li>
+            <li><span>Tactical</span> - teamwork</li>
         </ul>
-</div>
-<div id="Registration" class="container">
-    <div class="title">Ready to Register?</div>
-    <div class="container_row">
-        <p>Follow the link to the right to create an account and register for the upcoming program on our new <a href="https://bit.ly/juniors_registration" class="links">Playmetrics</a> system!</p>
-        <div class="playmetrics">
-            <a href="https://bit.ly/juniors_registration">
-                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/logos/playmetrics-logo-color.png" class="logos" />
-                <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/logos/playmetrics-logo-hover.png" class="logos-hover" />
-            </a>
-        </div>
+        <p>This is done by using progressive methods of training to introduce new ideas and information in a manner that is easy to understand and apply by our youngest players.</p>
+        <p>Furthermore, <span style="font-weight: 600;">this program is an introduction to the Cleveland Force Soccer Club</span> and opportunities to prepare players to advance into the full competitive program starting at U9. Players can attend <span style="font-weight: 600;">training options in convenient geographical locations:</span> East, West and South.</p>
+        <p>Through our progamming, we offer a multitude of Classrooms including:</p>
+            <ul>
+                <li><a href="#Schedule" class="links">Training / Classes</a></li>
+                <li><a href="#Camps" class="links">Camps / Specialty Clinics</a></li>
+                <li>Games within our JA Development League</li>
+            </ul>
     </div>
-    <p>Not sure if your little one is ready for this level of commitment or experience? We have classrooms for that too! Check out our Juniors Program Infographic for details on our programming for this age group &#x2935;
-    <br />&#x1F4C4; <a href="http://bit.ly/juniors_infographic" class="links">Juniors Infographic</a></p>
-    <p>...and then check out our programming at our&#x1F4CD; <a href="http://bit.ly/cfsa_soccer" class="links">Force Sports Locations</a>
-    </p>
-</div>
-<div id="Price" class="container">
-    <div class="title"> Price Per Player</div>
-    <p>This program is based on subscription of packages within a Session. With our packages, the player has the opportunity to train at any of our geographical locations to get the full experience!<br>
-    We now have new packages setup for more convenience to ourcustomers. You are able to purchase individual packages (see Package break down below) to fit your schedule.</p>
-    <p>Families will be able to choose as many of the below 'Packages' at registration as they please.  So you can select; both west side, both east side, etc -- whatever your heart desires. The commitment is 8 weeks at $140 for the Fall Season per listed package. Once you sign up for a package, you are free to use them as you see fit. When you have used up the classes in your package, you will need to sign up for additional package(s). When you click to register you will see packages for the remaining year!<br />
-    <span class="triangle"></span><em>The class packages will not be rolled over into the next Session.</em></p>
-    <p>There will also be the option for a Package including Games. Games will be used as an extension of the training to give real life experience for the players. Games will be played on Saturdays. Rosters will be set by the Coaching staff on a weekly basis.</p>
-    <div id="flex-table" class="container_row" role="table" aria-label="Programs">
-        <div class="container_col">
-            <div class="flex-header">Program Package</div>
-            <div class="flex-data">FALL - WEST - North Ridgeville - Mondays</div>
-            <div class="flex-data">FALL - WEST - Rocky River - Wednesdays</div>
-            <div class="flex-data">FALL - EAST - Bedford Heights - Tuesdays</div>
-            <div class="flex-data">FALL - EAST - Willoughby - Thursdays</div>
-            <div class="flex-data">FALL - EAST - Bedford Heights - Fridays</div>
-            <div class="flex-data">FALL - SOUTH - Copley/Fairlawn - Tuesdays</div>
-        </div>
-        <div class="container_col">
-            <div class="flex-header">Location</div>
-            <div class="flex-data">Cleveland United Fields Monday</div>
-            <div class="flex-data">Force Rocky River Wednesday</div>
-            <div class="flex-data">Force Richmond Tuesday</div>
-            <div class="flex-data">Lost Nation Sports Park Thursday</div>
-            <div class="flex-data">Force - Richmond Friday</div>
-            <div class="flex-data">Springside Athletic Club Tuesday</div>
-        </div>
-        <div class="container_col">
-            <div class="flex-header">Price</div>
-            <div class="flex-data flex-price">$140</div>
-            <div class="flex-data flex-price">$140</div>
-            <div class="flex-data flex-price">$140</div>
-            <div class="flex-data flex-price">$140</div>
-            <div class="flex-data flex-price">$140</div>
-            <div class="flex-data flex-price">$140</div>
-        </div>
-    </div>
-    <div class="container_col">
-        <div class="flex-row">
-            <div class="flex-data">*No combo pricing available*</div>
-        </div>
-        <div class="flex-row">
-            <div class="flex-data"><span style="color: darkgreen;">25% OFF 2nd Child Automatically Processed at Registration!</span></div>
-        </div>
-    </div>
-</div>
-<div id="Schedule" class="container">
-    <div class="title">Schedule</div>
-    <div class="container_row">
-        <div class="container_col">
-            <div class="schedule_header">2021-22 Fall<br> Session Dates</div>
-            <div class="schedule_item">
-                <div class="days">Mondays</div>
-                <div class="dates">August 23, 30; September 13, 20, 27; October 4, 11, 18</div>
-                <div class="flex-academy_info">
-                    <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> West (CUF)</div>
-                    <div class="academy_times">
-                        <div>6:00-7:00pm</div>
-                    </div>
-                </div>
-            </div>
-            <div class="schedule_item">
-                <div class="days">Tuesdays</div>
-                <div class="dates">August 24, 31, September 7, 14, 21, 28; October 5, 12</div>
-                <div class="flex-academy_info">
-                    <div class="academy_location">
-                        <div><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> Central (Richmond)</div>
-                        <div><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> South (Fairlawn)</div>
-                    </div>
-                    <div class="academy_times">
-                        <div>6:00-7:00pm</div>
-                        <div>6:00-7:00pm</div>
-                    </div>
-                </div>
-            </div>
-            <div class="schedule_item">
-                <div class="days">Wednesdays</div>
-                <div class="dates">August 25; September 1, 8, 15, 22, 29; October 6, 13</div>
-                <div class="flex-academy_info">
-                    <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> West (Rocky River)</div>
-                    <div class="academy_times">
-                        <div>6:00-7:00pm</div>
-                    </div>
-                </div>
-            </div>
-            <div class="schedule_item">
-                <div class="days">Thursdays</div>
-                <div class="dates">August 26; September 2, 9, 16, 23, 30; October 7, 14</div>
-                <div class="flex-academy_info">
-                    <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> EAST (LNSP)</div>
-                    <div class="academy_times">
-                        <div>6:00-7:00pm</div>
-                    </div>
-                </div>
-            </div>
-            <div class="schedule_item">
-                <div class="days">Fridays</div>
-                <div class="dates">August 27; September 3, 10, 17, 24; October 1, 8, 15</div>
-                <div class="flex-academy_info">
-                    <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL (Richmond)</div>
-                    <div class="academy_times">
-                        <div>5:30-6:30pm</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="Locations" class="container">
-    <div class="title">Locations</div>
-    <div class="container_row">
-        <div class="location_west">
-            <div class="location_header">westside</div>
-            <div class="inside_west">
-                <div class="location">Force Sports Rocky River</div>
-                <div class="address">21220 Center Ridge Road</div>
-                <div class="address">Rocky River, OH 44116</div>
-            </div>
-            <div class="outside_west">
-                <div class="location">Cleveland United Fields</div>
-                <div class="address">32760 Bagley Rd.</div>
-                <div class="address">North Ridgeville, OH 44039</div>
-            </div>
-        </div>
-        <div class="location_east">
-            <div class="location_header">eastside</div>
-            <div class="inside_east">
-                <div class="location">Force Sports Richmond</div>
-                <div class="address">26555 Richmond Road</div>
-                <div class="address">Bedford, Heights OH 44146</div>
-            </div>
-            <div class="outside_east">
-                <div class="location">Lost Nation Sports Park</div>
-                <div class="address">38630 Jet Center Drive</div>
-                <div class="address">Willoughby, OH 44094</div>
-            </div>
-        </div>
-        <div class="location_south">
-            <div class="location_header">south</div>
-            <div class="inside_south">
-                <div class="location">Springside Athletic Club</div>
-                <div class="address">215 Springside Dr</div>
-                <div class="address">Akron, OH 44333</div>
-            </div>
-        </div>
-    </div>
-    <div class="container_row">
-        <div class="directors">
-            <p>Any Questions? Please reach out to <a href="mailto:cmueller@force-sports.com?subject=Juniors Academy" class="links" >Coach Chris Mueller</a> or <a href="mailto:ben@force-sports.com?subject=Juniors Academy" class="links" >Coach Ben Gunter</a> with any program questions!</p>
-            <div class="container_row">
-                <a href="mailto:ben@force-sports.com?subject=Juniors Academy" class="links" >
-                <figure>
-                    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/ben%20gunter.jpg" class="circle" />
-                    <figcaption>Coach Ben Gunter</figcaption>
-                </figure>
+    <div id="Registration" class="container">
+        <div class="title">Ready to Register?</div>
+        <div class="container_row">
+            <p>Follow the link to the right to create an account and register for the upcoming program on our new <a href="https://bit.ly/juniors_registration" class="links">Playmetrics</a> system!</p>
+            <div class="playmetrics">
+                <a href="https://bit.ly/juniors_registration">
+                    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/logos/playmetrics-logo-color.png" class="logos" />
+                    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/logos/playmetrics-logo-hover.png" class="logos-hover" />
                 </a>
-                <a href="mailto:cmueller@force-sports.com?subject=Juniors Academy" class="links" >
+            </div>
+        </div>
+        <p>Not sure if your little one is ready for this level of commitment or experience? We have classrooms for that too! Check out our Juniors Program Infographic for details on our programming for this age group &#x2935;
+        <br />&#x1F4C4; <a href="http://bit.ly/juniors_infographic" class="links">Juniors Infographic</a></p>
+        <p>...and then check out our programming at our&#x1F4CD; <a href="http://bit.ly/cfsa_soccer" class="links">Force Sports Locations</a>
+        </p>
+    </div>
+    <div id="Price" class="container">
+        <div class="title"> Price Per Player</div>
+        <p>This program is based on subscription of packages within a Session. With our packages, the player has the opportunity to train at any of our geographical locations to get the full experience!<br>
+        We now have new packages setup for more convenience to ourcustomers. You are able to purchase individual packages (see Package break down below) to fit your schedule.</p>
+        <p>Families will be able to choose as many of the below 'Packages' at registration as they please.  So you can select; both west side, both east side, etc -- whatever your heart desires. The commitment is 8 weeks at $140 for the Fall Season per listed package. Once you sign up for a package, you are free to use them as you see fit. When you have used up the classes in your package, you will need to sign up for additional package(s). When you click to register you will see packages for the remaining year!<br />
+        <span class="triangle"></span><em>The class packages will not be rolled over into the next Session.</em></p>
+        <p>There will also be the option for a Package including Games. Games will be used as an extension of the training to give real life experience for the players. Games will be played on Saturdays. Rosters will be set by the Coaching staff on a weekly basis.</p>
+        <div id="flex-table" class="container_row" role="table" aria-label="Programs">
+            <div class="container_col">
+                <div class="flex-header">Program Package</div>
+                <div class="flex-data">FALL - WEST - North Ridgeville - Mondays</div>
+                <div class="flex-data">FALL - WEST - Rocky River - Wednesdays</div>
+                <div class="flex-data">FALL - EAST - Bedford Heights - Tuesdays</div>
+                <div class="flex-data">FALL - EAST - Willoughby - Thursdays</div>
+                <div class="flex-data">FALL - EAST - Bedford Heights - Fridays</div>
+                <div class="flex-data">FALL - SOUTH - Copley/Fairlawn - Tuesdays</div>
+            </div>
+            <div class="container_col">
+                <div class="flex-header">Location</div>
+                <div class="flex-data">Cleveland United Fields Monday</div>
+                <div class="flex-data">Force Rocky River Wednesday</div>
+                <div class="flex-data">Force Richmond Tuesday</div>
+                <div class="flex-data">Lost Nation Sports Park Thursday</div>
+                <div class="flex-data">Force - Richmond Friday</div>
+                <div class="flex-data">Springside Athletic Club Tuesday</div>
+            </div>
+            <div class="container_col">
+                <div class="flex-header">Price</div>
+                <div class="flex-data flex-price">$140</div>
+                <div class="flex-data flex-price">$140</div>
+                <div class="flex-data flex-price">$140</div>
+                <div class="flex-data flex-price">$140</div>
+                <div class="flex-data flex-price">$140</div>
+                <div class="flex-data flex-price">$140</div>
+            </div>
+        </div>
+        <div class="container_col">
+            <div class="flex-row">
+                <div class="flex-data">*No combo pricing available*</div>
+            </div>
+            <div class="flex-row">
+                <div class="flex-data"><span style="color: darkgreen;">25% OFF 2nd Child Automatically Processed at Registration!</span></div>
+            </div>
+        </div>
+    </div>
+    <div id="Schedule" class="container">
+        <div class="title">Schedule</div>
+        <div class="container_row">
+            <div class="container_col">
+                <div class="schedule_header">2021-22 Fall<br> Session Dates</div>
+                <div class="schedule_item">
+                    <div class="days">Mondays</div>
+                    <div class="dates">August 23, 30; September 13, 20, 27; October 4, 11, 18</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> West (CUF)</div>
+                        <div class="academy_times">
+                            <div>6:00-7:00pm</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule_item">
+                    <div class="days">Tuesdays</div>
+                    <div class="dates">August 24, 31, September 7, 14, 21, 28; October 5, 12</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location">
+                            <div><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> Central (Richmond)</div>
+                            <div><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> South (Fairlawn)</div>
+                        </div>
+                        <div class="academy_times">
+                            <div>6:00-7:00pm</div>
+                            <div>6:00-7:00pm</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule_item">
+                    <div class="days">Wednesdays</div>
+                    <div class="dates">August 25; September 1, 8, 15, 22, 29; October 6, 13</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F7E1;</span> West (Rocky River)</div>
+                        <div class="academy_times">
+                            <div>6:00-7:00pm</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule_item">
+                    <div class="days">Thursdays</div>
+                    <div class="dates">August 26; September 2, 9, 16, 23, 30; October 7, 14</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> EAST (LNSP)</div>
+                        <div class="academy_times">
+                            <div>6:00-7:00pm</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule_item">
+                    <div class="days">Fridays</div>
+                    <div class="dates">August 27; September 3, 10, 17, 24; October 1, 8, 15</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location"><span style="font-size: 5pt; vertical-align: top;">&#x1F535;</span> CENTRAL (Richmond)</div>
+                        <div class="academy_times">
+                            <div>5:30-6:30pm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Locations" class="container">
+        <div class="title">Locations</div>
+        <div class="container_row">
+            <div class="location_west">
+                <div class="location_header">westside</div>
+                <div class="inside_west">
+                    <div class="location">Force Sports Rocky River</div>
+                    <div class="address">21220 Center Ridge Road</div>
+                    <div class="address">Rocky River, OH 44116</div>
+                </div>
+                <div class="outside_west">
+                    <div class="location">Cleveland United Fields</div>
+                    <div class="address">32760 Bagley Rd.</div>
+                    <div class="address">North Ridgeville, OH 44039</div>
+                </div>
+            </div>
+            <div class="location_east">
+                <div class="location_header">eastside</div>
+                <div class="inside_east">
+                    <div class="location">Force Sports Richmond</div>
+                    <div class="address">26555 Richmond Road</div>
+                    <div class="address">Bedford, Heights OH 44146</div>
+                </div>
+                <div class="outside_east">
+                    <div class="location">Lost Nation Sports Park</div>
+                    <div class="address">38630 Jet Center Drive</div>
+                    <div class="address">Willoughby, OH 44094</div>
+                </div>
+            </div>
+            <div class="location_south">
+                <div class="location_header">south</div>
+                <div class="inside_south">
+                    <div class="location">Springside Athletic Club</div>
+                    <div class="address">215 Springside Dr</div>
+                    <div class="address">Akron, OH 44333</div>
+                </div>
+            </div>
+        </div>
+        <div class="container_row">
+            <div class="directors">
+                <p>Any Questions? Please reach out to <a href="mailto:cmueller@force-sports.com?subject=Juniors Academy" class="links" >Coach Chris Mueller</a> or <a href="mailto:ben@force-sports.com?subject=Juniors Academy" class="links" >Coach Ben Gunter</a> with any program questions!</p>
+                <div class="container_row">
+                    <a href="mailto:ben@force-sports.com?subject=Juniors Academy" class="links" >
                     <figure>
-                        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/21_chirs_mueller-01.png" class="circle" />
-                        <figcaption>Coach Chris Mueller</figcaption>
+                        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/ben%20gunter.jpg" class="circle" />
+                        <figcaption>Coach Ben Gunter</figcaption>
                     </figure>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="Camps" class="container">
-    <div class="title">Camps / Specialty Clinics</div>
-    <div id="Fall_2021" class="container_row">
-        <div>
-        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/juniors_academy/cartoon.png" class="cartoon" />
-        </div>
-        <div class="container_col">
-            <div class="schedule_header">Fall 2021</div>
-            <div class="schedule_item">
-                <div>
-                    <i>We will be holding a Pre-Season Camp from August 16 - 20 at our Force Locations</i>
-                </div>
-                <div class="dates">August 16 -- 18</div>
-                <div class="flex-academy_info">
-                    <div class="academy_location">Force Sports Rocky River</div>
-                    <div class="academy_times">6:00pm - 7:30pm</div>
-                </div>
-                <div class="dates">August 18 -- 20</div>
-                <div class="flex-academy_info">
-                    <div class="academy_location">Force Sports Richmond</div>
-                    <div class="academy_times">6:00pm - 7:30pm</div>
+                    </a>
+                    <a href="mailto:cmueller@force-sports.com?subject=Juniors Academy" class="links" >
+                        <figure>
+                            <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/21_chirs_mueller-01.png" class="circle" />
+                            <figcaption>Coach Chris Mueller</figcaption>
+                        </figure>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- don't edit below here Scroll to top function -->
-<div id="topFunction">
-<a href="#top" class="topBtn"></a>
-</div>
-</main>
+    <div id="Camps" class="container">
+        <div class="title">Camps / Specialty Clinics</div>
+        <div id="Fall_2021" class="container_row">
+            <div>
+            <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/juniors_academy/cartoon.png" class="cartoon" />
+            </div>
+            <div class="container_col">
+                <div class="schedule_header">Fall 2021</div>
+                <div class="schedule_item">
+                    <div>
+                        <i>We will be holding a Pre-Season Camp from August 16 - 20 at our Force Locations</i>
+                    </div>
+                    <div class="dates">August 16 -- 18</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location">Force Sports Rocky River</div>
+                        <div class="academy_times">6:00pm - 7:30pm</div>
+                    </div>
+                    <div class="dates">August 18 -- 20</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location">Force Sports Richmond</div>
+                        <div class="academy_times">6:00pm - 7:30pm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- don't edit below here Scroll to top function -->
+    <div id="topFunction">
+    <a href="#top" class="topBtn"></a>
+    </div>
+    </main>
