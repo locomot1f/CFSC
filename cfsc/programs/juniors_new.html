@@ -124,11 +124,17 @@ img.cartoon {
 }
 img.circle {
     border-radius: 50%;
-    height: 150px;
     width: 150px;
+    height: 150px;
+    margin: 0 .5em 1em .5em;
     object-fit: cover;
-    object-position: 0% 10%;
-    border:hsl(215, 65%, 28%) 2px solid;
+    object-position: top;
+    border:hsl(215, 65%, 28%) .2rem solid;
+    background-color: white;
+    box-shadow: 0 .35rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .6rem .25rem 0 rgba(0, 0, 0, 0.19);
+}
+figcaption {
+    text-align: center;
 }
 div.nav_button > div > a:any-link {
     font-family: 'Kensmark-03';
@@ -245,6 +251,7 @@ a.links:any-link {
     position: relative;
     font-weight: 500;
     color: #194077;
+    white-space: nowrap;
 }
 a.links::after {
     content: '';
@@ -356,8 +363,11 @@ a.links:hover::after {
 }
 .directors {
     display: flex;
-    align-items: flex-start;
-    max-width: 50vw;
+    align-items: center;
+    max-width: 70vmax;
+}
+.directors > p {
+    color: red;
 }
 .triangle {
 	width: 0;
@@ -587,8 +597,21 @@ a.links:hover::after {
     </div>
     <div class="container_row">
         <div class="directors">
-            <div><img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/ben%20gunter.jpg" class="circle" /></div>
-            <p>Any Questions?</span> Please reach out to <a href="mailto:ben@force-sports.com?subject=Juniors Academy" class="links" >Ben Gunter</a> with any program questions!</p>
+            <p>Any Questions? Please reach out to <a href="mailto:cmueller@force-sports.com?subject=Juniors Academy" class="links" >Coach Chris Mueller</a> or <a href="mailto:ben@force-sports.com?subject=Juniors Academy" class="links" >Coach Ben Gunter</a> with any program questions!</p>
+            <div class="container_row">
+                <a href="mailto:ben@force-sports.com?subject=Juniors Academy" class="links" >
+                <figure>
+                    <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/ben%20gunter.jpg" class="circle" />
+                    <figcaption>Coach Ben Gunter</figcaption>
+                </figure>
+                </a>
+                <a href="mailto:cmueller@force-sports.com?subject=Juniors Academy" class="links" >
+                    <figure>
+                        <img src="https://bsbproduction.s3.amazonaws.com/portals/1093/images/0/staff/21_chirs_mueller-01.png" class="circle" />
+                        <figcaption>Coach Chris Mueller</figcaption>
+                    </figure>
+                </a>
+            </div>
         </div>
     </div>
 </div>
