@@ -1,0 +1,14 @@
+IF(
+    AND(
+        IS_AFTER(Today(),DATEADD({Start Date},-25,'days')),
+        IS_BEFORE({Start Date},DATEADD({Start Date},6,'weeks'))
+    ),
+     '✅',
+     '❎'
+)
+
+IF(
+    REGEX_MATCH({Name},"CFSA"),
+    REGEX_EXTRACT({Name},"\\>(.*?)\\-"),
+    "J-League"
+)
