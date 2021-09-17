@@ -8,9 +8,13 @@
     font-family: "Kensmark-03";
     src: url("/Kensmark/Kensmark-03/Kensmark-03-BlackSoft.ttf");
   }
-  .flexbox {
+  .flex_box {
     display: flex;
     flex-direction: row;
+  }
+  .flex_container {
+    flex-direction: column;
+    display: flex;
   }
   img.pixel {
     border-radius: 15px;
@@ -26,8 +30,6 @@
     border-bottom: 15px #194077 double;
     margin-bottom: 10px;
     padding-top: 20px;
-    flex-direction: column;
-    display: flex;
   }
   .press::before {
     content: "Press Releases";
@@ -63,22 +65,26 @@
   }
 </style>
 
-<div class="flexbox">
+<div class="flex_box">
 
-<div class="header press"></div>
-<div>
-  [youtubevideo class="rss_feeds"
-  src="https://locomot1f.github.io/cfsc/rss_feed.html" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-  picture-in-picture" allowfullscreen][/youtubevideo]
+<div class="flex_container">
+  <div class="header press"></div>
+  <div>
+    [youtubevideo class="rss_feeds"
+    src="https://locomot1f.github.io/cfsc/rss_feed.html" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+    picture-in-picture" allowfullscreen][/youtubevideo]
+  </div>
 </div>
 
-<div class="header newsletter"></div>
-<div>
-  [youtubevideo class="rss_feeds"
-  src="https://locomot1f.github.io/cfsc/rss_newsletters.html" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-  picture-in-picture" allowfullscreen][/youtubevideo]
+<div class="flex_container">
+  <div class="header newsletter"></div>
+  <div>
+    [youtubevideo class="rss_feeds"
+    src="https://locomot1f.github.io/cfsc/rss_newsletters.html" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+    picture-in-picture" allowfullscreen][/youtubevideo]
+  </div>
 </div>
 
 </div>
