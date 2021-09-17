@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    @font-face {
+      font-family: "Kensmark-05";
+      src: url("https://locomot1f.github.io/cfsc/Kensmark/Kensmark-05/Kensmark-05-BlackSoft.ttf");
+    }
+    @font-face {
+      font-family: "Kensmark-03";
+      src: url("https://locomot1f.github.io/cfsc/Kensmark/Kensmark-03/Kensmark-03-BoldSoft.ttf");
+    }
+    .header {
+      border-bottom: 15px #194077 double;
+      margin-bottom: 10px;
+      padding-top: 20px;
+    }
+    .press::before {
+      content: "Press Releases";
+      position: relative;
+      top: 0px;
+      font-family: "Kensmark-05", "Fira Sans Ultra", Impact, Haettenschweiler,
+        "Arial Narrow Bold", sans-serif;
+      font-size: 45pt;
+      color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #194077;
+    }
+    .social::before {
+      content: "Instagram";
+      position: relative;
+      top: 0px;
+      font-family: "Kensmark-05", "Fira   Sans Ultra", Impact, Haettenschweiler,
+        "Arial Narrow Bold", sans-serif;
+      font-size: 45pt;
+      color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #194077;
+    }
+    .headline {
+      display: flex;
+      flex-wrap: nowrap;
+      width: fit-content;
+      padding-bottom: 7px;
+    }
+    .pubDate {
+      font-family: "Fira Sans", Helvetica, sans-serif;
+      font-size: 1em;
+      font-weight: 200;
+      padding-right: 5px;
+      text-transform: uppercase;
+    }
+    .author {
+      font-family: "Fira Sans", Georgia, "Times New Roman", Times, serif;
+      font-size: .95em;
+      font-weight: 200;
+      padding: 0 5px;
+      color: rgb(37, 47, 56);
+    }
+    .title {
+      font-family: "Kensmark-03";
+      font-weight: 600;
+      font-size: 1.1em;
+      line-height: 1em;
+      letter-spacing: 0.02em;
+    }
+    a.title:any-link {
+      text-decoration: none;
+      color: #194077;
+    }
+    a.title:hover {
+      text-decoration: #f9eb0d underline;
+    }
+    .pubDate::after {
+      content: " ";
+      position: relative;
+      display: inline-block;
+      background-image: radial-gradient(circle, #194077 50%, #fff 50%);
+      background-position: center;
+      background-size: 10px 10px;
+      background-repeat: repeat-y;
+      width: 12px;
+      height: 12px;
+      left: 5px;
+    }
+    .RSS_FLEX {
+      display: flex;
+      width: min-content;
+      padding-bottom: 20px;
+      flex-direction: column;
+    }
+    .RSS_TEXT {
+      width: 100%;
+      padding: 1.2em 0 0 0;
+    }
+    .RSS_IMAGE {
+      border: 2px solid #194077;
+      border-radius: 5px;
+      display: inline-block;
+      padding: 3px;
+      position: relative;
+      width: auto;
+      height: calc(100% - .25vh);
+      top: 1em;
+    }
+    .RSS_IMAGE::before {
+      content: " ";
+      background: #fff;
+      width: calc(100% + 80px + 4px - 120px);
+      height: calc(100% + 4px);
+      top: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      position: absolute;
+    }
+    .RSS_IMAGE::after {
+      content: " ";
+      background: #fff;
+      height: calc(100% + 80px + 4px - 120px);
+      width: calc(100% + 4px);
+      left: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      position: absolute;
+    }
+    img.rss {
+      border-radius: 5px;
+      height: 20vh;
+      width: 35vw;
+      object-fit: cover;
+      object-position: 50% 50%;
+      position: relative;
+      display: block;
+      z-index: 5;
+    }
+    .description {
+      font-family: "Fira Sans", Helvetica, "Gill Sans", "Gill Sans MT", Calibri,
+        "Trebuchet MS", sans-serif;
+      font-size: .85em;
+      font-weight: 300;
+      display: block; /* Fallback for non-webkit */
+      display: -webkit-box;
+      height: 3em; /* Fallback for non-webkit, line-height * 2 */
+      line-height: 1.2em;
+      -webkit-line-clamp: 3; /* if you change this, make sure to change the fallback line-height    and height */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+  <body>
+    <div id="rss_feed">...loading...</div>
+
+    <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          myFunction(this);
+        }
+      };
+      xhttp.open("GET", "rss_feed.xml", true);
+      xhttp.send();
+
+      function myFunction(xml) {
+        var x, i, xmlDoc, html;
+        xmlDoc = xml.responseXML;
+        html = "";
+        x = xmlDoc.getElementsByTagName("item");
+        for (i = 0; i < x.length; i++) {
+          html +=
+            "<div class='RSS_FLEX'>" +
+            "<div class='RSS_TEXT'><div class='headline'><div class='pubDate'>" +
+            x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue +
+            "</div><div class='author'>" +
+            x[i].getElementsByTagName("author")[0].childNodes[0].nodeValue +
+            "</div></div><div class='title'> <a href='" +
+            x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
+            "' class='title'>" +
+            x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+            "</a></div>" +
+            "</div></div>";
+        }
+        document.getElementById("rss_feed").innerHTML = html;
+      }
+    </script>
+  </body>
+</html>
