@@ -95,9 +95,9 @@
     }
     .flex-academy_info {
         display: flex;
+        flex-direction: row;
         flex-wrap: nowrap;
-        margin: auto;
-        padding: 3px 0 3px 0;
+        margin: .75vh 0 .75vh 1vw;
     }
     div.nav_button > div {
         padding: 1vh 0;
@@ -192,7 +192,7 @@
     .dates {
         font-family: 'Fira Sans-Light';
         font-weight: 250;
-        font-size: 1.5vw;
+        font-size: 1.75vw;
     }
     #Home > p, #Registration > p, #Registration > div > p, #Price > p, #Schedule > p, #Locations > div > div > p {
         font-size: 1.5vw;
@@ -302,7 +302,7 @@
         border-bottom-left-radius: 2%;
     }
     .schedule_item:not(:last-of-type) {
-        border-bottom: 2px dotted #ffe900;
+        border-bottom: 3px groove #194077;
     }
     div.schedule_item > div > i {
         font-size: 1.8vw;
@@ -311,36 +311,41 @@
         white-space: normal;
     }
     .academy_location_west, .academy_location_east, .academy_location_south {
-        flex: 50%;
         flex-wrap: nowrap;
-        border-right: #194077 2px solid;
-        margin-bottom: .25em;
         padding-right: 5px;
         font-weight: 400;
         font-size: 1.7vw;
         font-family: 'Fira Sans-Medium';
-        vertical-align: middle;
+        order: 1;
+    }
+    .flex-academy_info::after {
+        background-image: radial-gradient(circle, currentcolor 1px, transparent 1.5px);
+        background-position: bottom;
+        background-size: 1ex 4.5px;
+        background-repeat: space no-repeat;
+        content: "";
+        flex-grow: 1;
+        height: 1em;
+        order: 2;
     }
     .academy_location_west::before {
         content: "🟡";
-        font-size: 1.1vw;
+        font-size: .75vw;
         vertical-align: top;
-        margin: 0 .5vw;
+        margin: 0 .50vw 0 0;
     }
     .academy_location_east::before, .academy_location_south::before {
         content: "🔵";
-        font-size: 1.1vw;
+        font-size: .75vw;
         vertical-align: top;
-        margin: 0 .5vw;
+        margin: 0 .50vw 0 0;
     }
     .academy_times {
-        flex: 50%;
         flex-wrap: nowrap;
-        margin: auto;
         padding-left: 5px;
-        vertical-align: middle;
         font-weight: 350;
         font-size: 1.7vw;
+        order: 3;
     }
     .location_east, .location_west, .location_south {
         min-width: 33.3vmin;
@@ -536,23 +541,19 @@
                     <div class="dates">August 23, 30; September 13, 20, 27; October 4, 11, 18</div>
                     <div class="flex-academy_info">
                         <div class="academy_location_west">West (CUF)</div>
-                        <div class="academy_times">
-                            <div>6:00-7:00pm</div>
-                        </div>
+                        <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
                 <div class="schedule_item">
                     <div class="days">Tuesdays</div>
                     <div class="dates">August 24, 31, September 7, 14, 21, 28; October 5, 12</div>
                     <div class="flex-academy_info">
-                        <div>
-                            <div class="academy_location_east">Central (Richmond)</div>
-                            <div class="academy_location_south">South (Fairlawn)</div>
-                        </div>
-                        <div class="academy_times">
-                            <div>6:00-7:00pm</div>
-                            <div>6:00-7:00pm</div>
-                        </div>
+                        <div class="academy_location_east">Central (Richmond)</div>
+                        <div class="academy_times">6:00-7:00pm</div>
+                    </div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_south">South (Fairlawn)</div>
+                        <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
                 <div class="schedule_item">
@@ -560,9 +561,7 @@
                     <div class="dates">August 25; September 1, 8, 15, 22, 29; October 6, 13</div>
                     <div class="flex-academy_info">
                         <div class="academy_location_west">West (Rocky River)</div>
-                        <div class="academy_times">
-                            <div>6:00-7:00pm</div>
-                        </div>
+                        <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
                 <div class="schedule_item">
@@ -570,9 +569,7 @@
                     <div class="dates">August 26; September 2, 9, 16, 23, 30; October 7, 14</div>
                     <div class="flex-academy_info">
                         <div class="academy_location_east">EAST (LNSP)</div>
-                        <div class="academy_times">
-                            <div>6:00-7:00pm</div>
-                        </div>
+                        <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
                 <div class="schedule_item">
@@ -580,76 +577,58 @@
                     <div class="dates">August 27; September 3, 10, 17, 24; October 1, 8, 15</div>
                     <div class="flex-academy_info">
                         <div class="academy_location_east">CENTRAL (Richmond)</div>
-                        <div class="academy_times">
-                            <div>5:30-6:30pm</div>
-                        </div>
+                        <div class="academy_times">5:30-6:30pm</div>
                     </div>
                 </div>
             </div>
             <div class="container_col">
-                <div class="schedule_header">2021-22 Fall II<br> Session Dates</div>
+                <div class="schedule_header">2021-22 Winter I<br> Session Dates</div>
                 <div class="schedule_item">
                     <div class="days">Mondays</div>
                     <div class="dates">NOV 1, 8, 15, <em>OFF 22</em>, 29; DEC 6, 13</div>
                     <div class="flex-academy_info">
-                        <div>
-                            <div class="academy_location_east">Force - Eastlake</div>
-                        </div>
-                        <div class="academy_times">
-                            <div>6:00-7:00pm</div>
-                        </div>
+                        <div class="academy_location_east">Force - Eastlake</div>
+                        <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
                 <div class="schedule_item">
                     <div class="days">Tuesdays</div>
                     <div class="dates">NOV 2, 9, 16, <em>OFF 23</em>, 30; DEC 7, 14</div>
                     <div class="flex-academy_info">
-                        <div>
-                            <div class="academy_location_west">Force - Rocky River</div>
-                        </div>
-                        <div class="academy_times">
-                            <div>6:00-7:00pm</div>
-                        </div>
+                        <div class="academy_location_west">Force - Rocky River</div>
+                        <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
                 <div class="schedule_item">
                     <div class="days">Wednesdays</div>
                     <div class="dates">NOV 3, 10, 17; <em>OFF 24</em>; DEC 1, 8, 15</div>
                     <div class="flex-academy_info">
-                        <div>
-                            <div class="academy_location_west">Sportsplex - N. Olmstead</div>
-                            <div class="academy_location_east">Force - Richmond</div>
-                        </div>
-                        <div class="academy_times">
-                            <div>6:30-7:30pm</div>
-                            <div>6:00-7:00pm</div>
-                        </div>
+                        <div class="academy_location_west">Sportsplex - N. Olmstead</div>    
+                        <div class="academy_times">6:30-7:30pm</div>
+                    </div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_east">Force - Richmond</div>
+                        <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
                 <div class="schedule_item">
                     <div class="days">Fridays</div>
                     <div class="dates">NOV 5, 12, 19, <em>OFF 26</em>; DEC 3, 10, 17</div>
                     <div class="flex-academy_info">
-                        <div>
-                            <div class="academy_location_south">Springside - Fairlawn</div>
-                            <div class="academy_location_east">Force - Richmond</div>
-                        </div>
-                        <div class="academy_times">
-                            <div>6:00-7:00pm</div>
-                            <div>6:00-7:00pm</div>
-                        </div>
+                        <div class="academy_location_south">Springside - Fairlawn</div>
+                        <div class="academy_times">6:00-7:00pm</div>
+                    </div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_east">Force - Richmond</div>
+                        <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
                 <div class="schedule_item">
                     <div class="days">Saturdays</div>
                     <div class="dates">NOV 6, 13, 20, <em>OFF 27</em>; DEC 4, 11, 18</div>
                     <div class="flex-academy_info">
-                        <div>
-                            <div class="academy_location_west">Force - Rocky River</div>
-                        </div>
-                        <div class="academy_times">
-                            <div>9:00a-10:00am</div>
-                        </div>
+                        <div class="academy_location_west">Force - Rocky River</div>
+                        <div class="academy_times">9:00a-10:00am</div>
                     </div>
                 </div>
             </div>
