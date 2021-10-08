@@ -15,11 +15,8 @@
   }
   .flex_container {
     display: flex;
-    width: 50%;
+    width: 100%;
     flex-direction: column;
-  }
-  .flex_container:first-of-type {
-    padding-right: 5px;
   }
   img.pixel {
     border-radius: 15px;
@@ -32,9 +29,14 @@
     border: #194077 1px solid;
   }
   .header {
-    border-bottom: 15px #194077 double;
     margin-bottom: 10px;
     padding-top: 20px;
+  }
+  .newsletter {
+    order: 1;
+  }
+  .press {
+    order: 2;
   }
   .press::before {
     content: "Press Releases";
@@ -46,6 +48,8 @@
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #194077;
+    z-index: 1;
+    border-bottom: 15px #194077 double;
   }
   .newsletter::before {
     content: "Newsletters";
@@ -57,6 +61,8 @@
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #194077;
+    z-index: 1;
+    border-bottom: 15px #194077 double;
   }
   .divider {
     margin: 10px 0;
@@ -64,28 +70,42 @@
     height: 10px;
     border-top: 5px #f9eb0d dotted;
   }
-  .rss_feeds {
+  .newsletter_feeds {
+    position: relative;
+    overflow: hidden;
+    padding-top: 33.3%;
+  }
+  .press_feeds {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+  }
+  ._feeds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
-    height: 600px;
+    height: 100%;
+    border: none;
   }
 </style>
 
 <div class="flex_box">
 
-<div class="flex_container">
-  <div class="header press"></div>
-  <div>
-    [youtubevideo class="rss_feeds"
+<div class="flex_container header press">
+  <div class="press_feeds">
+    [youtubevideo class="_feeds"
     src="https://locomot1f.github.io/cfsc/rss_feed.html" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
     picture-in-picture" allowfullscreen][/youtubevideo]
   </div>
 </div>
 
-<div class="flex_container">
-  <div class="header newsletter"></div>
-  <div>
-    [youtubevideo class="rss_feeds"
+<div class="flex_container header newsletter">
+  <div class="newsletter_feeds">
+    [youtubevideo class="_feeds"
     src="https://locomot1f.github.io/cfsc/newsletter_feed.html" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
     picture-in-picture" allowfullscreen][/youtubevideo]
