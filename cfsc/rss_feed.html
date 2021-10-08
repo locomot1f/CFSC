@@ -146,7 +146,7 @@
         xmlDoc = xml.responseXML;
         html = "";
         x = xmlDoc.getElementsByTagName("item");
-        for (i = 0; i < length(i); i++) {
+        for (i = 0; i < x.length; i++) {
           html +=
             "<div class='RSS_FLEX'><div class='RSS_IMAGE'><div><img src='" +
             x[i].getElementsByTagName("enclosure")[0].getAttributeNode("url")
