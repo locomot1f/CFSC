@@ -83,6 +83,10 @@
         font-weight: 300;
         font-size: 1.8vw;
         white-space: nowrap;
+        padding: .25em;
+    }
+    .flex-data:nth-child(even) {
+        background-color: rgb(235, 235, 235);
     }
     .flex-row:last-of-type {
         border: none;
@@ -510,36 +514,48 @@
         <div id="flex-table" class="container_row" role="table" aria-label="Programs">
             <div class="container_col">
                 <div class="flex-header">Program Package</div>
-                <div class="flex-data">Winter I - EAST - Eastlake - Mondays</div>
-                <div class="flex-data">Winter I - WEST - Rocky River - Tuesdays</div>
-                <div class="flex-data closed">Winter I - EAST - Bedford Heights - Wednesdays</div>
-                <div class="flex-data">Winter I - WEST - North Olmsted - Wednesdays</div>
-                <div class="flex-data">Winter I - SOUTH - Fairlawn - Fridays</div>
-                <div class="flex-data">Winter I - EAST - Bedford Heights - Fridays</div>
-                <div class="flex-data">Winter I - WEST - Rocky River - Saturdays</div>
-                <div class="flex-data">Winter I - EAST - Bedford Heights - Sundays 🆕</div>
+                <div class="flex-data">Winter II - EAST - Eastlake - Mondays</div>
+                <div class="flex-data">Winter II - WEST - Rocky River - Tuesdays</div>
+                <div class="flex-data">Winter II - WEST - Rocky River - Tuesdays</div>
+                <div class="flex-data">Winter II - EAST - Bedford Heights - Wednesdays</div>
+                <div class="flex-data">Winter II - EAST - Bedford Heights - Wednesdays</div>
+                <div class="flex-data">Winter II - WEST - North Olmsted - Wednesdays</div>
+                <div class="flex-data">Winter II - SOUTH - Fairlawn - Fridays</div>
+                <div class="flex-data">Winter II - EAST - Bedford Heights - Fridays</div>
+                <div class="flex-data">Winter II - WEST - Rocky River - Saturdays</div>
+                <div class="flex-data">Winter II - EAST - Bedford Heights - Saturdays</div>
+                <div class="flex-data">Winter II - <em>EAST LEAGUE GAMES</em> - Saturdays</div>
+                <div class="flex-data">Winter II - <em>WEST LEAGUE GAMES</em> - Saturdays</div>
             </div>
             <div class="container_col">
                 <div class="flex-header">Location</div>
                 <div class="flex-data">Force Eastlake</div>
-                <div class="flex-data">Force Rocky River</div>
-                <div class="flex-data closed">Force Richmond</div>
+                <div class="flex-data">Force Rocky River (5pm Class)</div>
+                <div class="flex-data">Force Rocky River (6pm Class)</div>
+                <div class="flex-data">Force Richmond (5pm Class)</div>
+                <div class="flex-data">Force Richmond (6pm Class)</div>
                 <div class="flex-data">North Olmstead - Soccer Sportsplex</div>
                 <div class="flex-data">Fairlawn - Springside Athletic Club</div>
                 <div class="flex-data">Force Richmond</div>
                 <div class="flex-data">Force Rocky River</div>
                 <div class="flex-data">Force Richmond</div>
+                <div class="flex-data">Force Richmond</div>
+                <div class="flex-data">Force Rocky River</div>
             </div>
             <div class="container_col">
                 <div class="flex-header">Price</div>
                 <div class="flex-data flex-price">$105</div>
                 <div class="flex-data flex-price">$105</div>
-                <div class="flex-data flex-price closed">$105</div>
                 <div class="flex-data flex-price">$105</div>
                 <div class="flex-data flex-price">$105</div>
                 <div class="flex-data flex-price">$105</div>
                 <div class="flex-data flex-price">$105</div>
                 <div class="flex-data flex-price">$105</div>
+                <div class="flex-data flex-price">$105</div>
+                <div class="flex-data flex-price">$105</div>
+                <div class="flex-data flex-price">$105</div>
+                <div class="flex-data flex-price">$75</div>
+                <div class="flex-data flex-price">$75</div>
             </div>
         </div>
         <div class="container_col">
@@ -555,53 +571,6 @@
         <div class="title">Schedule</div>
         <div class="container_row">
             <div class="container_col">
-                <div class="schedule_header">2021-22 Fall I<br> Session Dates</div>
-                <div class="schedule_item">
-                    <div class="days">Mondays</div>
-                    <div class="dates">August 23, 30; September 13, 20, 27; October 4, 11, 18</div>
-                    <div class="flex-academy_info">
-                        <div class="academy_location_west">West (CUF)</div>
-                        <div class="academy_times">6:00-7:00pm</div>
-                    </div>
-                </div>
-                <div class="schedule_item">
-                    <div class="days">Tuesdays</div>
-                    <div class="dates">August 24, 31, September 7, 14, 21, 28; October 5, 12</div>
-                    <div class="flex-academy_info">
-                        <div class="academy_location_east">Central (Richmond)</div>
-                        <div class="academy_times">6:00-7:00pm</div>
-                    </div>
-                    <div class="flex-academy_info">
-                        <div class="academy_location_south">South (Fairlawn)</div>
-                        <div class="academy_times">6:00-7:00pm</div>
-                    </div>
-                </div>
-                <div class="schedule_item">
-                    <div class="days">Wednesdays</div>
-                    <div class="dates">August 25; September 1, 8, 15, 22, 29; October 6, 13</div>
-                    <div class="flex-academy_info">
-                        <div class="academy_location_west">West (Rocky River)</div>
-                        <div class="academy_times">6:00-7:00pm</div>
-                    </div>
-                </div>
-                <div class="schedule_item">
-                    <div class="days">Thursdays</div>
-                    <div class="dates">August 26; September 2, 9, 16, 23, 30; October 7, 14</div>
-                    <div class="flex-academy_info">
-                        <div class="academy_location_east">EAST (LNSP)</div>
-                        <div class="academy_times">6:00-7:00pm</div>
-                    </div>
-                </div>
-                <div class="schedule_item">
-                    <div class="days">Fridays</div>
-                    <div class="dates">August 27; September 3, 10, 17, 24; October 1, 8, 15</div>
-                    <div class="flex-academy_info">
-                        <div class="academy_location_east">CENTRAL (Richmond)</div>
-                        <div class="academy_times">5:30-6:30pm</div>
-                    </div>
-                </div>
-            </div>
-            <div class="container_col">
                 <div class="schedule_header">2021-22 Winter I<br> Session Dates</div>
                 <div class="schedule_item">
                     <div class="days">Mondays</div>
@@ -616,6 +585,7 @@
                     <div class="dates">NOV 2, 9, 16 <em>OFF 23</em>, 30; DEC 7, 14</div>
                     <div class="flex-academy_info">
                         <div class="academy_location_west">Force - Rocky River</div>
+                        <div class="academy_times">5:00-6:00pm &amp;</div>
                         <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
@@ -628,6 +598,7 @@
                     </div>
                     <div class="flex-academy_info">
                         <div class="academy_location_east">Force - Richmond</div>
+                        <div class="academy_times">5:00-6:00pm &amp;</div>
                         <div class="academy_times">6:00-7:00pm</div>
                     </div>
                 </div>
@@ -645,18 +616,83 @@
                 </div>
                 <div class="schedule_item">
                     <div class="days">Saturdays</div>
-                    <div class="dates">NOV 6, 13, 20 <em>OFF 27</em>; DEC 4, 11, 18</div>
+                    <div class="dates">NOV 6, 13, <em>OFF 20</em>, 27; DEC 4, 11, 18</div>
                     <div class="flex-academy_info">
                         <div class="academy_location_west">Force - Rocky River</div>
                         <div class="academy_times">9:00-10:00am</div>
                     </div>
                 </div>
                 <div class="schedule_item">
-                    <div class="days">Sundays 🆕</div>
+                    <div class="days">Sundays</div>
                     <div class="dates">November 7, 14, 21 <em>OFF November 28</em>; December 5, 12, 19</div>
                     <div class="flex-academy_info">
                         <div class="academy_location_west">Force - Richmond</div>
                         <div class="academy_times">12:00-1:00pm</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container_col">
+                <div class="schedule_header">2021-22 Winter II<br> Session Dates</div>
+                <div class="schedule_item">
+                    <div class="days">Mondays</div>
+                    <div class="dates">January 3, 10, <em>OFF 17</em>, 24, 31; February 7, 14</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_east">Force - Eastlake</div>
+                        <div class="academy_times">6:00-7:00pm</div>
+                    </div>
+                </div>
+                <div class="schedule_item">
+                    <div class="days">Tuesdays</div>
+                    <div class="dates">January 4, 11, 18, 25; February 1, 8</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_west">Force - Rocky River</div>
+                        <div class="academy_times">5:00-6:00pm &amp;</div>
+                        <div class="academy_times">6:00-7:00pm</div>
+                    </div>
+                </div>
+                <div class="schedule_item">
+                    <div class="days">Wednesdays</div>
+                    <div class="dates">January 5, 12, 19, 26; February 2, 9</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_west">Sportsplex - N. Olmstead</div>    
+                        <div class="academy_times">6:30-7:30pm</div>
+                    </div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_east">Force - Richmond</div>
+                        <div class="academy_times">5:00-6:00pm &amp;</div>
+                        <div class="academy_times">6:00-7:00pm</div>
+                    </div>
+                </div>
+                <div class="schedule_item">
+                    <div class="days">Thursdays</div>
+                    <div class="dates">January 6, 13, 20, 27; February 3, 10</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_west">Force - Rocky River</div>
+                        <div class="academy_times">6:00-7:00pm</div>
+                    </div>
+                </div>
+                <div class="schedule_item">
+                    <div class="days">Fridays</div>
+                    <div class="dates">January 7, 14, 21, 28; February 4, 11</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_south">Springside - Fairlawn</div>
+                        <div class="academy_times">6:00-7:00pm</div>
+                    </div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_east">Force - Richmond</div>
+                        <div class="academy_times">6:00-7:00pm</div>
+                    </div>
+                </div>
+                <div class="schedule_item">
+                    <div class="days">Saturdays</div>
+                    <div class="dates">January 8, 15, 22, 29; February 5, 12</div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_west">Force - Rocky River</div>
+                        <div class="academy_times">9:00-10:00am</div>
+                    </div>
+                    <div class="flex-academy_info">
+                        <div class="academy_location_east">Force - Richmond</div>
+                        <div class="academy_times">10:00-11:00am</div>
                     </div>
                 </div>
             </div>
