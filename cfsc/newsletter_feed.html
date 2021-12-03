@@ -175,11 +175,9 @@
             x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
             "' class='title' target='_parent'>" +
             x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-            "</a></div>" +
-            x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue +
-            "</div><div class='description'>" +
+            "</a></div></div><div class='description'>" +
             x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
-            "</div></div>";
+            "</div>";
         }
         document.getElementById("rss_feed").innerHTML = html;
       }
