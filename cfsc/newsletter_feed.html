@@ -170,14 +170,14 @@
         for (i = 0; i < x.length; i++) {
           html +=
             "<div class='RSS_FLEX'>" +
-            "<div class='RSS_TEXT'><div class='headline'><div class='pubDate'>" +
+            "<div class='RSS_TEXT'><div class='headline'>" +
             "<div class='title'> <a target='_blank' href='" +
             x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
             "' class='title' target='_parent'>" +
             x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
             "</a></div></div><div class='description'>" +
             x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
-            "</div>";
+            "</div></div>";
         }
         document.getElementById("rss_feed").innerHTML = html;
       }
